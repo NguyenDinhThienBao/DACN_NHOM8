@@ -1,19 +1,105 @@
+<<<<<<< tpchungg
+html {
+    box-sizing: border-box;
+  }
+body{
+    font-family: 'Montserrat', sans-serif;
+    word-spacing: 3px;
+    line-height: 25px;
+    width: 250px;
+    font-size: 15px;
+}
+#navbar{
+    position: fixed;
+    min-width: 290px;
+    width: 300px;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    border-right: 2px solid #2b2c2c;
+}
+@media only screen and (max-width: 815px){
+#navbar {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 275px;
+    border: none;
+    z-index: 1;
+    border-bottom: 2px solid;
+}
+}
+nav > header{
+    color: black;
+    margin: 10px;
+    text-align: center;
+    font-size: 1.8em;
+}
+li > a{
+    text-decoration: none;
+}
+a:visited, a:link{
+    color: #2b2c2c;
+}
+#navbar > ul{
+    width: 100%;
+    padding: 0;
+    height: 88%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+#navbar > ul >li{
+    position: relative;
+    list-style: none;
+    border-bottom: 1px solid #2b2c2c;
+    width: 100%;
+    line-height: 3em;
+    padding: 0.5em;
+}
+@media only screen and (max-width: 400px){
+#main-doc {
+    margin-left: -10px;
+}
+}
+@media only screen and (max-width: 815px){
+#main-doc {
+    position: relavtive;
+    margin-top: 270px;
+    margin-left: -270px;
+}
+}
+#main-doc{
+    position: absolute;
+    left: 310px;
+    padding: 20px;
+    margin-bottom: 110px;
+    color:  #2b2c2c;
+}
+.main-section > header{
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+section{
+    padding-bottom: 10px;
+}
+code{
+    display:  block;
+    background-color:#bec3c6;
+    font-size: 13px;
+}
+p, code{
+    padding-left: 10px;
+}
+ul{
+    padding-left: 60px;
+=======
 body {
     width: 100%;
     background-color:white;
     color:black;
     font-style: Montserrat
-}
-
-h1 {
-    text-align: center;
-}
-
-fieldset {
-    width:fit-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    background-color: aqua
-}
+>>>>>>> main
