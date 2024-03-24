@@ -1,3 +1,4 @@
+<<<<<<< tpchungg
 html {
     box-sizing: border-box;
   }
@@ -95,17 +96,10 @@ p, code{
 }
 ul{
     padding-left: 60px;
-}
-
-h1 {
-    text-align: center;
-}
-
-fieldset {
-    width:fit-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    background-color: aqua
-}
+=======
+body {
+    width: 100%;
+    background-color:white;
+    color:black;
+    font-style: Montserrat
+>>>>>>> main
