@@ -31,12 +31,14 @@ body{
     z-index: 1;
     border-bottom: 2px solid;
 }
+
 }
 nav > header{
     color: white;
     margin: 10px;
     text-align: center;
     font-size: 1.8em;
+    font-weight: bold;
 }
 li > a{
     text-decoration: none;
@@ -52,12 +54,15 @@ a:visited, a:link{
     overflow-y: auto;
 }
 #navbar > ul >li{
+    color: white;
+    font-weight: bold;
     position: relative;
     list-style: none;
     border-bottom: 1px solid #2b2c2c;
     width: 100%;
     line-height: 3em;
     padding: 0.5em;
+    background-color: #25b9b9;
 }
 @media only screen and (max-width: 400px){
 #main-doc {
