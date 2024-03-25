@@ -84,13 +84,14 @@ a:visited, a:link{
     color:  #2b2c2c;
 }
 .main-section > header{
-    color: white;
+    color: black;
     font-weight: bold;
     font-size: 20px;
 }
 section{
     padding-bottom: 10px;
 }
+
 code{
     display:  block;
     background-color:#bec3c6;
@@ -102,3 +103,33 @@ p, code{
 ul{
     padding-left: 60px;
 }
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+
