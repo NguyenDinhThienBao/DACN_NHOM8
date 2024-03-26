@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Hệ thống ERP</title>
-        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="./khach_hang.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <link rel="icon" href="./favicon.ico" type="image/x-icon">
         <!--Monsterrat-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,22 +14,93 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <!--Mục lục-->
-        <nav id="navbar">
-            <header>Advee ERP</header>
-            <ul>
-                <li><a class="nav-link" href="index.html">Trang chủ</a></li>
-                <li><a class="nav-link" href="khach_hang.html">Khách hàng</a></li>
-                <li><a class="nav-link" href="nhan_su.html">Nhân sự</a></li>
-                <li><a class="nav-link" href="san_xuat.html">Sản xuất</a></li>
-                <li><a class="nav-link" href="mua_ban.html">Mua bán</a></li>
-                <li><a class="nav-link" href="tai_chinh.html">Tài chính</a></li>
-                <li><a class="nav-link" href="dang_nhap.html">Đăng nhập (test thôi chứ ko có đâu)</a></li>
+        <div class="back">
+            <i class='bx bx-arrow-back'><a href="./khach_hang.html"></a></i>
+        </div>
+
+
+        <div class="sidebar">
+            <div class="content">
+                <div class="logo">
+                    <h3>ERP</h3>
+                </div>
+                <i class='bx bx-menu' id="btn"></i>
+            </div>
+
+            <ul class="list">
+                <li class="search">
+                    <i class='bx bx-search'></i>
+                    <input type="text" placeholder="Tìm kiếm ...">
+                </li>
+
+                <li class="list-item">
+                    <a href="#">
+                        <i class='bx bx-grid-alt'></i>
+                        <span class="links-name">Trang chủ</span>
+                    </a>
+                </li>
+
+                <li class="list-item">
+                    <a href="#">
+                        <i class='bx bx-user'></i>
+                        <span class="links-name">User</span>
+                    </a>
+                </li>
+
+                <li class="list-item">
+                    <a href="#">
+                        <i class='bx bx-chat'></i>
+                        <span class="links-name">Messages</span>
+                    </a>
+                </li>
+
+                <li class="list-item">
+                    <a href="#">
+                        <i class='bx bx-user-circle' ></i>
+                        <span class="links-name">Khách hàng</span>
+                    </a>
+                </li>
+
+                <li class="list-item">
+                    <a href="#">
+                        <i class='bx bx-id-card'></i>
+                        <span class="links-name">Nhân viên</span>
+                    </a>
+                </li>
+
+                <li class="list-item">
+                    <a href="#">
+                        <i class='bx bx-package'></i>
+                        <span class="links-name">Sản xuất</span>
+                    </a>
+                </li>
+
+                <li class="list-item">
+                    <a href="#">
+                        <i class='bx bx-shopping-bag'></i>
+                        <span class="links-name">Mua bán</span>
+                    </a>
+                </li>
+
+                <li class="list-item">
+                    <a href="#">
+                        <i class='bx bx-wallet-alt'></i>
+                        <span class="links-name">Tài chính</span>
+                    </a>
+                </li>
             </ul>
-        </nav>
-        
-        
-           
-                
+
+            <ul class="list-logout">
+                <li>
+                    <a href="#">
+                        <i class='bx bx-log-out'></i>
+                        <span class="links-name">Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+
+        <script src="script.js"></script>        
     </body>
 </html>
