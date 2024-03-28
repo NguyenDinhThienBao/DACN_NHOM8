@@ -6,35 +6,112 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Hệ thống ERP</title>
         <link rel="stylesheet" href="./styles.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <link rel="icon" href="./favicon.ico" type="image/x-icon">
         <!--Monsterrat-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="container">
-            <div class="menu">
-
+        <!--Mục lục-->
+        <div class="sidebar">
+            <div class="logo-content">
+                <div class="logo">
+                    <i class='bx bxl-meta'></i>
+                    <h3>Advee ERP</h3>
+                </div>
+                <i class='bx bx-menu' id="btn"></i>
             </div>
+
+            <ul class="list">
+                <li class="search">
+                    <i class='bx bx-search'></i>
+                    <input type="text" placeholder="Tìm kiếm ...">
+                </li>
+
+                <li class="list-item active">
+                    <a href="#">
+                        <a href="index.html"><i class='bx bx-grid-alt'></i></a>
+                        <a href="index.html"><span class="links-name">Trang chủ</span></a>
+                    </a>
+                    <span class="tooltip">Trang chủ</span>
+                </li>
+
+                <li class="list-item">
+                    <a href="#">
+                        <a href="dang_nhap.html"><i class='bx bx-user'></i></a>
+                        <a href="dang_nhap.html"><span class="links-name">User</span></a>
+                    </a>
+                    <span class="tooltip">User</span>
+                </li>
+
+                <li class="list-item">
+                    <a href="#">
+                        <i class='bx bx-chat'></i>
+                        <span class="links-name">Messages</span>
+                    </a>
+                    <span class="tooltip">Messages</span>
+                </li>
+
+                <li class="list-item">
+                    <a href="#">
+                        <a href="khach_hang.html"><i class='bx bx-user-circle' ></i></a>
+                        <a href="khach_hang.html"><span class="links-name">Khách hàng</span></a>
+                    </a>
+                    <span class="tooltip">Khách hàng</span>
+                </li>
+
+                <li class="list-item">
+                    <a href="#">
+                        <a href="nhan_su.html"><i class='bx bx-id-card'></i></a>
+                        <a href="nhan_su.html"><span class="links-name">Nhân sự</span></a>
+                    </a>
+                    <span class="tooltip">Nhân sự</span>
+                </li>
+
+                <li class="list-item">
+                    <a href="#">
+                        <a href="san_xuat.html"><i class='bx bx-package'></i></a>
+                        <a href="san_xuat.html"><span class="links-name">Sản xuất</span></a>
+                    </a>
+                    <span class="tooltip">Sản xuất</span>
+                </li>
+
+                <li class="list-item">
+                    <a href="#">
+                        <a href="mua_ban.html"><i class='bx bx-shopping-bag'></i></a>
+                        <a href="mua_ban.html"><span class="links-name">Mua bán</span></a>
+                    </a>
+                    <span class="tooltip">Mua bán</span>
+                </li>
+
+                <li class="list-item">
+                    <a href="#">
+                        <a href="tai_chinh.html"><i class='bx bx-wallet-alt'></i></a>
+                        <a href="tai_chinh.html"><span class="links-name">Tài chính</span></a>
+                    </a>
+                    <span class="tooltip">Tài chính</span>
+                </li>
+            </ul>
+
+            <ul class="list-logout">
+                <li>
+                    <a href="#">
+                        <i class='bx bx-log-out'></i>
+                        <span class="links-name">Logout</span>
+                    </a>
+                </li>
+            </ul>
         </div>
-<!--Mục lục-->
-<nav id="navbar">
-    <header>Advee ERP</header>
-    <ul>
-      <li><a class="nav-link" href="index.html">Trang chủ</a></li>
-      <li><a class="nav-link" href="khach_hang.html">Khách hàng</a></li>
-      <li><a class="nav-link" href="nhan_su.html">Nhân sự</a></li>
-      <li><a class="nav-link" href="san_xuat.html">Sản xuất</a></li>
-      <li><a class="nav-link" href="mua_ban.html">Mua bán</a></li>
-      <li><a class="nav-link" href="tai_chinh.html">Tài chính</a></li>
-      <li><a class="nav-link" href="dang_nhap.html">Đăng nhập (test thôi chứ ko có đâu)</a></li>
-    </ul>
-  </nav>
+        <script src="script.js"></script>
+
+
         <main id="main-doc">
             <section class="main_section" id="mua_ban">
                 <header>Mua bán</header>
                 <p>Đây là mua bán</p>
             </section>
+        </main>
     </body>
 </html>
