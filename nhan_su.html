@@ -105,11 +105,65 @@
             </ul>
         </div>
         <script src="script.js"></script>
-
-        <main id="main-doc">
-            <section class="main_section" id="nhan_su">
-                <header>Nhân sự</header>
-                <p>Đây là nhân sự</p>
+<!--Hiển thị chính-->
+        <main id="nhan-su">
+            <!--Thanh tìm kiếm-->
+            <div class="search-img">
+                <i class='bx bx-search'></i>
+                <input type="text" placeholder="Tìm kiếm ...">
+            </div>
+            <!--Danh sách nhân sự-->
+            <section id = "employee-list">
+                <!--Bộ lọc-->
+                <div id = "employee-filter">
+                    <!--Lọc theo chức vụ-->
+                    <div class="filter">
+                        <div class="filter-item">
+                            <label for="chuc-vu">Chức vụ</label>
+                            <select name="chuc-vu" id="chuc-vu">
+                                <option value="tat-ca">Tất cả</option>
+                                <option value="giam-doc">Giám đốc</option>
+                                <option value="truong-phong">Trưởng phòng</option>
+                                <option value="nhan-vien">Nhân viên</option>
+                            </select>
+                        </div>
+                        <!--Lọc theo phòng ban-->
+                        <div class="filter-item">
+                            <label for="phong-ban">Phòng ban</label>
+                            <select name="phong-ban" id="phong-ban">
+                                <option value="tat-ca">Tất cả</option>
+                                <option value="kinh-doanh">Kinh doanh</option>
+                                <option value="san-xuat">Sản xuất</option>
+                                <option value="ke-toan">Kế toán</option>
+                            </select>
+                        </div>
+                        <!--Lọc theo giới tính-->
+                        <div class="filter-item">
+                            <label for="gioi-tinh">Giới tính</label>
+                            <select name="gioi-tinh" id="gioi-tinh">
+                                <option value="tat-ca">Tất cả</option>
+                                <option value="nam">Nam</option>
+                                <option value="nu">Nữ</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!--Thông tin nhân sự-->
+                    <div class = "employee-card">
+                        <div class="employee-card-header">
+                            <img src="./images/employee.jpg" alt="employee">
+                            <div class="employee-info">
+                                <h3>Nguyễn Văn A</h3>
+                                <p>Giám đốc</p>
+                            </div>
+                        </div>
+                        <div class="employee-card-body">
+                            <div class="employee-info">
+                                <p>Ngày sinh: 01/01/1990</p>
+                                <p>Giới tính: Nam</p>
+                                <p>Địa chỉ: 123 Đường ABC, Quận 1, TP.HCM</p>
+                                <p>Số điện thoại: 0123456789</p>
+                                <p>Email:</p>
+                    </div>
             </section>
         </main>
     </body>
