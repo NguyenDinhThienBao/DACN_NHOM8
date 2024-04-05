@@ -14,7 +14,24 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
+
+        <!--Navbar- thanh ngang menu-->
         
+        <header class="header">
+            
+            <nav class="navbar">
+                <a href="#">
+                    <i class='bx bx-chat'></i>
+                </a>
+                <a href="#">
+                    <i class='bx bx-bell'></i>
+                </a>
+                <a href="#">
+                    <a href="dang_nhap.html"><i class='bx bx-user'></i></a>
+                </a>
+            </nav>
+        </header>
+
         <!--Mục lục-->
         <div class="sidebar">
             <div class="logo-content">
@@ -38,22 +55,6 @@
                     </a>
                     <span class="tooltip">Trang chủ</span> <!--khi đưa chuột vô nó sẽ hiện chữ trang chủ, tương tự với mấy cái dưới-->
                 </li>                                       <!--khi menu thu hẹp chỉ hiện icon thì đưa chuột vô icon sẽ hiện chữ-->
-
-                <li class="list-item">
-                    <a href="#">
-                        <a href="dang_nhap.html"><i class='bx bx-user'></i></a>
-                        <a href="dang_nhap.html"><span class="links-name">User</span></a>
-                    </a>
-                    <span class="tooltip">User</span>
-                </li>
-
-                <li class="list-item">
-                    <a href="#">
-                        <i class='bx bx-chat'></i>
-                        <span class="links-name">Messages</span>
-                    </a>
-                    <span class="tooltip">Messages</span>
-                </li>
 
                 <li class="list-item">
                     <a href="#">
@@ -107,12 +108,10 @@
         </div>
         <script src="script.js"></script> <!--javascript để làm cái thu ra thu vô của menu-->
 
-
-        <main id="main-doc">
-            <section class="main_section" id="index">
-                <header>Trang chủ</header>
-                <p>Đây là trang chủ</p>
-            </section>
-        </main>
+        <!--nội dung content-->
+        <div class="content">
+            
+        </div>
+        
     </body>
 </html>
