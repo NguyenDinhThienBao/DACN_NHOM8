@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');*/
 
 * {
     margin: 0;
@@ -16,15 +16,10 @@ body {
     position:fixed;
     top:0;
     left: 0;
-    width: 80px;
+    width: 240px;
     height: 100%;
     background: #25b9b9;
     padding: 6px 14px;
-    transition: .5s ease;
-}
-
-.sidebar.active {
-    width: 240px;
 }
 
 .sidebar .logo-content .logo {
@@ -34,15 +29,7 @@ body {
     width: 100%;
     height: 50px;
     pointer-events: none;
-    opacity: 0;
-    transition: .3s ease;
 }
-
-.sidebar.active .logo-content .logo {
-    transition-delay: .2s;
-    opacity: 1;
-}
-
 
 .logo-content .logo h3 {
     font-size: 20px;
@@ -59,7 +46,7 @@ body {
 .sidebar #btn {
     position:absolute;
     top: 6px;
-    left: 50%;
+    left: 90%;
     transform: translateX(-50%);
     color:#fff;
     font-size: 20px;
@@ -67,10 +54,6 @@ body {
     height: 50px;
     text-align: center;
     line-height: 50px;
-}
-
-.sidebar.active #btn {
-    left: 90%;
 }
 
 .sidebar ul {
@@ -101,10 +84,6 @@ body {
     color:#fff;
 }
 
-.sidebar.active ul li input {
-    padding: 0 20px 0 50px;
-}
-
 .sidebar ul li .bx-search {
     position:absolute;
     color:#fff;
@@ -126,27 +105,11 @@ body {
     background: #c64343;
 }
 
-.sidebar ul .list-item.active a {
-    background: #c64343;
-}
-
 .sidebar ui li i {
     min-width: 50px;
     height: 50px;
     text-align: center;
     line-height: 50px;
-}
-
-.sidebar .links-name {
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity .3s ease;
-}
-
-.sidebar.active .links-name {
-    transition-delay: .2s;
-    opacity: 1;
-    pointer-events: auto;
 }
 
 .sidebar .list-logout {
@@ -160,13 +123,9 @@ body {
     width: 89%;
 }
 
-<<<<<<< Updated upstream
 .sidebar ul li .tooltip {
-<<<<<<< HEAD
     
 }
-=======
-=======
     position:absolute;
     top: 0;
     left: 130px;
@@ -201,7 +160,6 @@ h3 {
     padding-bottom: 10px;
 }
 
->>>>>>> f32ed53062d8a2eddd684ddc90336e09d4f0a306
 a {
     text-decoration: none;
 }
@@ -216,31 +174,26 @@ a {
 }
 
 .content {
-<<<<<<< HEAD
     position:absolute;
     top:100px;
     left: 260px;
     right: 20px;
 }
-
-.content-items {
-=======
->>>>>>> f32ed53062d8a2eddd684ddc90336e09d4f0a306
+.content-item {
     width: 50%;
     margin: 15px;
     box-sizing: border-box;
     float:left;
     text-align: center;
     border-radius: 20px;
-<<<<<<< HEAD
     padding-top: 10px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.22); /*đổ bóng*/
-=======
     cursor:pointer;
     padding-top: 10px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.22);
     transition: .4s;
->>>>>>> f32ed53062d8a2eddd684ddc90336e09d4f0a306
+    padding-top: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.22); /*đổ bóng*/
     background: white;
 }
 
@@ -255,7 +208,6 @@ p {
     padding-top: 0 8px;
 }
 
-<<<<<<< HEAD
 .table-container {
     position:absolute;
     top: 100px;
@@ -306,12 +258,3 @@ p {
 .navbar a:hover::before { /*trỏ chuột sẽ hiện đường gạch phía dưới*/
     width: 100%;
 }
-
-/*===============================*/
-
->>>>>>> Stashed changes
-=======
-
-
-/*============*/
->>>>>>> f32ed53062d8a2eddd684ddc90336e09d4f0a306

@@ -18,7 +18,24 @@
             <i class='bx bx-arrow-back'><a href="./khach_hang.html"></a></i>
         </div>-->
 
+        <!--Navbar- thanh ngang menu-->
+        
+        <header class="header">
+            
+            <nav class="navbar">
+                <a href="#">
+                    <i class='bx bx-chat'></i>
+                </a>
+                <a href="#">
+                    <i class='bx bx-bell'></i>
+                </a>
+                <a href="#">
+                    <a href="dang_nhap.html"><i class='bx bx-user'></i></a>
+                </a>
+            </nav>
+        </header>
 
+        <!--sidebar-->
         <div class="sidebar">
             <div class="logo-content">
                 <div class="logo">
@@ -34,28 +51,11 @@
                     <input type="text" placeholder="Tìm kiếm ...">
                 </li>
 
-                <li class="list-item active">
+                <li class="list-item">
                     <a href="#">
                         <a href="index.html"><i class='bx bx-grid-alt'></i></a>
                         <a href="index.html"><span class="links-name">Trang chủ</span></a>
                     </a>
-                    <span class="tooltip">Trang chủ</span>
-                </li>
-
-                <li class="list-item">
-                    <a href="#">
-                        <a href="dang_nhap.html"><i class='bx bx-user'></i></a>
-                        <a href="dang_nhap.html"><span class="links-name">User</span></a>
-                    </a>
-                    <span class="tooltip">User</span>
-                </li>
-
-                <li class="list-item">
-                    <a href="#">
-                        <i class='bx bx-chat'></i>
-                        <span class="links-name">Messages</span>
-                    </a>
-                    <span class="tooltip">Messages</span>
                 </li>
 
                 <li class="list-item">
@@ -63,7 +63,6 @@
                         <a href="khach_hang.html"><i class='bx bx-user-circle' ></i></a>
                         <a href="khach_hang.html"><span class="links-name">Khách hàng</span></a>
                     </a>
-                    <span class="tooltip">Khách hàng</span>
                 </li>
 
                 <li class="list-item">
@@ -71,7 +70,6 @@
                         <a href="nhan_su.html"><i class='bx bx-id-card'></i></a>
                         <a href="nhan_su.html"><span class="links-name">Nhân sự</span></a>
                     </a>
-                    <span class="tooltip">Nhân sự</span>
                 </li>
 
                 <li class="list-item">
@@ -79,7 +77,6 @@
                         <a href="san_xuat.html"><i class='bx bx-package'></i></a>
                         <a href="san_xuat.html"><span class="links-name">Sản xuất</span></a>
                     </a>
-                    <span class="tooltip">Sản xuất</span>
                 </li>
 
                 <li class="list-item">
@@ -87,7 +84,6 @@
                         <a href="mua_ban.html"><i class='bx bx-shopping-bag'></i></a>
                         <a href="mua_ban.html"><span class="links-name">Mua bán</span></a>
                     </a>
-                    <span class="tooltip">Mua bán</span>
                 </li>
 
                 <li class="list-item">
@@ -95,7 +91,6 @@
                         <a href="tai_chinh.html"><i class='bx bx-wallet-alt'></i></a>
                         <a href="tai_chinh.html"><span class="links-name">Tài chính</span></a>
                     </a>
-                    <span class="tooltip">Tài chính</span>
                 </li>
             </ul>
 
@@ -108,8 +103,86 @@
                 </li>
             </ul>
         </div>
-        <script src="script.js"></script>     
         
-        
+        <!--nội dung content-->
+        <div class="content">
+            <div class="back">
+                <i class='bx bx-arrow-back'><a href="./khach_hang.html"></a></i>
+            </div>
+
+            <h2>KHÁCH HÀNG MỚI</h2>
+
+            <div class="ten">
+                <h3>NGUYỄN ĐÌNH THIÊN BẢO</h3>
+            </div>
+
+            <div class="items-khachhang">
+                <div class="TieuThu">Tiêu thụ (VND)</div>
+                <div class="SanPham">Sản phẩm (số lượng)</div>
+                <div class="Email">Email</div>
+                <div class="DiaChi">Địa chỉ</div>
+            </div>
+
+            <div class="history">
+                <h3>LỊCH SỬ GIAO DỊCH</h3>
+                <!--tạo bảng lịch sử giao dịch-->
+                <table>
+
+                    <thead>
+                        <tr><!--tạo hàng-->
+                            <th><!--tạo cột--><!--tiêu đề là th-->
+                                THỜI GIAN
+                            </th>
+                            <th>SẢN PHẨM</th>
+                            <th>SỐ LƯỢNG</th>
+                            <th>TỔNG TIỀN</th>
+                            <th>TRẠNG THÁI</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr><!--tạo hàng-->
+                            <td><!--tạo cột-->
+                                29/02/2024
+                            </td>
+                            <td>Laptop HP Pavilion X360</td>
+                            <td>2</td>
+                            <td>2.000.000.000</td>
+                            <td>sc</td>
+                        </tr>
+    
+                        <tr><!--tạo hàng-->
+                            <td><!--tạo cột-->
+                                05/3/2024
+                            </td>
+                            <td>Sạc dự phòng</td>
+                            <td>1</td>
+                            <td>300.000</td>
+                            <td>đã chuyển</td>
+                        </tr>
+    
+                        <tr><!--tạo hàng-->
+                            <td><!--tạo cột-->
+                                20/3/2024
+                            </td>
+                            <td>Tai nghe Bluetooth</td>
+                            <td>1</td>
+                            <td>2.500.000</td>
+                            <td>chưa chuyển</td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot>
+
+                    </tfoot>
+
+                    
+                </table>
+            </div>
+
+            <div class="mail">
+                <h3>Gửi mail</h3>
+            </div>
+        </div>
     </body>
 </html>
