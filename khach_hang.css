@@ -140,16 +140,21 @@ a {
 }
 
 .content {
+    position:absolute;
+    top:100px;
+    left: 260px;
+    right: 20px;
+}
+
+.content-item {
     width: 50%;
     margin: 15px;
     box-sizing: border-box;
     float:left;
     text-align: center;
     border-radius: 20px;
-    cursor:pointer; /*trỏ chuột vào sẽ phóng to lên*/
     padding-top: 10px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.22); /*đổ bóng*/
-    transition: .4s;
     background: white;
 }
 

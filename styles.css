@@ -158,3 +158,11 @@ body {
 
 /*===============================*/
 
+
+/*nội dung chính - content*/
+.content {
+    position:absolute;
+    top:100px;
+    left: 260px;
+    right: 20px;
+}

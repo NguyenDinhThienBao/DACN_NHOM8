@@ -161,7 +161,22 @@ body {
 /*content nội dung*/
 .content {
     position:absolute;
-    top:100px;
-    left: 80px;
+    top:80px;
+    left: 260px;
+    right: 20px;
 
+}
+
+table {
+    width: 60%;
+}
+
+table, td, th {
+    border-bottom:1px solid #000;
+    border-collapse:collapse; /*hợp nhất border thành 1 đường kẻ*/
+}
+
+td, th {
+    padding: 6px 10px;
+    text-align: center;
 }
