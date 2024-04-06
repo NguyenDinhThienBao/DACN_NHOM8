@@ -5,80 +5,17 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-
-    word-spacing: 3px;
-    line-height: 25px;
-    width: 250px;
-    font-size: 15px;
-}
-
-body {
-    margin: 0;
-    min-height: 100vh;
-
 }
 
 body {
     min-height: 100vh;
-
     background: #fffcf1;
 }
-
-
-a {
-    text-decoration: none;
-}
-
-.gallery {
-    display:flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
-    align-items:center;
-    margin: 50px 0;
-}
-
-.content {
-    width: 50%;
-    margin: 15px;
-    box-sizing: border-box;
-    float:left;
-    text-align: center;
-    border-radius: 20px;
-    cursor:pointer;
-    padding-top: 10px;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.22);
-    transition: .4s;
-    background: white;
-}
-
-
-.content:hover {
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.22);
-    transform: translate(0px, -8px);
-}
-
-p {
-    text-align: center;
-    color: black;
-    padding-top: 0 8px;
-}
-
-
-
-/*============*/
-#navbar{
-    background-color: #25B9B9;
-    color: white;
-    position: fixed;
-    min-width: 290px;
-    width: 250px;
 
 .sidebar {
     position:fixed;
     top:0;
     left: 0;
-    width: 80px;
     width: 240px;
     height: 100%;
     background: #25b9b9;
@@ -181,6 +118,70 @@ p {
     margin: 15px 0;
 }
 
+/*BẢNG KHÁCH HÀNG*/
+h3 {
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.gallery {
+    display:flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items:center;
+    margin: 50px 0;
+}
+
+.content {
+    position:absolute;
+    top:100px;
+    left: 260px;
+    right: 20px;
+}
+
+.content-item {
+    width: 50%;
+    margin: 15px;
+    box-sizing: border-box;
+    float:left;
+    text-align: center;
+    border-radius: 20px;
+    padding-top: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.22); /*đổ bóng*/
+    background: white;
+}
+
+.content:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.22);
+    transform: translate(0px, -8px);
+}
+
+p {
+    text-align: center;
+    color: black;
+    padding-top: 0 8px;
+}
+
+.table-container {
+    position:absolute;
+    top: 100px;
+    left: 150px;
+    width: 80%;
+    display: flex;
+    justify-content:right;
+    align-items: center;
+}
+
+/*============*/
+
+
 /*navbar*/
 .header {
     position: fixed;
@@ -221,44 +222,3 @@ p {
 
 /*===============================*/
 
-
-/*mua bán*/
-#tensp {
-    text-align: center;
-    font-size: 30px;
-    margin: 0;
-    padding-top: 10px;
-}
-
-a {
-    text-decoration: none;
-}
-
-.hanghoa {
-    display:flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    margin: 50px 0;
-}
-
-.sanpham {
-    width: 20%;
-    margin: 15px;
-    box-sizing: border-box;
-    float:left;
-    text-align: center;
-    border-radius: 20px;
-    cursor: pointer;
-    padding-top: 10px;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-}
-
-/*nội dung chính - content*/
-.content {
-    position:absolute;
-    top:100px;
-    left: 260px;
-    right: 20px;
-}
