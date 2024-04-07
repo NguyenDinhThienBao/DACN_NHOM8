@@ -161,8 +161,9 @@ body {
 
 /*nội dung chính - content*/
 .content {
-    position:absolute;
-    top:100px;
-    left: 260px;
-    right: 20px;
+    position: relative;
+    margin-top: 100px;
+    margin-left: 240px;
+    padding: 20px 30px;
+    background: #f0f0f0;
 }
