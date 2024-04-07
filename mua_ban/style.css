@@ -214,3 +214,61 @@ img {
     display: block;
 }
 
+p {
+    text-align: center;
+    color:#b2bec3;
+    padding-top: 0 8px;
+}
+
+h5 {
+    font-size: 26px;
+    text-align: center;
+    color: #c64343;
+    margin: 0;
+}
+
+button {
+    text-align: center;
+    font-size: 24px;
+    color:#fff;
+    width: 100%;
+    padding: 15px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    margin-top: 5px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.buy {
+    background: #004aad;
+    font-weight: 600;
+}
+
+@media(max-width:1000px){
+    .sanpham{
+        width: 45%;
+    }
+}
+
+@media(max-width:750px){
+    .sanpham{
+        width: 100%;
+    }
+}
+
+/*button thêm xóa hàng hóa*/
+.btn {
+    width: 40%;
+    height: 45px;
+    background:#004aad;
+    border: 2px solid rgba(255, 255, 255, .2);
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+}
