@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Hệ thống ERP</title>
+        <link rel="stylesheet" href="../khach_hang_moi/style.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="icon" href="./favicon.ico" type="image/x-icon">
+        <!--Monsterrat-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+        <!--Navbar- thanh ngang menu-->
+        
+        <header class="header">
+            
+            <nav class="navbar">
+                <a href="#">
+                    <i class='bx bx-chat'></i>
+                </a>
+                <a href="#">
+                    <i class='bx bx-bell'></i>
+                </a>
+                <a href="#">
+                    <a href="dang_nhap.html"><i class='bx bx-user'></i></a>
+                </a>
+            </nav>
+        </header>
+
+        <!--sidebar-->
+        <div class="sidebar">
+            <div class="logo-content">
+                <div class="logo">
+                    <i class='bx bxl-meta'></i>
+                    <h3>Advee ERP</h3>
+                </div>
+                <i class='bx bx-menu' id="btn"></i>
+            </div>
+
+            <ul class="list">
+                <li class="search">
+                    <i class='bx bx-search'></i>
+                    <input type="text" placeholder="Tìm kiếm ...">
+                </li>
+
+                <li class="list-item">
+                    <a href="#">
+                        <a href="/index.html">
+                            <i class='bx bx-grid-alt'></i>
+                            <span class="links-name">Trang chủ</span>
+                        </a>
+                    </a>
+                </li>
+
+                <li class="list-item">
+                    <a href="#">
+                        <a href="/khach_hang/index.html">
+                            <i class='bx bx-user-circle' ></i>
+                            <span class="links-name">Khách hàng</span>
+                        </a>
+                    </a>
+                </li>
+
+                <li class="list-item">
+                    <a href="#">
+                        <a href="/nhan_su/index.html">
+                            <i class='bx bx-id-card'></i>
+                            <span class="links-name">Nhân sự</span>
+                        </a>
+                    </a>
+                </li>
+
+                <li class="list-item">
+                    <a href="#">
+                        <a href="/san_xuat/index.html">
+                            <i class='bx bx-package'></i>
+                            <span class="links-name">Sản xuất</span>
+                        </a>
+                    </a>
+                </li>
+
+                <li class="list-item">
+                    <a href="#">
+                        <a href="/mua_ban/index.html">
+                            <i class='bx bx-shopping-bag'></i>
+                            <span class="links-name">Mua bán</span>
+                        </a>
+                    </a>
+                </li>
+
+                <li class="list-item">
+                    <a href="#">
+                        <a href="/tai_chinh/index.html">
+                            <i class='bx bx-wallet-alt'></i>
+                            <span class="links-name">Tài chính</span>
+                        </a>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="list-logout">
+                <li>
+                    <a href="#">
+                        <i class='bx bx-log-out'></i>
+                        <span class="links-name">Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <!--nội dung content-->
+        <div class="content">
+            <div class="back">
+                <a href="/khach_hang/index.html"><i class='bx bx-arrow-back'></i></a>
+            </div>
+
+            <h2>KHÁCH HÀNG MỚI</h2>
+
+            <div class="ten">
+                <h3>TRẦN PHƯỚC CHUNG</h3>
+            </div>
+
+            <div class="items-khachhang">
+                <div class="TieuThu">Tiêu thụ (VND)</div>
+                <div class="SanPham">Sản phẩm (số lượng)</div>
+                <div class="Email">Email</div>
+                <div class="DiaChi">Địa chỉ</div>
+            </div>
+
+            <div class="history">
+                <h3>LỊCH SỬ GIAO DỊCH</h3>
+                <!--tạo bảng lịch sử giao dịch-->
+                <table>
+
+                    <thead>
+                        <tr><!--tạo hàng-->
+                            <th><!--tạo cột--><!--tiêu đề là th-->
+                                THỜI GIAN
+                            </th>
+                            <th>SẢN PHẨM</th>
+                            <th>SỐ LƯỢNG</th>
+                            <th>TỔNG TIỀN</th>
+                            <th>TRẠNG THÁI</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr><!--tạo hàng-->
+                            <td><!--tạo cột-->
+                                29/02/2024
+                            </td>
+                            <td>Laptop HP Pavilion X360</td>
+                            <td>2</td>
+                            <td>2.000.000.000</td>
+                            <td>sc</td>
+                        </tr>
+    
+                        <tr><!--tạo hàng-->
+                            <td><!--tạo cột-->
+                                05/3/2024
+                            </td>
+                            <td>Sạc dự phòng</td>
+                            <td>1</td>
+                            <td>300.000</td>
+                            <td>đã chuyển</td>
+                        </tr>
+    
+                        <tr><!--tạo hàng-->
+                            <td><!--tạo cột-->
+                                20/3/2024
+                            </td>
+                            <td>Tai nghe Bluetooth</td>
+                            <td>1</td>
+                            <td>2.500.000</td>
+                            <td>chưa chuyển</td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot>
+
+                    </tfoot>
+
+                    
+                </table>
+            </div>
+
+            <div class="mail">
+                <h3>Gửi mail</h3>
+            </div>
+        </div>
+    </body>
+</html>
