@@ -158,11 +158,6 @@ a {
     background: white;
 }
 
-.content:hover {
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.22);
-    transform: translate(0px, -8px);
-}
-
 p {
     text-align: center;
     color: black;
