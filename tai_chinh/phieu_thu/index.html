@@ -5,17 +5,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Hệ thống ERP</title>
-        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="/tai_chinh/style.css">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <link rel="icon" href="./favicon.ico" type="image/x-icon">
+        <script src="script.js"></script>
         <!--Monsterrat-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <script src="script.js"></script>
     </head>
     <body>
 
+        
         <!--Navbar- thanh ngang menu-->
         
         <header class="header">
@@ -33,9 +34,8 @@
             </nav>
         </header>
 
-
          <!--Mục lục-->
-         <div class="sidebar">
+        <div class="sidebar">
             <div class="logo-content">
                 <div class="logo">
                     <i class='bx bxl-meta'></i>
@@ -52,7 +52,7 @@
 
                 <li class="list-item">
                     <a href="#">
-                        <a href="../index.html">
+                        <a href="/index.html">
                             <i class='bx bx-grid-alt'></i>
                             <span class="links-name">Trang chủ</span>
                         </a>
@@ -61,7 +61,7 @@
 
                 <li class="list-item">
                     <a href="#">
-                        <a href="../khach_hang/index.html">
+                        <a href="/khach_hang/index.html">
                             <i class='bx bx-user-circle' ></i>
                             <span class="links-name">Khách hàng</span>
                         </a>
@@ -70,7 +70,7 @@
 
                 <li class="list-item">
                     <a href="#">
-                        <a href="../nhan_su/index.html">
+                        <a href="/nhan_su/index.html">
                             <i class='bx bx-id-card'></i>
                             <span class="links-name">Nhân sự</span>
                         </a>
@@ -79,7 +79,7 @@
 
                 <li class="list-item">
                     <a href="#">
-                        <a href="index.html">
+                        <a href="/san_xuat/index.html">
                             <i class='bx bx-package'></i>
                             <span class="links-name">Sản xuất</span>
                         </a>
@@ -88,7 +88,7 @@
 
                 <li class="list-item">
                     <a href="#">
-                        <a href="../mua_ban/index.html">
+                        <a href="/mua_ban/index.html">
                             <i class='bx bx-shopping-bag'></i>
                             <span class="links-name">Mua bán</span>
                         </a>
@@ -97,9 +97,12 @@
 
                 <li class="list-item">
                     <a href="#">
-                        <a href="../tai_chinh/index.html">
+                        <a href="/tai_chinh/index.html">
                             <i class='bx bx-wallet-alt'></i>
                             <span class="links-name">Tài chính</span>
+                        </a>
+                        <a href="/tai_chinh/phieu_thu/index.html">
+                            <span class="links-name">Phiếu thu</span>
                         </a>
                     </a>
                 </li>
@@ -114,16 +117,75 @@
                 </li>
             </ul>
         </div>
-        
-        <!--Hiển thị chính-->
+
+        <!--Nội dung content-->
         <div class="content">
-            <main id="main-doc">
-                <section class="main_section" id="san_xuat">
-                    <header>Sản xuất</header>
-                    <p>Đây là sản xuất</p>
-                </section>
-            </main>
+
+            <div class="back">
+                <a href="/tai_chinh/index.html"><i class='bx bx-arrow-back'></i></a>
+            </div>
+
+            <div class="phieuthu">
+                <from action=""> 
+                    <h2>PHIẾU THU TIỀN</h2>
+                    <div class="input-box">
+                        <h4>Ngày ghi sổ</h4>
+                        <input type="text" placeholder="Username" required>
+                    </div>
+        
+                    <div class="input-box">
+                        <h4>Số chứng từ</h4>
+                        <input type="text" placeholder="Username" required>
+                    </div>
+
+                    <div class="input-box">
+                        <h4>Ngày chứng từ</h4>
+                        <input type="text" placeholder="Username" required>
+                    </div>
+
+                    <div class="input-box">
+                        <h4>Nội dung thu tiền</h4>
+                        <input type="text" placeholder="Username" required>
+                    </div>
+
+                    <div class="input-box">
+                        <h4>Số tiền</h4>
+                        <input type="text" placeholder="Username" required>
+                    </div>
+
+                    <div class="input-box">
+                        <h4>Tài khoản</h4>
+                        <input type="text" placeholder="Username" required>
+                    </div>
+
+                    <div class="input-box">
+                        <h4>Loại doanh thu</h4>
+                        <input type="text" placeholder="Username" required>
+                    </div>
+
+                    <div class="input-box">
+                        <h3>Thông tin người giao dịch</h3>
+                        <div class="input-box">
+                            <h4>Họ và tên người nộp</h4>
+                            <input type="text" placeholder="Username" required>
+                        </div>
+                        <div class="input-box">
+                            <h4>Email</h4>
+                            <input type="text" placeholder="Username" required>
+                        </div>
+                        <div class="input-box">
+                            <h4>Địa chỉ</h4>
+                            <input type="text" placeholder="Username" required>
+                        </div>
+                    </div>
+                    
+
+                    <input type="submit" value="Submit" />
+                        
+                </from>             
+            </div>
         </div>
+        
         
     </body>
 </html>
