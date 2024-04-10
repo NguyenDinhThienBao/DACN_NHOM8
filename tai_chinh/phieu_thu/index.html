@@ -5,9 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Hệ thống ERP</title>
-        <link rel="stylesheet" href="../khach_hang_moi/style.css">
+        <link rel="stylesheet" href="/tai_chinh/style.css">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <link rel="icon" href="./favicon.ico" type="image/x-icon">
+        <script src="script.js"></script>
         <!--Monsterrat-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +16,7 @@
     </head>
     <body>
 
+        
         <!--Navbar- thanh ngang menu-->
         
         <header class="header">
@@ -32,7 +34,7 @@
             </nav>
         </header>
 
-        <!--sidebar-->
+         <!--Mục lục-->
         <div class="sidebar">
             <div class="logo-content">
                 <div class="logo">
@@ -99,6 +101,9 @@
                             <i class='bx bx-wallet-alt'></i>
                             <span class="links-name">Tài chính</span>
                         </a>
+                        <a href="/tai_chinh/phieu_thu/index.html">
+                            <span class="links-name">Phiếu thu</span>
+                        </a>
                     </a>
                 </li>
             </ul>
@@ -112,86 +117,75 @@
                 </li>
             </ul>
         </div>
-        
-        <!--nội dung content-->
+
+        <!--Nội dung content-->
         <div class="content">
+
             <div class="back">
-                <a href="/khach_hang/index.html"><i class='bx bx-arrow-back'></i></a>
+                <a href="/tai_chinh/index.html"><i class='bx bx-arrow-back'></i></a>
             </div>
 
-            <h2>KHÁCH HÀNG TIỀM NĂNG</h2>
+            <div class="phieuthu">
+                <from action=""> 
+                    <h2>PHIẾU THU TIỀN</h2>
+                    <div class="input-box">
+                        <h4>Ngày ghi sổ</h4>
+                        <input type="text" placeholder="Username" required>
+                    </div>
+        
+                    <div class="input-box">
+                        <h4>Số chứng từ</h4>
+                        <input type="text" placeholder="Username" required>
+                    </div>
 
-            <div class="ten">
-                <h3>NGUYỄN ĐÌNH THIÊN BẢO</h3>
-            </div>
+                    <div class="input-box">
+                        <h4>Ngày chứng từ</h4>
+                        <input type="text" placeholder="Username" required>
+                    </div>
 
-            <div class="items-khachhang">
-                <div class="TieuThu">Tiêu thụ (VND)</div>
-                <div class="SanPham">Sản phẩm (số lượng)</div>
-                <div class="Email">Email</div>
-                <div class="DiaChi">Địa chỉ</div>
-            </div>
+                    <div class="input-box">
+                        <h4>Nội dung thu tiền</h4>
+                        <input type="text" placeholder="Username" required>
+                    </div>
 
-            <div class="history">
-                <h3>LỊCH SỬ GIAO DỊCH</h3>
-                <!--tạo bảng lịch sử giao dịch-->
-                <table>
+                    <div class="input-box">
+                        <h4>Số tiền</h4>
+                        <input type="text" placeholder="Username" required>
+                    </div>
 
-                    <thead>
-                        <tr><!--tạo hàng-->
-                            <th><!--tạo cột--><!--tiêu đề là th-->
-                                THỜI GIAN
-                            </th>
-                            <th>SẢN PHẨM</th>
-                            <th>SỐ LƯỢNG</th>
-                            <th>TỔNG TIỀN</th>
-                            <th>TRẠNG THÁI</th>
-                        </tr>
-                    </thead>
+                    <div class="input-box">
+                        <h4>Tài khoản</h4>
+                        <input type="text" placeholder="Username" required>
+                    </div>
+
+                    <div class="input-box">
+                        <h4>Loại doanh thu</h4>
+                        <input type="text" placeholder="Username" required>
+                    </div>
+
+                    <div class="input-box">
+                        <h3>Thông tin người giao dịch</h3>
+                        <div class="input-box">
+                            <h4>Họ và tên người nộp</h4>
+                            <input type="text" placeholder="Username" required>
+                        </div>
+                        <div class="input-box">
+                            <h4>Email</h4>
+                            <input type="text" placeholder="Username" required>
+                        </div>
+                        <div class="input-box">
+                            <h4>Địa chỉ</h4>
+                            <input type="text" placeholder="Username" required>
+                        </div>
+                    </div>
                     
-                    <tbody>
-                        <tr><!--tạo hàng-->
-                            <td><!--tạo cột-->
-                                29/02/2024
-                            </td>
-                            <td>Laptop HP Pavilion X360</td>
-                            <td>2</td>
-                            <td>2.000.000.000</td>
-                            <td>sc</td>
-                        </tr>
-    
-                        <tr><!--tạo hàng-->
-                            <td><!--tạo cột-->
-                                05/3/2024
-                            </td>
-                            <td>Sạc dự phòng</td>
-                            <td>1</td>
-                            <td>300.000</td>
-                            <td>đã chuyển</td>
-                        </tr>
-    
-                        <tr><!--tạo hàng-->
-                            <td><!--tạo cột-->
-                                20/3/2024
-                            </td>
-                            <td>Tai nghe Bluetooth</td>
-                            <td>1</td>
-                            <td>2.500.000</td>
-                            <td>chưa chuyển</td>
-                        </tr>
-                    </tbody>
 
-                    <tfoot>
-
-                    </tfoot>
-
-                    
-                </table>
-            </div>
-
-            <div class="mail">
-                <h3>Gửi mail</h3>
+                    <input type="submit" value="Submit" />
+                        
+                </from>             
             </div>
         </div>
+        
+        
     </body>
 </html>
