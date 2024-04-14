@@ -160,12 +160,15 @@ body {
 
 
 /*nội dung chính - content*/
-.content {
+#nhan-su{
     display: flex;
     position: relative;
     margin-top: 100px;
     margin-left: 240px;
-    padding: 20px 30px;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+
 }
 /*Thanh tìm kiếm*/
 #search-box {
@@ -176,7 +179,7 @@ cursor: pointer;
 width: 300px;
 border-radius: 20px;
 display: flex;
-align-items: flex-start; /* căn lề trên cho các phần tử con */
+margin-left: 10px;
 }
 /*text*/
 #search-box #search-text{
@@ -196,23 +199,19 @@ align-items: flex-start; /* căn lề trên cho các phần tử con */
 }
 
 /*Xử lý danh sách nhân viên*/
-
-#employee-list {
-    display: flex;
-    background: #315e39;
+#employee-list{
     margin-top: 50px;
-}
-#employee-filter {
-    position: absolute;
+    margin-left: 20px;
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex: 1;
+}
+#employee-filter{
     background: white;
-    flex-wrap: wrap;
-    justify-content: center;
+    padding: 10px;
+    height: 100%;
+    flex: 1 1 auto;
 }
 #employee-card{
-    position: absolute;
-    display: flex;
-    flex: 2;
-    flex-wrap: wrap;
+    flex: 8 1 auto;
 }
