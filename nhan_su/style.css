@@ -161,8 +161,58 @@ body {
 
 /*nội dung chính - content*/
 .content {
-    position:absolute;
-    top:100px;
-    left: 260px;
-    right: 20px;
+    display: flex;
+    position: relative;
+    margin-top: 100px;
+    margin-left: 240px;
+    padding: 20px 30px;
+}
+/*Thanh tìm kiếm*/
+#search-box {
+position: absolute;
+background: white;
+border: 1px solid black;
+cursor: pointer;
+width: 300px;
+border-radius: 20px;
+display: flex;
+align-items: flex-start; /* căn lề trên cho các phần tử con */
+}
+/*text*/
+#search-box #search-text{
+    border: none;
+    outline: none;
+    background: none;
+    width: 85%;
+    padding: 10px 10px;
+}
+/*button*/
+#search-box #search-btn{
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 10px;
+}
+
+/*Xử lý danh sách nhân viên*/
+
+#employee-list {
+    display: flex;
+    background: #315e39;
+    margin-top: 50px;
+}
+#employee-filter {
+    position: absolute;
+    display: flex;
+    flex: 1;
+    background: white;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#employee-card{
+    position: absolute;
+    display: flex;
+    flex: 2;
+    flex-wrap: wrap;
 }
