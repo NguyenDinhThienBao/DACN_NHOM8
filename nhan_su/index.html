@@ -117,20 +117,19 @@
             </ul>
         </div>
     </div>
-
     
 <!--Hiển thị chính-->
-  <div class="content" >
-    <main id="nhan-su">
+   <main id="nhan-su">
         <!--Thanh tìm kiếm-->
-        <form action ="" id ="search-box">
-            <input type="text" placeholder="Tìm kiếm..." id="search-text" required>
-            <button type="submit" id="search-btn">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-        </form>
-        <!--Danh sách nhân sự-->
-        <section id = "employee-list">
+        <section id="employee-search">
+            <div id ="search-box">
+            <form action ="">
+                <input type="text" placeholder="Tìm kiếm..." id="search-text" required>
+                <button type="submit" id="search-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+        </div>
             <!--Bộ lọc-->
             <div id = "employee-filter">
                 <!--Lọc theo chức vụ-->
@@ -165,18 +164,37 @@
                     </div>
                 </div>
                 </div>
+                <div id="adjust-employee">
+                <div id="add-employee">
+                    <button type="button" id="add-btn">
+                        <text>Thêm</text>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
+                <div id="delete-employee">
+                    <button type="button" id="delete-btn">
+                        <text>Xóa</text>
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
+                </div>
+            </div>
+            </section>
+
                 <!--Thông tin nhân sự-->
-                <div id = "employee-card">
-                    <img src="./images/employee.jpg" alt="Ảnh nhân viên">
+                    <!-- <section id="employee-card">
+                    <div id="employee-info">
+                        <img src="./wallhaven-7pqr2e.jpg" alt="Ảnh nhân viên" id="employee-img">
                     <div class="employee-card-body">
-                        <div class="employee-info">
-                            <div id="ho_ten_nhan_vien"><p><strong>HỌ VÀ TÊN</strong></p></div>
-                            <div id="chuc_vu_nhan_vien"><p>Chức vụ</p></div>
+                            <div id="ho_ten_nhan_vien"><p><strong>TRẦN PHƯỚC CHUNG</strong></p></div>
+                            <div id="chuc_vu_nhan_vien"><p>Quản lý</p></div>
                             <div id="email_nhan_vien"><p>email liên hệ</p></div>
                             <div id="so_dien_thoai_nhan_vien"><p>số điện thoại</p></div>
-                </div>
-        </section>
+                    </div>
+                    </div>
+
+                </section> -->
+
+
     </main>
-  </div>   
     </body>
 </html>

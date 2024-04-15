@@ -160,33 +160,44 @@ body {
 
 
 /*nội dung chính - content*/
-.content {
+#nhan-su{
     display: flex;
     position: relative;
-    margin-top: 100px;
+    margin-top: 30px;
     margin-left: 240px;
-    padding: 20px 30px;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+
+}
+#employee-search{
+    margin-top: 50px;
+    margin-left: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
 }
 /*Thanh tìm kiếm*/
 #search-box {
-position: absolute;
 background: white;
 border: 1px solid black;
 cursor: pointer;
 width: 300px;
 border-radius: 20px;
 display: flex;
-align-items: flex-start; /* căn lề trên cho các phần tử con */
+flex-direction: column;
+margin-left: 10px;
 }
-/*text*/
+/*text search*/
 #search-box #search-text{
+    
     border: none;
     outline: none;
     background: none;
     width: 85%;
     padding: 10px 10px;
 }
-/*button*/
+/*button search*/
 #search-box #search-btn{
     border: none;
     background: none;
@@ -195,24 +206,77 @@ align-items: flex-start; /* căn lề trên cho các phần tử con */
     padding: 10px 10px;
 }
 
-/*Xử lý danh sách nhân viên*/
-
-#employee-list {
-    display: flex;
-    background: #315e39;
-    margin-top: 50px;
-}
-#employee-filter {
-    position: absolute;
-    display: flex;
-    flex: 1;
+/*Bộ lọc nhân viên*/
+#employee-filter{
     background: white;
-    flex-wrap: wrap;
+    border: 1px solid black;
+    margin-left: 5px;
+    border-radius: 20px;
+    display: flex;
+    padding: 10px;
+    margin-right: 10px;
+    flex-direction: row;
+}
+.filter-item{
+    display: inline;
+    margin-bottom: 10px;
+}
+.filter-item select{
+    background: none;
+    font-family: "Montserrat", sans-serif;
+    border: 1px solid black;
+    outline: none;
+    margin-left: 5px;
+    border-radius: 20px;
     justify-content: center;
 }
-#employee-card{
-    position: absolute;
+/*Thêm, xóa nhân viên*/
+#adjust-employee{
+    background: white;
+    border: 1px solid black;
+    cursor: pointer;
+    width: 200px;
+    border-radius: 20px;
     display: flex;
-    flex: 2;
-    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: 5px;
 }
+#add-btn, #delete-btn{
+    text-align: center;
+    justify-content: center;
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 10px; 
+}
+/*Danh sách nhân viên*/
+ /* #employee-card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 3 1 auto;
+    width: 450px;
+    height: 100px;
+}
+#employee-info{
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    margin-top: 10px;
+    margin-left: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+#employee-img{
+    width: 150px;
+    height: 150px;
+    margin-right: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+#employee-card-body{
+    margin: 10px;
+} */
+
