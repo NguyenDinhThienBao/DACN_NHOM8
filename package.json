@@ -4,6 +4,7 @@
   "description": "Đồ án chuyên ngành",
   "main": "script.js",
   "scripts": {
+    "start": "nodemon --inspect script.js", 
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,6 +24,9 @@
   },
   "homepage": "https://github.com/NguyenDinhThienBao/DACN_NHOM8#readme",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2"   
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
   }
 }
