@@ -1,4 +1,4 @@
-const chart = document.querySelector("#chart").getContext('2d');
+const chart = document.getElementById('chart');
 
 //Tạo 1 chart instance
 new Chart(chart, {
