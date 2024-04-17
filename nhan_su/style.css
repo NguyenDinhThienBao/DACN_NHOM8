@@ -161,21 +161,18 @@ body {
 
 /*nội dung chính - content*/
 #nhan-su{
-    display: flex;
     position: relative;
+    display: flex;
+    flex-direction: column;
     margin-top: 30px;
     margin-left: 240px;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-
 }
 #employee-search{
     margin-top: 50px;
     margin-left: 20px;
-    width: 100%;
-    height: 100%;
     display: flex;
+    position: sticky;
+    z-index: 2000; /* Đảm bảo hiển thị "employee-search" trên cùng */
 }
 /*Thanh tìm kiếm*/
 #search-box {
@@ -232,18 +229,17 @@ margin-left: 10px;
 }
 /*Thêm, xóa nhân viên*/
 #adjust-employee{
-    background: white;
-    border: 1px solid black;
+    position: absolute;
+    right: 0;
+    align-items: center;
     cursor: pointer;
-    width: 200px;
+    width: 90px;
     border-radius: 20px;
     display: flex;
     flex-direction: row;
     margin-left: 5px;
 }
 #add-btn, #delete-btn{
-    text-align: center;
-    justify-content: center;
     border: none;
     background: none;
     outline: none;
@@ -251,32 +247,58 @@ margin-left: 10px;
     padding: 10px 10px; 
 }
 /*Danh sách nhân viên*/
- /* #employee-card {
+.employee-card {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    flex-wrap: wrap;
-    flex: 3 1 auto;
-    width: 450px;
-    height: 100px;
-}
-#employee-info{
-    display: flex;
+    flex-wrap: wrap;  
     flex-direction: row;
+    margin-top: 50px; /* Để tránh bị che bởi "employee-search" cố định */
+}
+.employee-info{
+    display: flex;
+    position: relative;
+    width: 30%;
     background-color: #fff;
     margin-top: 10px;
     margin-left: 30px;
     border: 1px solid black;
     border-radius: 10px;
+    justify-content: center;
 }
-#employee-img{
+.employee-img{
     width: 150px;
-    height: 150px;
+    height: auto;
     margin-right: 10px;
     border-radius: 10px;
-    border: 1px solid black;
+    border-right: 1px solid black;
 }
-#employee-card-body{
-    margin: 10px;
-} */
 
+.employee-card-body{
+    position: relative;
+    margin: 10px;
+}
+#chi_tiet_nhan_vien{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border: none;
+    background: none;
+    outline: none;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+.ho_ten_nhan_vien{
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.chuc_vu_nhan_vien{
+    background-color: #25b9b9;
+    padding: 5px;
+    text-transform: uppercase;
+}
+.email_nhan_vien, .so_dien_thoai_nhan_vien{
+    margin: 5px;
+    font-size: 11px;
+    color: #808080;
+}
