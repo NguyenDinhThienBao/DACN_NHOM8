@@ -175,3 +175,19 @@ canvas#chart {
     border-radius: 20px;
     padding: 20px;
 }
+
+
+
+/*=================PHIẾU THU====================*/
+.phieuthu {
+    background: #fff;
+    border: 2px solid rgba(255, 255, 255, .2);
+    color: #000;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+h2 {
+    font-size: 25px;
+    text-align: center;
+}
