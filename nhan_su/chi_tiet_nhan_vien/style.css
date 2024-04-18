@@ -163,3 +163,9 @@ body {
     margin-top: 30px;
     margin-left: 240px;
 }
+
+#chi_tiet_nhan_vien {
+    border-bottom: 1px solid #ccc;
+    width: 100px;
+}
+
