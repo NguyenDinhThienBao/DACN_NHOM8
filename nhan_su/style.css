@@ -161,9 +161,9 @@ body {
 
 /*nội dung chính - content*/
 #nhan-su{
-    position: relative;
+    position: relative; /*Hiển thị nút "Thêm, xóa nhân viên" ở góc dưới bên phải*/
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /*Hiển thị theo cột*/
     margin-top: 30px;
     margin-left: 240px;
 }
@@ -171,7 +171,7 @@ body {
     margin-top: 50px;
     margin-left: 20px;
     display: flex;
-    position: sticky;
+    position: sticky; /*Hiển thị "employee-search" cố định khi cuộn trang*/
     z-index: 2000; /* Đảm bảo hiển thị "employee-search" trên cùng */
 }
 /*Thanh tìm kiếm*/
@@ -229,7 +229,7 @@ margin-left: 10px;
 }
 /*Thêm, xóa nhân viên*/
 #adjust-employee{
-    position: absolute;
+    position: absolute; /*Hiển thị nút "Thêm, xóa nhân viên" ở góc dưới bên phải*/
     right: 0;
     align-items: center;
     cursor: pointer;
@@ -249,20 +249,20 @@ margin-left: 10px;
 /*Danh sách nhân viên*/
 .employee-card {
     display: flex;
-    flex-wrap: wrap;  
-    flex-direction: row;
+    flex-wrap: wrap;  /*Hiển thị dạng lưới, xuống dòng khi tràn*/
+    flex-direction: row; /*Hiển thị theo hàng ngang*/
     flex: 3 1 auto;
 }
 .employee-info{
     display: flex;
-    position: relative;
+    position: relative; /*Hiển thị nút "chi tiết" ở góc dưới bên phải*/
     width: 30%;
     background-color: #fff;
     margin-top: 10px;
     margin-left: 30px;
     border: 1px solid black;
     border-radius: 10px;
-    justify-content: center;
+    justify-content: center; /*Căn giữa*/
 }
 .employee-img{
     width: 150px;
@@ -277,7 +277,7 @@ margin-left: 10px;
     margin: 10px;
 }
 #chi_tiet_nhan_vien{
-    position: absolute;
+    position: absolute; /*Hiển thị nút "chi tiết" ở góc dưới bên phải*/
     right: 0;
     bottom: 0;
     border: none;
@@ -288,20 +288,21 @@ margin-left: 10px;
 }
 .ho_ten_nhan_vien{
     font-size: 20px;
-    text-transform: uppercase;
+    text-transform: uppercase; /*viết hoa*/
     font-weight: bold;
     margin-bottom: 5px;
 }
 .chuc_vu_nhan_vien{
     background-color: #25b9b9;
     padding: 5px;
-    text-transform: uppercase;
+    text-transform: uppercase; /*viết hoa*/
 }
 .email_nhan_vien, .so_dien_thoai_nhan_vien{
     margin: 5px;
     font-size: 11px;
     color: #808080;
 }
+
 a:link{
     color: black;
 }
