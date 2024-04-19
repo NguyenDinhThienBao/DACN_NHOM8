@@ -1,0 +1,317 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #fffcf1;
+}
+
+.sidebar {
+    position:fixed;
+    top:0;
+    left: 0;
+    width: 240px;
+    height: 100%;
+    background: #25b9b9;
+    padding: 6px 14px;
+}
+
+.sidebar .logo-content .logo {
+    display:flex;
+    align-items: center;
+    color: #fff;
+    width: 100%;
+    height: 50px;
+    pointer-events: none;
+}
+
+.logo-content .logo h3 {
+    font-size: 20px;
+    color:#fff;
+}
+
+.logo h3 {
+    font-size: 20px;
+    color:#fff;
+    text-align: center;
+    margin-top: 6px;
+}
+
+.sidebar #btn {
+    position:absolute;
+    top: 6px;
+    left: 90%;
+    transform: translateX(-50%);
+    color:#fff;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.sidebar ul {
+    margin-top: 20px;
+}
+
+.sidebar ul li {
+    position:relative;
+    width: 100%;
+    height: 50px;
+    list-style: none;
+    margin: 5px 0;
+    line-height: 50px;
+}
+
+.sidebar ul li input {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    border:none;
+    outline:none;
+    padding-left: 50px;
+    font-size: 18px;
+    color:#fff;
+}
+
+.sidebar ul li .bx-search {
+    position:absolute;
+    color:#fff;
+    font-size: 22px;
+    z-index: 99;
+}
+
+.sidebar ul li a {
+    display: center;
+    align-items: center;
+    color:#fff;
+    text-decoration: none;
+    border-radius: 6px;
+    white-space: nowrap;
+    transition: .5s ease;
+}
+
+.sidebar ul li a:hover {
+    background: #c64343;
+}
+
+.sidebar ui li i {
+    min-width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.sidebar .list-logout {
+    position:absolute;
+    bottom: 0;
+    margin: 15px 0;
+}
+
+/*navbar*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 18px 100px;
+    background: #25b9b9;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar a {
+    position:relative;
+    font-size: 18px;
+    color:#fff;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar a::before {
+    content:'';
+    position:absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background:#fff;
+    transition: .3s; /*đường gạch trắng hiện từ trái sang phải 3s*/
+}
+
+.navbar a:hover::before { /*trỏ chuột sẽ hiện đường gạch phía dưới*/
+    width: 100%;
+}
+
+/*===============================*/
+
+
+/*nội dung chính - content*/
+#nhan-su{
+    position: relative; /*Hiển thị nút "Thêm, xóa nhân viên" ở góc dưới bên phải*/
+    display: flex;
+    flex-direction: column; /*Hiển thị theo cột*/
+    margin-top: 30px;
+    margin-left: 240px;
+}
+#employee-search{
+    margin-top: 50px;
+    margin-left: 20px;
+    display: flex;
+    position: sticky; /*Hiển thị "employee-search" cố định khi cuộn trang*/
+    z-index: 2000; /* Đảm bảo hiển thị "employee-search" trên cùng */
+}
+/*Thanh tìm kiếm*/
+#search-box {
+background: white;
+border: 1px solid black;
+cursor: pointer;
+width: 300px;
+border-radius: 20px;
+display: flex;
+flex-direction: column;
+margin-left: 10px;
+}
+/*text search*/
+#search-box #search-text{
+    
+    border: none;
+    outline: none;
+    background: none;
+    width: 85%;
+    padding: 10px 10px;
+}
+/*button search*/
+#search-box #search-btn{
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 10px;
+}
+
+/*Bộ lọc nhân viên*/
+#employee-filter{
+    background: white;
+    border: 1px solid black;
+    margin-left: 5px;
+    border-radius: 20px;
+    display: flex;
+    padding: 10px;
+    margin-right: 10px;
+    flex-direction: row;
+}
+.filter-item{
+    display: inline;
+    margin-bottom: 10px;
+}
+.filter-item select{
+    background: none;
+    font-family: "Montserrat", sans-serif;
+    border: 1px solid black;
+    outline: none;
+    margin-left: 5px;
+    border-radius: 20px;
+    justify-content: center;
+}
+/*Thêm, xóa nhân viên*/
+#adjust-employee{
+    position: absolute; /*Hiển thị nút "Thêm, xóa nhân viên" ở góc dưới bên phải*/
+    right: 0;
+    align-items: center;
+    cursor: pointer;
+    width: 90px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 5px;
+}
+#add-btn, #delete-btn{
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 10px; 
+}
+/*Danh sách nhân viên*/
+.employee-card {
+    display: flex;
+    flex-wrap: wrap;  /*Hiển thị dạng lưới, xuống dòng khi tràn*/
+    flex-direction: row; /*Hiển thị theo hàng ngang*/
+    flex: 3 1 auto;
+}
+.employee-info{
+    display: flex;
+    position: relative; /*Hiển thị nút "chi tiết" ở góc dưới bên phải*/
+    width: 30%;
+    background-color: #fff;
+    margin-top: 10px;
+    margin-left: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    justify-content: center; /*Căn giữa*/
+}
+.employee-img{
+    width: 150px;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 10px;
+    border-right: 1px solid black;
+}
+
+.employee-card-body{
+    position: relative;
+    margin: 10px;
+}
+#chi_tiet_nhan_vien{
+    position: absolute; /*Hiển thị nút "chi tiết" ở góc dưới bên phải*/
+    right: 0;
+    bottom: 0;
+    border: none;
+    background: none;
+    outline: none;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+.ho_ten_nhan_vien{
+    font-size: 20px;
+    text-transform: uppercase; /*viết hoa*/
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.chuc_vu_nhan_vien{
+    background-color: #25b9b9;
+    padding: 5px;
+    text-transform: uppercase; /*viết hoa*/
+}
+.email_nhan_vien, .so_dien_thoai_nhan_vien{
+    margin: 5px;
+    font-size: 11px;
+    color: #808080;
+}
+
+a:link{
+    color: black;
+}
+a:visited{
+    color: black;
+}
+a:active{
+    color: black;
+}
+a:hover{
+    color: #25b9b9;
+}
