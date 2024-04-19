@@ -1,0 +1,34 @@
+{
+  "name": "dacn_nhom8",
+  "version": "1.0.0",
+  "description": "Đồ án chuyên ngành",
+  "main": "script.js",
+  "scripts": {
+    "start": "nodemon --inspect script.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NguyenDinhThienBao/DACN_NHOM8.git"
+  },
+  "keywords": [
+    "erp",
+    "dacn",
+    "nhom8",
+    "web"
+  ],
+  "author": "nhom8",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NguyenDinhThienBao/DACN_NHOM8/issues"
+  },
+  "homepage": "https://github.com/NguyenDinhThienBao/DACN_NHOM8#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "express-handlebars": "^7.1.2"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.0"
+  }
+}

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Hệ thống ERP</title>
+        <link rel="stylesheet" href="/tai_chinh/luong_thuong/style.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="icon" href="./favicon.ico" type="image/x-icon">
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!--Monsterrat-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+        <!--Navbar- thanh ngang menu-->
+        
+        <header class="header">
+            
+            <nav class="navbar">
+                <a href="#">
+                    <i class='bx bx-chat'></i>
+                </a>
+                <a href="#">
+                    <i class='bx bx-bell'></i>
+                </a>
+                <a href="#">
+                    <a href="/dang_nhap/index.html"><i class='bx bx-user'></i></a>
+                </a>
+            </nav>
+        </header>
+
+
+        <!--Mục lục-->
+        <div class="sidebar">
+
+            <div class="logo-content">
+                <div class="logo">
+                    <i class='bx bxl-meta'></i>
+                    <h3>Advee ERP</h3>
+                </div>
+                <i class='bx bx-menu' id="btn"></i>
+            </div>
+        
+            <ul class="list">
+        
+                <li class="list-item">
+                    <a href="#">
+                        <a href="/index.html">
+                            <i class='bx bx-grid-alt'></i>
+                            <span class="links-name">Trang chủ</span>
+                        </a>
+                    </a>
+                </li>
+        
+                <li class="list-item">
+                    <a href="#">
+                        <a href="/khach_hang/index.html">
+                            <i class='bx bx-user-circle' ></i>
+                            <span class="links-name">Khách hàng</span>
+                        </a>
+                    </a>
+                </li>
+        
+                <li class="list-item">
+                    <a href="#">
+                        <a href="/nhan_su/index.html">
+                            <i class='bx bx-id-card'></i>
+                            <span class="links-name">Nhân sự</span>
+                        </a>
+                    </a>
+                </li>
+        
+                <li class="list-item">
+                    <a href="#">
+                        <a href="/san_xuat/index.html">
+                            <i class='bx bx-package'></i>
+                            <span class="links-name">Sản xuất</span>
+                        </a>
+                    </a>
+                </li>
+        
+                <li class="list-item">
+                    <a href="#">
+                        <a href="/mua_ban/index.html">
+                            <i class='bx bx-shopping-bag'></i>
+                            <span class="links-name">Mua bán</span>
+                        </a>
+                    </a>
+                </li>
+        
+                <li class="list-item">
+                    <a href="#">
+                        <a href="/tai_chinh/index.html">
+                            <i class='bx bx-wallet-alt'></i>
+                            <span class="links-name">Tài chính</span>
+                        </a>
+                        <a href="/tai_chinh/luong_thuong/index.html">
+                            <span class="links-name">Lương thưởng</span>
+                        </a>
+                    </a>
+                </li>
+            </ul>
+        
+            <ul class="list-logout">
+                <li>
+                    <a href="#">
+                        <i class='bx bx-log-out'></i>
+                        <span class="links-name">Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+<!--Hiển thị chính-->
+   <main id="nhan-su">
+        <!--Thanh tìm kiếm-->
+        <section id="employee-search">
+            <div id ="search-box">
+            <form action ="">
+                <input type="text" placeholder="Tìm kiếm..." id="search-text" required>
+                <button type="submit" id="search-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+        </div>
+            <!--Bộ lọc-->
+            <div id = "employee-filter">
+                <!--Lọc theo chức vụ-->
+                <div class="filter">
+                    <div class="filter-item">
+                        <label for="chuc-vu">Chức vụ</label>
+                        <select name="chuc-vu" id="chuc-vu">
+                            <option value="tat-ca">Tất cả</option>
+                            <option value="giam-doc">Giám đốc</option>
+                            <option value="truong-phong">Trưởng phòng</option>
+                            <option value="nhan-vien">Nhân viên</option>
+                        </select>
+                    </div>
+                    <!--Lọc theo phòng ban-->
+                    <div class="filter-item">
+                        <label for="phong-ban">Phòng ban</label>
+                        <select name="phong-ban" id="phong-ban">
+                            <option value="tat-ca">Tất cả</option>
+                            <option value="kinh-doanh">Kinh doanh</option>
+                            <option value="san-xuat">Sản xuất</option>
+                            <option value="ke-toan">Kế toán</option>
+                        </select>
+                    </div>
+                    <!--Lọc theo giới tính-->
+                    <div class="filter-item">
+                        <label for="gioi-tinh">Giới tính</label>
+                        <select name="gioi-tinh" id="gioi-tinh">
+                            <option value="tat-ca">Tất cả</option>
+                            <option value="nam">Nam</option>
+                            <option value="nu">Nữ</option>
+                        </select>
+                    </div>
+                </div>
+                </div>
+                <div id="adjust-employee">
+                <div id="add-employee">
+                    <button type="button" id="add-btn">
+                        <i class="fa-solid fa-user-plus"></i>
+                    </button>
+                </div>
+                
+                <div id="delete-employee">
+                    <button type="button" id="delete-btn">
+                        <i class="fa-solid fa-user-minus"></i>
+                    </button>
+                </div>
+            </div>
+            </section>
+
+                <!--Thông tin nhân sự-->
+                    <section class="employee-card">
+                    <div class="employee-info">
+                        <img src="./nhan_vien_1.png" alt="Ảnh nhân viên" class="employee-img">
+                    <div class="employee-card-body">
+                            <div class="ho_ten_nhan_vien"><p><strong>lê thị tố uyên</strong></p></div>
+                            <div class="chuc_vu_nhan_vien"><p>Quản lý</p></div>
+                            <div class="email_nhan_vien"><p>21521893@gm.uit.edu.vn</p></div>
+                            <div class="so_dien_thoai_nhan_vien"><p>0931285430</p></div>
+                    </div>
+                    <div id="chi_tiet_nhan_vien">
+                        <a href="#">
+                            <a href="/tai_chinh/luong_thuong/ct_luong_thuong/index.html"><i class="fa-solid fa-address-card"></i></a>
+                        </a>
+                    </div>
+                    </div>
+
+
+                    <div class="employee-info">
+                        <img src="./nhan_vien_1.png" alt="Ảnh nhân viên" class="employee-img">
+                    <div class="employee-card-body">
+                            <div class="ho_ten_nhan_vien"><p><strong>lê thị tố uyên</strong></p></div>
+                            <div class="chuc_vu_nhan_vien"><p>Quản lý</p></div>
+                            <div class="email_nhan_vien"><p>21521893@gm.uit.edu.vn</p></div>
+                            <div class="so_dien_thoai_nhan_vien"><p>0931285430</p></div>
+                    </div>
+                    <div id="chi_tiet_nhan_vien">
+                        <a href="#">
+                            <a href="/tai_chinh/luong_thuong/ct_luong_thuong/index.html"><i class="fa-solid fa-address-card"></i></a>
+                        </a>
+                    </div>
+                    </div>
+
+
+                    <div class="employee-info">
+                        <img src="./nhan_vien_1.png" alt="Ảnh nhân viên" class="employee-img">
+                    <div class="employee-card-body">
+                            <div class="ho_ten_nhan_vien"><p><strong>lê thị tố uyên</strong></p></div>
+                            <div class="chuc_vu_nhan_vien"><p>Quản lý</p></div>
+                            <div class="email_nhan_vien"><p>21521893@gm.uit.edu.vn</p></div>
+                            <div class="so_dien_thoai_nhan_vien"><p>0931285430</p></div>
+                    </div>
+                    <div id="chi_tiet_nhan_vien">
+                        <a href="#">
+                            <a href="/tai_chinh/luong_thuong/ct_luong_thuong/index.html"><i class="fa-solid fa-address-card"></i></a>
+                        </a>
+                    </div>
+                    </div>
+
+
+
+                    <div class="employee-info">
+                        <img src="./nhan_vien_1.png" alt="Ảnh nhân viên" class="employee-img">
+                    <div class="employee-card-body">
+                            <div class="ho_ten_nhan_vien"><p><strong>lê thị tố uyên</strong></p></div>
+                            <div class="chuc_vu_nhan_vien"><p>Quản lý</p></div>
+                            <div class="email_nhan_vien"><p>21521893@gm.uit.edu.vn</p></div>
+                            <div class="so_dien_thoai_nhan_vien"><p>0931285430</p></div>
+                    </div>
+                    <div id="chi_tiet_nhan_vien">
+                        <a href="#">
+                            <a href="/tai_chinh/luong_thuong/ct_luong_thuong/index.html"><i class="fa-solid fa-address-card"></i></a>
+                        </a>
+                    </div>
+                    </div>
+
+
+
+                    <div class="employee-info">
+                        <img src="./nhan_vien_1.png" alt="Ảnh nhân viên" class="employee-img">
+                    <div class="employee-card-body">
+                            <div class="ho_ten_nhan_vien"><p><strong>lê thị tố uyên</strong></p></div>
+                            <div class="chuc_vu_nhan_vien"><p>Quản lý</p></div>
+                            <div class="email_nhan_vien"><p>21521893@gm.uit.edu.vn</p></div>
+                            <div class="so_dien_thoai_nhan_vien"><p>0931285430</p></div>
+                    </div>
+                    <div id="chi_tiet_nhan_vien">
+                        <a href="#">
+                            <a href="/tai_chinh/luong_thuong/ct_luong_thuong/index.html"><i class="fa-solid fa-address-card"></i></a>
+                        </a>
+                    </div>
+                    </div>
+
+
+
+                    <div class="employee-info">
+                        <img src="./nhan_vien_1.png" alt="Ảnh nhân viên" class="employee-img">
+                    <div class="employee-card-body">
+                            <div class="ho_ten_nhan_vien"><p><strong>lê thị tố uyên</strong></p></div>
+                            <div class="chuc_vu_nhan_vien"><p>Quản lý</p></div>
+                            <div class="email_nhan_vien"><p>21521893@gm.uit.edu.vn</p></div>
+                            <div class="so_dien_thoai_nhan_vien"><p>0931285430</p></div>
+                    </div>
+                    <div id="chi_tiet_nhan_vien">
+                        <a href="#">
+                            <a href="/tai_chinh/luong_thuong/ct_luong_thuong/index.html"><i class="fa-solid fa-address-card"></i></a>
+                        </a>
+                    </div>
+                    </div>
+                </section>
+
+
+                
+
+    </main>
+    </body>
+</html>
