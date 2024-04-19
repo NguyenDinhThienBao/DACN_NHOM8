@@ -7,7 +7,7 @@
         <title>Hệ thống ERP</title>
         <link rel="stylesheet" href="./style.css">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="icon" href="./favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!--Monsterrat-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -112,14 +112,89 @@
         </div>
         
         <!--Hiển thị chính-->
-        <div class="content">
-            <main id="main-doc">
-                <section class="main_section" id="san_xuat">
-                    <header>Sản xuất</header>
-                    <p>Đây là sản xuất</p>
-                </section>
-            </main>
-        </div>
+        <main id="san_pham">
+            <section>
+               <a href="them_san_pham.html"> 
+                <button class="btn_lap_ke_hoach_san_xuat">
+                    <i class="fa-solid fa-pen"></i>
+                    <span>Lập kế hoạch sản xuất</span>
+                </button>
+            </a>
+            </section>
+            <span class="line"></span>
+            <section  class="main_workspace container-flex-row">
+        
+                <div class="sp_yeu_cau container-flex-column">
+                    <div class="title_yeu_cau container-flex-column">
+                        <p class="big-text">YÊU CẦU</p>
+                        <span class="red-color"></span>
+                    </div>
+                    <span class="line"></span>
+                    <div class="container-flex-column adjust-center">
+                        <items>
+                            <div>
+                                <p><p><strong>[WH/MO/00001]</strong></p>DDR4</p>
+                                <p>22/02/2024</p>
+                            </div>
+                            <button class="btn_chuyen">
+                                <i class="fa-solid fa-database"></i>
+                            </button>
+                        </items>
+                    </div>
+
+                    <div class="container-flex-column adjust-center">
+                        <items>
+                            <div>
+                                <p><p><strong>[WH/MO/00001]</strong></p>DDR4</p>
+                                <p>22/02/2024</p>
+                            </div>
+                            <button class="btn_chuyen">
+                                <i class="fa-solid fa-database"></i>
+                            </button>
+                        </items>
+                    </div>
+
+                </div>
+
+                <div class="sp_dang_tien_hanh container-flex-column">
+                    <div class="title_dang_tien_hanh container-flex-column">
+                        <p class="big-text">ĐANG TIẾN HÀNH</p>
+                        <span class="blue-color"></span>
+                    </div>
+                    <span class="line"></span>
+                    <div class="container-flex-column adjust-center">
+                        <items>
+                            <div>
+                                <p><p><strong>[WH/MO/00001]</strong></p>DDR4</p>
+                                <p>22/02/2024</p>
+                            </div>
+                            <button class="btn_chuyen">
+                                <i class="fa-solid fa-database"></i>
+                            </button>
+                        </items>
+                    </div>
+                </div>
+
+                <div class ="sp_da_hoan_thanh container-flex-column">
+                    <div class=" title_da_hoan_thanh container-flex-column">
+                        <p class="big-text">ĐÃ HOÀN THÀNH</p>
+                        <span class="green-color"></span>
+                    </div>
+                    <span class="line"></span>
+                    <div class="container-flex-column adjust-center">
+                        <items>
+                            <div>
+                                <p><p><strong>[WH/MO/00001]</strong></p>DDR4</p>
+                                <p>22/02/2024</p>
+                            </div>
+                            <button class="btn_chuyen">
+                                <i class="fa-solid fa-database"></i>
+                            </button>
+                        </items>
+                    </div>
+                </div>
+            </section>
+        </main>
         
     </body>
 </html>
