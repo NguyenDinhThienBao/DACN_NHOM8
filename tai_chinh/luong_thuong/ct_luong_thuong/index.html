@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Hệ thống ERP</title>
+        <link rel="stylesheet" href="/tai_chinh/style.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="icon" href="./favicon.ico" type="image/x-icon">
+        <script src="script.js"></script>
+        <!--Monsterrat-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+        
+        <!--Navbar- thanh ngang menu-->
+        
+        <header class="header">
+            
+            <nav class="navbar">
+                <a href="#">
+                    <i class='bx bx-chat'></i>
+                </a>
+                <a href="#">
+                    <i class='bx bx-bell'></i>
+                </a>
+                <a href="#">
+                    <a href="/dang_nhap/index.html"><i class='bx bx-user'></i></a>
+                </a>
+            </nav>
+        </header>
+
+         <!--Mục lục-->
+        <div class="sidebar">
+            <div class="logo-content">
+                <div class="logo">
+                    <i class='bx bxl-meta'></i>
+                    <h3>Advee ERP</h3>
+                </div>
+                <i class='bx bx-menu' id="btn"></i>
+            </div>
+
+            <ul class="list">
+
+                <li class="list-item">
+                    <a href="#">
+                        <a href="/index.html">
+                            <i class='bx bx-grid-alt'></i>
+                            <span class="links-name">Trang chủ</span>
+                        </a>
+                    </a>
+                </li>
+
+                <li class="list-item">
+                    <a href="#">
+                        <a href="/khach_hang/index.html">
+                            <i class='bx bx-user-circle' ></i>
+                            <span class="links-name">Khách hàng</span>
+                        </a>
+                    </a>
+                </li>
+
+                <li class="list-item">
+                    <a href="#">
+                        <a href="/nhan_su/index.html">
+                            <i class='bx bx-id-card'></i>
+                            <span class="links-name">Nhân sự</span>
+                        </a>
+                    </a>
+                </li>
+
+                <li class="list-item">
+                    <a href="#">
+                        <a href="/san_xuat/index.html">
+                            <i class='bx bx-package'></i>
+                            <span class="links-name">Sản xuất</span>
+                        </a>
+                    </a>
+                </li>
+
+                <li class="list-item">
+                    <a href="#">
+                        <a href="/mua_ban/index.html">
+                            <i class='bx bx-shopping-bag'></i>
+                            <span class="links-name">Mua bán</span>
+                        </a>
+                    </a>
+                </li>
+
+                <li class="list-item">
+                    <a href="#">
+                        <a href="/tai_chinh/index.html">
+                            <i class='bx bx-wallet-alt'></i>
+                            <span class="links-name">Tài chính</span>
+                        </a>
+                        <a href="/tai_chinh/luong_thuong/index.html">
+                            <span class="links-name">Lương thưởng</span>
+                        </a>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="list-logout">
+                <li>
+                    <a href="#">
+                        <i class='bx bx-log-out'></i>
+                        <span class="links-name">Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!--Nội dung content-->
+        <div class="content">
+
+            <div class="back">
+                <a href="/tai_chinh/luong_thuong/index.html"><i class='bx bx-arrow-back'></i></a>
+            </div>
+
+            <div class="phieuthu">
+                <from action=""> 
+                    <h2>PHIẾU LƯƠNG</h2>
+                    <div class="input-box">
+                        <h4></h4>
+                        <input type="text" placeholder="Username" required>
+                    </div>
+        
+                    <div class="input-box">
+                        <h4></h4>
+                        <input type="text" placeholder="Username" required>
+                    </div>
+
+                    <div class="input-box">
+                        <h4></h4>
+                        <input type="text" placeholder="Username" required>
+                    </div>
+
+                    <div class="input-box">
+                        <h4></h4>
+                        <textarea id="moneydetail" name="moneydetail" rows="3" cols="30" ></textarea>
+                    </div>
+
+                    <div class="input-box">
+                        <h4></h4>
+                        <input type="text" placeholder="Username" required>
+                    </div>
+
+                    <div class="input-box">
+                        <h4></h4>
+                        <input type="text" placeholder="Username" required>
+                    </div>
+
+                    <div class="input-box">
+                        <h4></h4>
+                        <input type="text" placeholder="Username" required>
+                    </div>
+
+                    <div class="input-box">
+                        <h3></h3>
+                        <div class="input-box">
+                            <h4></h4>
+                            <input type="text" placeholder="Username" required>
+                        </div>
+                        <div class="input-box">
+                            <h4></h4>
+                            <input type="text" placeholder="Username" required>
+                        </div>
+                        <div class="input-box">
+                            <h4></h4>
+                            <input type="text" placeholder="Username" required>
+                        </div>
+                    </div>
+                    
+
+                    <input type="submit" value="Xác nhận" />
+                        
+                </from>             
+            </div>
+        </div>
+        
+        
+    </body>
+</html>

@@ -84,12 +84,6 @@ body {
     color:#fff;
 }
 
-.sidebar ul li .bx-search {
-    position:absolute;
-    color:#fff;
-    font-size: 22px;
-    z-index: 99;
-}
 
 .sidebar ul li a {
     display: center;
