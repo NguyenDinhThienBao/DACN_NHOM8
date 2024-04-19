@@ -158,14 +158,26 @@ body {
 
 /*===============================*/
 /*Nội dung trang*/
-.content {
-    position:absolute;
-    top:80px;
-    left: 260px;
-    right: 20px;
+#khach-hang {
+    position:relative;
+    margin-top: 65px;
+    margin-left: 240px;
+    display:flex;
+    flex-direction: column;
 }
 
-/*Thanh tìm kiếm*/
+.line {
+    border-bottom: 2px solid black;
+    width: 100%;
+}
+
+/*===========Thanh tìm kiếm============*/
+#customer-search {
+    display: flex;
+    position: sticky; /*Hiển thị "customer-search" cố định khi cuộn trang*/
+    z-index: 2000; /* Đảm bảo hiển thị "customer-search" trên cùng */
+}
+
 #search-box {
     position:fixed;
     right: 20px;
@@ -199,41 +211,85 @@ body {
     padding: 10px 10px;
 }
 
+
 /*================BẢNG KHÁCH HÀNG======================*/
-.customer {
-    text-align: center;
-    font-size: 25px;
-    margin: 0;
-    padding-bottom: 10px;
+
+
+/*===============CỘT KHÁCH HÀNG*===============*/
+.new-customer, .potential-customer, .vip-customer {
+    border: none;
+    cursor: pointer;
+    width: calc(100% / 3);
 }
 
-.type-customer {
-    display:flex;
-    flex-wrap: wrap;
-    width: 100%;
+.new-customer-column, .potential-customer-column {
+    border-right: 1px solid black;
+}
+
+.type-new-customer, .type-potential-customer, .type-vip-customer {
+    margin-top: 10px;
+    margin-bottom: 10px;
     justify-content: center;
-    align-items:center;
-    margin: 50px 0;
+    align-items: center;
 }
 
-.post-title {
-    text-decoration: none;
+.yellow-color, .orange-color, .red-color{
+    border: 1px solid black;
+    cursor: pointer;
+    width: 100px;
+    height: 20px;
 }
 
-.list-customer li {
-    width: 80%;
-    height:fit-content;
-    margin: 15px;
-    box-sizing: border-box;
-    float:left;
-    text-align: center;
-    border-radius: 10px;
-    padding-top: 10px;
-    border-color: black;
+.yellow-color{
+    background: yellow;
+}
+
+.orange-color{
+    background: orange;
+}
+
+.red-color{
+    background: red;
+}
+
+div > items{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 20px;
     background: white;
+    width: 80%;
+    height: auto;
+    margin: 10px;
 }
 
+/*=========CĂN CHỈNH BỐ CỤC=========*/
+.container-flex-column{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
 
+.container-flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.adjust-center{
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.big-text {
+    font-size: 18px;
+    font-weight: bold;
+}
 
 
 /*==============================================*/
