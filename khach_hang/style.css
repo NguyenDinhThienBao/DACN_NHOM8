@@ -160,7 +160,7 @@ body {
 /*Nội dung trang*/
 #khach-hang {
     position:relative;
-    margin-top: 65px;
+    margin-top: 80px;
     margin-left: 240px;
     display:flex;
     flex-direction: column;
@@ -220,10 +220,6 @@ body {
     border: none;
     cursor: pointer;
     width: calc(100% / 3);
-}
-
-.new-customer-column, .potential-customer-column {
-    border-right: 1px solid black;
 }
 
 .type-new-customer, .type-potential-customer, .type-vip-customer {
@@ -286,10 +282,18 @@ div > items{
     align-items: center;
 }
 
+.main_workspace {
+    margin-top: 5%;
+}
+
 .big-text {
     font-size: 18px;
     font-weight: bold;
 }
 
-
+.post-title {
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
+}
 /*==============================================*/

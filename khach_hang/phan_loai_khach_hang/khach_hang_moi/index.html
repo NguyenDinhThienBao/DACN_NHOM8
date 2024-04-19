@@ -5,9 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Hệ thống ERP</title>
-        <link rel="stylesheet" href="../khach_hang_moi/style.css">
+        <link rel="stylesheet" href="/khach_hang/phan_loai_khach_hang/khach_hang_moi/style.css">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <link rel="icon" href="./favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!--Monsterrat-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,10 +44,6 @@
             </div>
 
             <ul class="list">
-                <li class="search">
-                    <i class='bx bx-search'></i>
-                    <input type="text" placeholder="Tìm kiếm ...">
-                </li>
 
                 <li class="list-item">
                     <a href="#">
@@ -114,84 +111,111 @@
         </div>
         
         <!--nội dung content-->
-        <div class="content">
-            <div class="back">
-                <a href="/khach_hang/index.html"><i class='bx bx-arrow-back'></i></a>
-            </div>
+        <main id="new-customer">
+            <!--Nút trở về-->
+            <section id="back">
+                <a href="/khach_hang/index.html">
+                    <i class='bx bx-arrow-back'></i>
+                </a>
+            </section>
+            <!--Thông tin khách hàng-->
+            <section id="info-customer">
+                <div class="name">
+                    <p>TRẦN PHƯỚC CHUNG</p>
+                </div>
 
-            <h2>KHÁCH HÀNG MỚI</h2>
+                <div class="items-khachhang">
+                    <!--Hàng đầu (Tiêu thụ & SL Sản phẩm)-->
+                    <div class="container-flex-row">
+                        <div class="container-flex-column">
+                            <div>
+                                <p class="big-text">TIÊU THỤ</p>
+                                <p class="small-text">(VND)</p>
+                            </div>
+                            <p class="tieu_thu border-info">2.000.000.000</p>
+                        </div>
+                        <div class="container-flex-column flex-end">
+                            <div>
+                                <p class="big-text">SẢN PHẨM</p>
+                                <p class="small-text">(Số lượng)</p>
+                            </div>
+                            <p class="san_pham border-info">20</p>
+                        </div>
+                    </div>
 
-            <div class="ten">
-                <h3>TRẦN PHƯỚC CHUNG</h3>
-            </div>
+                    <div class="container-flex-column">
+                        <p class="big-text">EMAIL</p>
+                        <p class="email border-info" >21521893@gm.uit.edu.vn</p>
+                    </div>
 
-            <div class="items-khachhang">
-                <div class="TieuThu">Tiêu thụ (VND)</div>
-                <div class="SanPham">Sản phẩm (số lượng)</div>
-                <div class="Email">Email</div>
-                <div class="DiaChi">Địa chỉ</div>
-            </div>
-
-            <div class="history">
-                <h3>LỊCH SỬ GIAO DỊCH</h3>
-                <!--tạo bảng lịch sử giao dịch-->
-                <table>
-
-                    <thead>
-                        <tr><!--tạo hàng-->
-                            <th><!--tạo cột--><!--tiêu đề là th-->
-                                THỜI GIAN
-                            </th>
-                            <th>SẢN PHẨM</th>
-                            <th>SỐ LƯỢNG</th>
-                            <th>TỔNG TIỀN</th>
-                            <th>TRẠNG THÁI</th>
-                        </tr>
-                    </thead>
-                    
-                    <tbody>
-                        <tr><!--tạo hàng-->
-                            <td><!--tạo cột-->
-                                29/02/2024
-                            </td>
-                            <td>Laptop HP Pavilion X360</td>
-                            <td>2</td>
-                            <td>2.000.000.000</td>
-                            <td>sc</td>
-                        </tr>
+                    <div class="container-flex-column">
+                        <p class="big-text">ĐỊA CHỈ</p>
+                        <p class="address border-info" >Phúc Long A, Thành phố Hồ Chí Minh</p>
+                    </div>
+                </div>
+            </section>
+            <!--=================================================-->
+            <span class="line"></span>
+            <!--Lịch sử giao dịch-->
+            <section id="history">
+                <div class="history">
+                    <h3>LỊCH SỬ GIAO DỊCH</h3>
+                    <!--tạo bảng lịch sử giao dịch-->
+                    <table>
     
-                        <tr><!--tạo hàng-->
-                            <td><!--tạo cột-->
-                                05/3/2024
-                            </td>
-                            <td>Sạc dự phòng</td>
-                            <td>1</td>
-                            <td>300.000</td>
-                            <td>đã chuyển</td>
-                        </tr>
+                        <thead>
+                            <tr><!--tạo hàng-->
+                                <th><!--tạo cột--><!--tiêu đề là th-->
+                                    THỜI GIAN
+                                </th>
+                                <th>SẢN PHẨM</th>
+                                <th>SỐ LƯỢNG</th>
+                                <th>TỔNG TIỀN</th>
+                                <th>TRẠNG THÁI</th>
+                            </tr>
+                        </thead>
+                        
+                        <tbody>
+                            <tr><!--tạo hàng-->
+                                <td><!--tạo cột-->
+                                    29/02/2024
+                                </td>
+                                <td>Laptop HP Pavilion X360</td>
+                                <td>2</td>
+                                <td>2.000.000.000</td>
+                                <td>sc</td>
+                            </tr>
+        
+                            <tr><!--tạo hàng-->
+                                <td><!--tạo cột-->
+                                    05/3/2024
+                                </td>
+                                <td>Sạc dự phòng</td>
+                                <td>1</td>
+                                <td>300.000</td>
+                                <td>đã chuyển</td>
+                            </tr>
+        
+                            <tr><!--tạo hàng-->
+                                <td><!--tạo cột-->
+                                    20/3/2024
+                                </td>
+                                <td>Tai nghe Bluetooth</td>
+                                <td>1</td>
+                                <td>2.500.000</td>
+                                <td>chưa chuyển</td>
+                            </tr>
+                        </tbody>
     
-                        <tr><!--tạo hàng-->
-                            <td><!--tạo cột-->
-                                20/3/2024
-                            </td>
-                            <td>Tai nghe Bluetooth</td>
-                            <td>1</td>
-                            <td>2.500.000</td>
-                            <td>chưa chuyển</td>
-                        </tr>
-                    </tbody>
-
-                    <tfoot>
-
-                    </tfoot>
-
-                    
-                </table>
-            </div>
-
-            <div class="mail">
-                <h3>Gửi mail</h3>
-            </div>
-        </div>
+                        <tfoot>
+    
+                        </tfoot>
+    
+                        
+                    </table>
+                </div>
+            </section>            
+            
+        </main>
     </body>
 </html>
