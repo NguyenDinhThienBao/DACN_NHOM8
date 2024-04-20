@@ -154,7 +154,7 @@ body {
 
 /*nội dung chính - content*/
 .hanghoa {
-    position:absolute;
+    position:relative;
     top:100px;
     left: 260px;
     right: 20px;

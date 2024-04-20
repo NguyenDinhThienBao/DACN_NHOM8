@@ -263,6 +263,20 @@ div > items{
     margin: 10px;
 }
 
+#chi-tiet-khach-hang{
+    margin: 5px 5px;
+    padding: 5px 5px;
+    background-color: #25b9b9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: end;
+    position: absolute; /*Hiển thị nút "chi tiết" ở góc dưới bên phải*/
+    right: 0;
+    bottom: 0;
+    outline: none;
+}
 /*=========CĂN CHỈNH BỐ CỤC=========*/
 .container-flex-column{
     display: flex;
