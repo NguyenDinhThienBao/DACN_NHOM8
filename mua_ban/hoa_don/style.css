@@ -159,12 +159,45 @@ body {
 /*===============================*/
 
 /*Nội dung content*/
-.content {
-    position:absolute;
-    top:80px;
-    left: 260px;
-    right: 20px;
+#hoa-don {
+    position: relative;
+    margin-top: 80px;
+    margin-left: 240px;
+    display: flex;
+    flex-direction: column;
 }
+
+ /*Nút trở về*/
+#back > a{
+    text-decoration: none;
+    color: #000;
+    font-size: 25px;
+    margin-left: 15px;
+}
+
+/*BUTTON TẠO HÓA ĐƠN*/
+.btn_tao_hoa_don{
+    margin:15px 15px 0 15px;
+    padding: 10px 20px;
+    background-color: #25b9b9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 table {
     width: 100%;

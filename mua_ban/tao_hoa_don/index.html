@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Hệ thống ERP</title>
-        <link rel="stylesheet" href="/mua_ban/hoa_don/style.css">
+        <link rel="stylesheet" href="/mua_ban/tao_hoa_don/style.css">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <link rel="icon" href="./favicon.ico" type="image/x-icon">
         <script src="script.js"></script>
@@ -45,10 +45,6 @@
             </div>
 
             <ul class="list">
-                <li class="search">
-                    <i class='bx bx-search'></i>
-                    <input type="text" placeholder="Tìm kiếm ...">
-                </li>
 
                 <li class="list-item">
                     <a href="#">
@@ -119,47 +115,53 @@
         </div>
 
         <!--Nội dung content-->
-        <div class="content">
-
-            <div class="back">
-                <a href="/mua_ban/hoa_don/index.html"><i class='bx bx-arrow-back'></i></a>
-            </div>
-
-            <div class="hoadon">
-                
-                <button type="submit" class="btn">Xác nhận</button>
-                
+        <main id="tao-hoa-don">
+            <!--Nút trở về-->
+            <section id="back">
+                <a href="/mua_ban/hoa_don/index.html">
+                    <i class='bx bx-arrow-back'></i>
+                </a>
+            </section>
+            <!--BUTTON XÁC NHẬN HÓA ĐƠN-->
+            <section>
+                <from action="">
+                    <button type="submit" class="btn_xac_nhan">Xác nhận</button>
+                </from>
+            </section>
+            <!--==============CHI TIẾT HÓA ĐƠN=================-->
+            <section id="hoa-don-ban-hang">
                 <div class="bill">
                     <from action=""> 
-                        <h2>HÓA ĐƠN BÁN HÀNG</h2>
+                        <h3>HÓA ĐƠN BÁN HÀNG</h3>
+
                         <div class="input-box">
                             <h4>Khách hàng</h4>
-                            <input type="text" placeholder="Username" required>
+                            <input type="text" placeholder="Tên khách hàng" required>
                         </div>
         
                         <div class="input-box">
                             <h4>SĐT</h4>
-                            <input type="text" placeholder="Username" required>
+                            <input type="text" placeholder="Số điện thoại" required>
                         </div>
 
                         <div class="input-box">
                             <h4>Địa chỉ</h4>
-                            <input type="text" placeholder="Username" required>
+                            <input type="text" placeholder="Địa chỉ" required>
                         </div>
 
                         <div class="input-box">
                             <h4>Ngày lập hóa đơn</h4>
-                            <input type="text" placeholder="Username" required>
+                            <input type="text" placeholder="Ngày lập hóa đơn" required>
                         </div>
 
                         <div class="input-box">
                             <h4>Thông tin thanh toán</h4>
-                            <input type="text" placeholder="Username" required>
+                            <input type="text" placeholder="Chuyển khoản/ tiền mặt" required>
                         </div>
 
                         <div class="input-box">
                             <h4>Ngày đến hạn</h4>
-                            <input type="text" placeholder="Username" required>
+                            <input type="text" placeholder="Ngày đến hạn" required>
                             <p>hoặc</p>
                             <div class="filter">
                                 <select id="referrer" name="referrer">
@@ -174,73 +176,65 @@
                                     <option value="8">Khác</option>
                                 </select>
                             </div>
-                        </div>
-
-                        <div>
-                            <h4>Chi tiết hóa đơn</h4>
-                            <table>
-
-                                <thead>
-                                    <tr><!--tạo hàng-->
-                                        <th><!--tạo cột--><!--tiêu đề là th-->
-                                            Sản phẩm
-                                        </th>
-                                        <th>Đơn giá</th>
-                                        <th>Số lượng</th>
-                                        <th>Thuế</th>
-                                        <th>Thành tiền</th>
-                                    </tr>
-                                </thead>
-                                
-                                <tbody>
-                                    <tr><!--tạo hàng-->
-                                        <td><!--tạo cột-->
-                                            Laptop
-                                        </td>
-                                        <td>20.000.000đ</td>
-                                        <td>1</td>
-                                        <td>10%</td>
-                                        <td>20.000.000đ</td>
-                                    </tr>
-                
-                                    <tr><!--tạo hàng-->
-                                        <td><!--tạo cột-->
-                                            Sạc dự phòng
-                                        </td>
-                                        <td>300.000đ</td>
-                                        <td>2</td>
-                                        <td>10%</td>
-                                        <td>600.000đ</td>
-                                    </tr>
-                
-                                    <tr><!--tạo hàng-->
-                                        <td><!--tạo cột-->
-                                            Tai nghe Bluetooth
-                                        </td>
-                                        <td>2.500.000đ</td>
-                                        <td>1</td>
-                                        <td>10%</td>
-                                        <td>2.500.000đ</td>
-                                    </tr>
-                                </tbody>
-                
-                                <tfoot>
-                                    <tr>
-                                        <td>Tổng</td>
-                                    </tr>
-                                </tfoot>
-                            </table>
-                        </div>
-        
-                        
+                        </div> 
                     </from>
                 </div>
 
-                
-            </div>
-
-        </div>
+                <div class="chi-tiet-hoa-don">
+                    <h4>Chi tiết hóa đơn</h4>
+                    <table>
+                        <thead>
+                            <tr><!--tạo hàng-->
+                                <th><!--tạo cột--><!--tiêu đề là th-->
+                                    Sản phẩm
+                                </th>
+                                <th>Đơn giá</th>
+                                <th>Số lượng</th>
+                                <th>Thuế</th>
+                                <th>Thành tiền</th>
+                            </tr>
+                        </thead>
+                        
+                        <tbody>
+                            <tr><!--tạo hàng-->
+                                <td><!--tạo cột-->
+                                    Laptop
+                                </td>
+                                <td>20.000.000đ</td>
+                                <td>1</td>
+                                <td>10%</td>
+                                <td>20.000.000đ</td>
+                            </tr>
         
+                            <tr><!--tạo hàng-->
+                                <td><!--tạo cột-->
+                                    Sạc dự phòng
+                                </td>
+                                <td>300.000đ</td>
+                                <td>2</td>
+                                <td>10%</td>
+                                <td>600.000đ</td>
+                            </tr>
         
+                            <tr><!--tạo hàng-->
+                                <td><!--tạo cột-->
+                                    Tai nghe Bluetooth
+                                </td>
+                                <td>2.500.000đ</td>
+                                <td>1</td>
+                                <td>10%</td>
+                                <td>2.500.000đ</td>
+                            </tr>
+                        </tbody>
+        
+                        <tfoot>
+                            <tr>
+                                <td>Tổng</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </section>   
+        </main>
     </body>
 </html>
