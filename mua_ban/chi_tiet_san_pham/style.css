@@ -201,4 +201,8 @@ body {
 }
 
 
-
+img {
+    width: 250px;
+    height: auto;
+    margin-top: 15px;
+}
