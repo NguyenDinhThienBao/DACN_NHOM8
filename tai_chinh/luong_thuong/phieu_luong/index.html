@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Hệ thống ERP</title>
-        <link rel="stylesheet" href="/tai_chinh/style.css">
+        <link rel="stylesheet" href="/tai_chinh/luong_thuong/phieu_luong/style.css">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <link rel="icon" href="./favicon.ico" type="image/x-icon">
         <script src="script.js"></script>
@@ -115,72 +115,84 @@
         </div>
 
         <!--Nội dung content-->
-        <div class="content">
+        <main id="phieu-luong">
 
-            <div class="back">
-                <a href="/tai_chinh/luong_thuong/index.html"><i class='bx bx-arrow-back'></i></a>
-            </div>
+            <!--Nút trở về-->
+            <section id="back">
+                <a href="/tai_chinh/luong_thuong/index.html">
+                    <i class='bx bx-arrow-back'></i>
+                </a>
+            </section>
 
-            <div class="phieuthu">
-                <from action=""> 
-                    <h2>PHIẾU LƯƠNG</h2>
-                    <div class="input-box">
-                        <h4></h4>
-                        <input type="text" placeholder="Username" required>
-                    </div>
-        
-                    <div class="input-box">
-                        <h4></h4>
-                        <input type="text" placeholder="Username" required>
-                    </div>
-
-                    <div class="input-box">
-                        <h4></h4>
-                        <input type="text" placeholder="Username" required>
-                    </div>
-
-                    <div class="input-box">
-                        <h4></h4>
-                        <textarea id="moneydetail" name="moneydetail" rows="3" cols="30" ></textarea>
-                    </div>
-
-                    <div class="input-box">
-                        <h4></h4>
-                        <input type="text" placeholder="Username" required>
-                    </div>
-
-                    <div class="input-box">
-                        <h4></h4>
-                        <input type="text" placeholder="Username" required>
-                    </div>
-
-                    <div class="input-box">
-                        <h4></h4>
-                        <input type="text" placeholder="Username" required>
-                    </div>
-
-                    <div class="input-box">
-                        <h3></h3>
+            <!--===============NỘI DUNG PHIẾU LƯƠNG=================-->
+            <section id="chi-tiet-phieu-luong">
+                <div class="">
+                    <from action=""> 
+                        <h2>PHIẾU LƯƠNG</h2>
+                        <div class="input-box">
+                            <h4>Tổng thu nhập</h4>
+                            <input type="text" placeholder="Username" required>
+                        </div>
+            
                         <div class="input-box">
                             <h4></h4>
                             <input type="text" placeholder="Username" required>
                         </div>
+    
                         <div class="input-box">
                             <h4></h4>
                             <input type="text" placeholder="Username" required>
                         </div>
+    
+                        <div class="input-box">
+                            <h4></h4>
+                            <textarea id="moneydetail" name="moneydetail" rows="3" cols="30" ></textarea>
+                        </div>
+    
                         <div class="input-box">
                             <h4></h4>
                             <input type="text" placeholder="Username" required>
                         </div>
-                    </div>
-                    
-
-                    <input type="submit" value="Xác nhận" />
+    
+                        <div class="input-box">
+                            <h4></h4>
+                            <input type="text" placeholder="Username" required>
+                        </div>
+    
+                        <div class="input-box">
+                            <h4></h4>
+                            <input type="text" placeholder="Username" required>
+                        </div>
+    
+                        <div class="input-box">
+                            <h3></h3>
+                            <div class="input-box">
+                                <h4></h4>
+                                <input type="text" placeholder="Username" required>
+                            </div>
+                            <div class="input-box">
+                                <h4></h4>
+                                <input type="text" placeholder="Username" required>
+                            </div>
+                            <div class="input-box">
+                                <h4></h4>
+                                <input type="text" placeholder="Username" required>
+                            </div>
+                        </div>
                         
-                </from>             
-            </div>
-        </div>
+                        <!--BUTTON CẬP NHẬT-->
+                        <section class="position-relative">
+                            <from action="">
+                                <button type="submit" class="btn_cap_nhat">Cập nhật</button>
+                            </from>
+                        </section>
+                            
+                    </from>             
+                </div>
+            </section>
+
+            
+        </main>
         
         
     </body>

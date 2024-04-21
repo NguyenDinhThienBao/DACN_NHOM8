@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Hệ thống ERP</title>
-        <link rel="stylesheet" href="/tai_chinh/phieu_thu/style.css">
+        <link rel="stylesheet" href="/mua_ban/chi_tiet_san_pham/style.css">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <link rel="icon" href="./favicon.ico" type="image/x-icon">
         <script src="script.js"></script>
@@ -45,7 +45,6 @@
             </div>
 
             <ul class="list">
-
                 <li class="list-item">
                     <a href="#">
                         <a href="/index.html">
@@ -88,6 +87,9 @@
                             <i class='bx bx-shopping-bag'></i>
                             <span class="links-name">Mua bán</span>
                         </a>
+                        <a href="/mua_ban/hoa_don/index.html">
+                            <span class="links-name">Hóa đơn</span>
+                        </a>
                     </a>
                 </li>
 
@@ -96,9 +98,6 @@
                         <a href="/tai_chinh/index.html">
                             <i class='bx bx-wallet-alt'></i>
                             <span class="links-name">Tài chính</span>
-                        </a>
-                        <a href="/tai_chinh/phieu_thu/index.html">
-                            <span class="links-name">Phiếu thu</span>
                         </a>
                     </a>
                 </li>
@@ -115,82 +114,44 @@
         </div>
 
         <!--Nội dung content-->
-        <main id="phieu-thu">
-
+        <main id="san-pham">
             <!--Nút trở về-->
             <section id="back">
-                <a href="/tai_chinh/index.html">
+                <a href="/mua_ban/index.html">
                     <i class='bx bx-arrow-back'></i>
                 </a>
             </section>
 
-            <!--=============NỘI DUNG PHIẾU THU=================-->
-            <section id="phieu-thu-tien">
-                <div class="">
-                    <from action=""> 
-                        <h2>PHIẾU THU TIỀN</h2>
-                        <div class="input-box">
-                            <h4>Ngày ghi sổ</h4>
-                            <input type="text" placeholder="Username" required>
-                        </div>
-            
-                        <div class="input-box">
-                            <h4>Số chứng từ</h4>
-                            <input type="text" placeholder="Username" required>
-                        </div>
-    
-                        <div class="input-box">
-                            <h4>Ngày chứng từ</h4>
-                            <input type="text" placeholder="Username" required>
-                        </div>
-    
-                        <div class="input-box">
-                            <h4>Nội dung thu tiền</h4>
-                            <textarea id="moneydetail" name="moneydetail" rows="3" cols="30" ></textarea>
-                        </div>
-    
-                        <div class="input-box">
-                            <h4>Số tiền</h4>
-                            <input type="text" placeholder="Username" required>
-                        </div>
-    
-                        <div class="input-box">
-                            <h4>Tài khoản</h4>
-                            <input type="text" placeholder="Username" required>
-                        </div>
-    
-                        <div class="input-box">
-                            <h4>Loại doanh thu</h4>
-                            <input type="text" placeholder="Username" required>
-                        </div>
-    
-                        <div class="input-box">
-                            <h3>Thông tin người giao dịch</h3>
-                            <div class="input-box">
-                                <h4>Họ và tên người nộp</h4>
-                                <input type="text" placeholder="Username" required>
-                            </div>
-                            <div class="input-box">
-                                <h4>Email</h4>
-                                <input type="text" placeholder="Username" required>
-                            </div>
-                            <div class="input-box">
-                                <h4>Địa chỉ</h4>
-                                <input type="text" placeholder="Username" required>
-                            </div>
-                        </div>
-                        
-                        <!--BUTTON XÁC NHẬN-->
-                        <section class="position-relative">
-                            <from action="">
-                                <button type="submit" class="btn_xac_nhan">Xác nhận</button>
-                            </from>
-                        </section>
-                            
-                    </from>             
+            <!--BUTTON SỬA HÀNG-->
+            <section>
+                <from action="">
+                    <button type="submit" class="btn_sua_hang">SỬA HÀNG</button>
+                </from>
+            </section>
+
+            <section>
+                <img src="" alt="ddr4">
+                <div class="thong-tin-san-pham">
+                    <p>1.200.000 vnđ</p>
+                    <p>THÔNG TIN SẢN PHẨM</p>
+                    <p>Chip bộ nhớ (DRAM chip)</p>
+                    <p>Đế chân và lớp vỏ</p>
+                    <p>Đồng (Vật dẫn điện)</p>
+                    <p>Fiberglass</p>
+                    <p>Bảo hành 12 tháng chính hãng</p>
+                    <p>Giá sản phẩm đã bao gồm VAT</p>
                 </div>
             </section>
 
+            <!--BUTTON TẠO HÓA ĐƠN-->
+            <section>
+                <from action="">
+                    <button type="submit" class="btn_tao_hoa_don">TẠO HÓA ĐƠN</button>
+                </from>
+            </section>
+
+            
+            
 
         </main>
         
