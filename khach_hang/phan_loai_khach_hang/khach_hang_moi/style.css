@@ -207,6 +207,23 @@ body {
     font-weight: bold;
 }
 
+/*Tiêu thụ & Sản phẩm, email & địa chỉ*/
+.tieu_thu, .san_pham {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    font-size: 30px;
+    font-weight: 500;
+    width: 200px;
+
+}
+
+.tieu_thu { 
+    margin-right: 120px;
+}
+
+
+
 /*Phần chỉnh sửa chung*/
 .container-flex-column{
     display: flex;
