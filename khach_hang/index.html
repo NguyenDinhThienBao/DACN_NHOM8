@@ -8,6 +8,8 @@
         <link rel="stylesheet" href="/khach_hang/style.css">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <link rel="icon" href="./favicon.ico" type="image/x-icon">
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!--Monsterrat-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +19,6 @@
 
                <!--Mục lục-->
                <div>
-            
                 <div class="sidebar">
                      <div class="logo-content">
                          <img src="../Advee ERP.png" alt="logo">
@@ -82,21 +83,19 @@
                          </li>
                      </ul>
                  </div>
-        
         <!--nội dung content-->
         <main id="khach-hang">
             <!--Tìm kiếm-->
-            <section id="customer-search">
+            <section id="employee-search">
                 <div id ="search-box">
-                    <form action ="">
-                        <input type="text" placeholder="Tìm kiếm..." id="search-text" required>
-                        <button type="submit" id="search-btn">
-                            <i class='bx bx-search'></i>
-                        </button>
-                    </form>
+                <form action ="">
+                    <input type="text" placeholder="Tìm kiếm..." id="search-text" required>
+                    <button type="submit" id="search-btn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
                 </div>
             </section>
-            <section>
             <!--================BẢNG KHÁCH HÀNG================-->
             <section class="main_workspace container-flex-row">
                 <!--line kẻ-->
@@ -108,171 +107,165 @@
                         <p class="big-text">MỚI</p>
                         <span class="yellow-color"></span>
                     </div>
-
                     <span class="line"></span>
                     <!--Nội dung ô khách hàng-->
-                    <div class="container-flex-column adjust-center">
-                        <items>
-                            <div class="more-info">
-                                <a href="/khach_hang/phan_loai_khach_hang/khach_hang_moi/index.html" class="post-title">
-                                    NGUYỄN ĐÌNH THIÊN BẢO
-                                </a>
-                                <p class="email">21520635@gm.uit.edu.vn</p>
-                                <span class="">
-                                    <p>(VNĐ)</p>
-                                    <p>(số lượng hàng hóa)</p>
-                                </span>
-                            </div>
-                            <div id="chi-tiet-khach-hang">
-                                <a href="#">
-                                    <a href="/khach_hang/phan_loai_khach_hang/khach_hang_moi/index.html">
-                                        <i class='bx bx-chevron-right'></i>
-                                    </a>
-                                </a>
-                            </div>
-                        </items>
-                    </div>
                     <!--===========================================================================-->
-                    <div class="container-flex-column adjust-center">
-                        <items>
-                            <div class="more-info">
-                                <a href="/khach_hang/phan_loai_khach_hang/khach_hang_moi/index.html" class="post-title">
-                                    NGUYỄN ĐÌNH THIÊN BẢO
-                                </a>
-                                <p class="email">21520635@gm.uit.edu.vn</p>
-                                <span class="">
-                                    <P>(VNĐ)</P>
-                                    <P>(số lượng hàng hóa)</P>
-                                </span>
-                            </div>
-                            <div id="chi-tiet-khach-hang">
-                                <a href="#">
-                                    <a href="/khach_hang/phan_loai_khach_hang/khach_hang_moi/index.html">
-                                        <i class='bx bx-chevron-right'></i>
-                                    </a>
-                                </a>
-                            </div>
+                    <!--===========================================================================-->
+                    <div class="container-flex-row adjust-center">
+                        <items class="container-flex-row background-item">
+                         <div>  
+                             <p class="khach-hang-name big-text">NGUYỄN ĐÌNH THIÊN BẢO</p>
+                             <p class="khach-hang-email">21520635@gm.uit.edu.vn</p>
+                             <div class="container-flex-row space-around">
+                                 <p class="border-yellor don-vi">2.000.0000</p>
+                                 <p>(VNĐ)</p>
+                             </div>
+                             <div class="container-flex-row space-around">
+                                 <p class="border-yellor">2.0000</p>
+                                 <p>(SL)</p>
+                             </div>
+                         </div>
+                         <a class="chi_tiet_khach_hang" href="../khach_hang/phan_loai_khach_hang/khach_hang_tiem_nang/index.html">
+                             <button class="btn_chuyen">
+                                 <i class="fa-solid fa-database"></i>
+                             </button>
+                         </a>
                         </items>
-                    </div>
+
+<!--===========================================================================-->
+                        <items class="container-flex-row background-item">
+                            <div>  
+                                <p class="khach-hang-name big-text">NGUYỄN ĐÌNH THIÊN BẢO</p>
+                                <p class="khach-hang-email">21520635@gm.uit.edu.vn</p>
+                                <div class="container-flex-row space-around">
+                                    <p class="border-yellor don-vi">2.000.0000</p>
+                                    <p>(VNĐ)</p>
+                                </div>
+                                <div class="container-flex-row space-around">
+                                    <p class="border-yellor">2.0000</p>
+                                    <p>(SL)</p>
+                                </div>
+                            </div>
+                            <a class="chi_tiet_khach_hang" href="../khach_hang/phan_loai_khach_hang/khach_hang_tiem_nang/index.html">
+                                <button class="btn_chuyen">
+                                    <i class="fa-solid fa-database"></i>
+                                </button>
+                            </a>
+                           </items>
+                     </div>
+                 </div>
+                <!--===========================================================================-->
+    
                     <!--=============================================================================-->
-                </div>
-
-
                 <!--KHÁCH HÀNG TIỀM NĂNG-->
-                <div class="potential-customer container-flex-column">
+                <div class="new-customer container-flex-column">
                     <!--Tiêu đề loại khách hàng-->
-                    <div class="type-potential-customer container-flex-column">
+                    <div class="type-new-customer container-flex-column">
                         <p class="big-text">TIỀM NĂNG</p>
                         <span class="orange-color"></span>
                     </div>
-
                     <span class="line"></span>
                     <!--Nội dung ô khách hàng-->
-                    <div class="container-flex-column adjust-center">
-                        <items>
-                            <div class="more-info">
-                                <a href="/khach_hang/phan_loai_khach_hang/khach_hang_tiem_nang/index.html" class="post-title">
-                                    NGUYỄN ĐÌNH THIÊN BẢO
-                                </a>
-                                <p class="email">21520635@gm.uit.edu.vn</p>
-                                <span class="">
-                                    <p>(VNĐ)</p>
-                                    <p>(số lượng hàng hóa)</p>
-                                </span>
-                            </div>
-                            <div id="chi-tiet-khach-hang">
-                                <a href="#">
-                                    <a href="/khach_hang/phan_loai_khach_hang/khach_hang_moi/index.html">
-                                        <i class='bx bx-chevron-right'></i>
-                                    </a>
-                                </a>
-                            </div>
-                        </items>
-                    </div>
                     <!--===========================================================================-->
-                    <div class="container-flex-column adjust-center">
-                        <items>
-                            <div class="more-info">
-                                <a href="/khach_hang/phan_loai_khach_hang/khach_hang_tiem_nang/index.html" class="post-title">
-                                    NGUYỄN ĐÌNH THIÊN BẢO
-                                </a>
-                                <p class="email">21520635@gm.uit.edu.vn</p>
-                                <span class="">
-                                    <p>(VNĐ)</p>
-                                    <p>(số lượng hàng hóa)</p>
-                                </span>
-                            </div>
-                            <div id="chi-tiet-khach-hang">
-                                <a href="#">
-                                    <a href="/khach_hang/phan_loai_khach_hang/khach_hang_moi/index.html">
-                                        <i class='bx bx-chevron-right'></i>
-                                    </a>
-                                </a>
-                            </div>
+                    <!--===========================================================================-->
+                    <div class="container-flex-row adjust-center">
+                        <items class="container-flex-row background-item">
+                         <div>  
+                             <p class="khach-hang-name big-text">NGUYỄN ĐÌNH THIÊN BẢO</p>
+                             <p class="khach-hang-email">21520635@gm.uit.edu.vn</p>
+                             <div class="container-flex-row space-around">
+                                 <p class="border-orange don-vi">2.000.0000</p>
+                                 <p>(VNĐ)</p>
+                             </div>
+                             <div class="container-flex-row space-around">
+                                 <p class="border-orange">2.0000</p>
+                                 <p>(SL)</p>
+                             </div>
+                         </div>
+                         <a class="chi_tiet_khach_hang" href="../khach_hang/phan_loai_khach_hang/khach_hang_tiem_nang/index.html">
+                             <button class="btn_chuyen">
+                                 <i class="fa-solid fa-database"></i>
+                             </button>
+                         </a>
                         </items>
-                    </div>
-                    <!--=============================================================================-->
-                </div>
 
+<!--===========================================================================-->
+                        <items class="container-flex-row background-item">
+                            <div>  
+                                <p class="khach-hang-name big-text">NGUYỄN ĐÌNH THIÊN BẢO</p>
+                                <p class="khach-hang-email">21520635@gm.uit.edu.vn</p>
+                                <div class="container-flex-row space-around">
+                                    <p class="border-orange don-vi">2.000.0000</p>
+                                    <p>(VNĐ)</p>
+                                </div>
+                                <div class="container-flex-row space-around">
+                                    <p class="border-orange">2.0000</p>
+                                    <p>(SL)</p>
+                                </div>
+                            </div>
+                            <a class="chi_tiet_khach_hang" href="../khach_hang/phan_loai_khach_hang/khach_hang_tiem_nang/index.html">
+                                <button class="btn_chuyen">
+                                    <i class="fa-solid fa-database"></i>
+                                </button>
+                            </a>
+                           </items>
+                     </div>
+                 </div>
                 <!--KHÁCH HÀNG VIP-->
-                <div class="vip-customer container-flex-column">
+                <div class="new-customer container-flex-column">
                     <!--Tiêu đề loại khách hàng-->
-                    <div class="type-vip-customer container-flex-column">
-                        <p class="big-text">VIP</p>
+                    <div class="type-new-customer container-flex-column">
+                        <p class="big-text">V.I.P</p>
                         <span class="red-color"></span>
                     </div>
-
                     <span class="line"></span>
                     <!--Nội dung ô khách hàng-->
-                    <div class="container-flex-column adjust-center">
-                        <items>
-                            <div class="more-info">
-                                <a href="/khach_hang/phan_loai_khach_hang/khach_hang_vip/index.html" class="post-title">
-                                    NGUYỄN ĐÌNH THIÊN BẢO
-                                </a>
-                                <p class="email">21520635@gm.uit.edu.vn</p>
-                                <span class="">
-                                    <p>(VNĐ)</p>
-                                    <p>(số lượng hàng hóa)</p>
-                                </span>
-                            </div>
-                            <div id="chi-tiet-khach-hang">
-                                <a href="#">
-                                    <a href="/khach_hang/phan_loai_khach_hang/khach_hang_moi/index.html">
-                                        <i class='bx bx-chevron-right'></i>
-                                    </a>
-                                </a>
-                            </div>
-                        </items>
-                    </div>
                     <!--===========================================================================-->
-                    <div class="container-flex-column adjust-center">
-                        <items>
-                            <div class="more-info">
-                                <a href="/khach_hang/phan_loai_khach_hang/khach_hang_vip/index.html" class="post-title">
-                                    NGUYỄN ĐÌNH THIÊN BẢO
-                                </a>
-                                <p class="email">21520635@gm.uit.edu.vn</p>
-                                <span class="">
-                                    <p>(VNĐ)</p>
-                                    <p>(số lượng hàng hóa)</p>
-                                </span>
-                            </div>
-                            <div id="chi-tiet-khach-hang">
-                                <a href="#">
-                                    <a href="/khach_hang/phan_loai_khach_hang/khach_hang_moi/index.html">
-                                        <i class='bx bx-chevron-right'></i>
-                                    </a>
-                                </a>
-                            </div>
+                    <!--===========================================================================-->
+                    <div class="container-flex-row adjust-center">
+                        <items class="container-flex-row background-item">
+                         <div>  
+                             <p class="khach-hang-name big-text">NGUYỄN ĐÌNH THIÊN BẢO</p>
+                             <p class="khach-hang-email">21520635@gm.uit.edu.vn</p>
+                             <div class="container-flex-row space-around">
+                                 <p class="border-red don-vi">2.000.0000</p>
+                                 <p>(VNĐ)</p>
+                             </div>
+                             <div class="container-flex-row space-around">
+                                 <p class="border-red">2.0000</p>
+                                 <p>(SL)</p>
+                             </div>
+                         </div>
+                         <a class="chi_tiet_khach_hang" href="../khach_hang/phan_loai_khach_hang/khach_hang_tiem_nang/index.html">
+                             <button class="btn_chuyen">
+                                 <i class="fa-solid fa-database"></i>
+                             </button>
+                         </a>
                         </items>
-                    </div>
-                    <!--=============================================================================-->
-                </div>
-            </section>
-        </section>
 
-        </main>
-            
+<!--===========================================================================-->
+                        <items class="container-flex-row background-item">
+                            <div>  
+                                <p class="khach-hang-name big-text">NGUYỄN ĐÌNH THIÊN BẢO</p>
+                                <p class="khach-hang-email">21520635@gm.uit.edu.vn</p>
+                                <div class="container-flex-row space-around">
+                                    <p class="border-red don-vi">2.000.0000</p>
+                                    <p>(VNĐ)</p>
+                                </div>
+                                <div class="container-flex-row space-around">
+                                    <p class="border-red">2.0000</p>
+                                    <p>(SL)</p>
+                                </div>
+                            </div>
+                            <a class="chi_tiet_khach_hang" href="../khach_hang/phan_loai_khach_hang/khach_hang_tiem_nang/index.html">
+                                <button class="btn_chuyen">
+                                    <i class="fa-solid fa-database"></i>
+                                </button>
+                            </a>
+                           </items>
+                     </div>
+                 </div>
+            </section>
+        </main> 
     </body>
 </html>
