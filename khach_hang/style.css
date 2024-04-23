@@ -73,39 +73,35 @@ ul li a :link{
 }
 
 /*===========Thanh tìm kiếm============*/
-#customer-search {
+#employee-search{
     display: flex;
-    position: sticky; /*Hiển thị "customer-search" cố định khi cuộn trang*/
-    z-index: 2000; /* Đảm bảo hiển thị "customer-search" trên cùng */
+    margin-bottom: 10px;
+    position: sticky; /*Hiển thị "employee-search" cố định khi cuộn trang*/
+    z-index: 2000; /* Đảm bảo hiển thị "employee-search" trên cùng */
 }
-
+/*Thanh tìm kiếm*/
 #search-box {
-    position:fixed;
-    right: 20px;
-    background: #25b9b9;
-    border: 1px solid white;
-    cursor: pointer;
-    width: 300px;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
+background: white;
+border: 1px solid black;
+cursor: pointer;
+width: 300px;
+border-radius: 20px;
+display: flex;
+flex-direction: column;
+margin-left: 10px;
 }
-
 /*text search*/
 #search-box #search-text{
+    
     border: none;
     outline: none;
-    color: white;
     background: none;
     width: 85%;
     padding: 10px 10px;
 }
-
 /*button search*/
 #search-box #search-btn{
     border: none;
-    color:#fff;
     background: none;
     outline: none;
     cursor: pointer;
@@ -118,7 +114,6 @@ ul li a :link{
 
 /*===============CỘT KHÁCH HÀNG*===============*/
 .new-customer, .potential-customer, .vip-customer {
-    border: none;
     cursor: pointer;
     width: calc(100% / 3);
 }
@@ -136,7 +131,14 @@ ul li a :link{
     width: 100px;
     height: 20px;
 }
+.background-item{
+    margin-top: 10px;
+    padding:10px 5px 5px 10px;
+    background: white;
+    border-radius: 5px;
+    border: 1px solid black;
 
+}
 .yellow-color{
     background: yellow;
 }
@@ -144,41 +146,63 @@ ul li a :link{
 .orange-color{
     background: orange;
 }
-
+.email{
+    font-size: 15px;;
+    color: #aa9d9a;
+}
 .red-color{
     background: red;
 }
-
-div > items{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
-    border-radius: 20px;
-    background: white;
-    width: 80%;
-    height: auto;
-    margin: 10px;
+.khach-hang-email{
+    font-size: 15px;
+    color: #aa9d9a;
+    margin: 5px;
 }
+.space-around{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
 
-#chi-tiet-khach-hang{
-    margin: 5px 5px;
-    padding: 5px 5px;
-    background-color: #25b9b9;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    align-items: end;
-    position: absolute; /*Hiển thị nút "chi tiết" ở góc dưới bên phải*/
-    right: 0;
-    bottom: 0;
-    outline: none;
+}
+.chi_tiet_khach_hang{
+    align-self: flex-end;
+}
+.btn_chuyen{
+        margin-left: 20px;
+        padding: 5px 5px;
+        background-color: #25b9b9;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        align-self: flex-end;
 }
 /*=========CĂN CHỈNH BỐ CỤC=========*/
+.border-orange{
+    border: 1px solid black;
+    width: calc(100%/1.5);
+    background: orange;
+    border-radius: 5px;
+    padding:5px;
+    margin-bottom: 3px;
+}
+
+.border-red{
+    border: 1px solid black;
+    width: calc(100%/1.5);
+    background: red;
+    border-radius: 5px;
+    padding:5px;
+    margin-bottom: 3px;
+}
+.border-yellor{
+    border: 1px solid black;
+    width: calc(100%/1.5);
+    background: yellow;
+    border-radius: 5px;
+    padding:5px;
+    margin-bottom: 3px;
+}
 .container-flex-column{
     display: flex;
     flex-direction: column;
@@ -195,10 +219,6 @@ div > items{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-}
-
-.main_workspace {
-    margin-top: 5%;
 }
 
 .big-text {

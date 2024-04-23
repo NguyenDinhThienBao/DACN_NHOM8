@@ -64,15 +64,13 @@ ul li a :link{
 
 
 /*nội dung chính - content*/
-#san_pham{
+#san-xuat{
     position: relative;
-    margin-top: 65px;
-    margin-left: 240px;
     display: flex;
     flex-direction: column;
 }
 .btn_lap_ke_hoach_san_xuat{
-    margin:15px 15px 0 15px;
+    margin: 0px 15px 0 15px;
     padding: 10px 20px;
     background-color: #25b9b9;
     color: white;

@@ -66,8 +66,6 @@ ul li a :link{
 
 #chi_tiet_nhan_vien {
     position: relative;
-    margin-top: 65px;
-    margin-left: 240px;
     display: flex;
     flex-direction: column;
 }
