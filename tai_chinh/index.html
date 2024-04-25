@@ -14,12 +14,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
-
-
-             <!--Mục lục-->
-             <div>
-            
-                <div class="sidebar">
+        <!--Mục lục-->
+        <div>
+            <div class="sidebar">
                      <div class="logo-content">
                          <img src="../Advee ERP.png" alt="logo">
                      </div>
@@ -82,33 +79,37 @@
                              </a>
                          </li>
                      </ul>
-                 </div>
-        
+        </div>
+        <!--Thanh tab bar chuyển các thành phần trong tài chính-->
+        <div class="container-flex-column">
+            <div class="container-flex-row">
+            <a href="./phieu_chi/index.html" class="custom-link">
+                <p>Phiếu chi</p>
+            </a>
+            <a href="./phieu_thu/index.html" class="custom-link">
+                <p>Phiếu thu</p>
+            </a>
+            <a href="./luong_thuong/index.html" class="custom-link">
+                <p>Lương thưởng</p>
+            </a>
+            </div>
+            <span class="line"></span>
         <!--Nội dung content-->
-        <div class="content">
-            <h3>TÌNH HÌNH TÀI CHÍNH</h3>
-            <div class="stat-1">
-                <canvas id="chart"></canvas>
-
-                
-            </div>
-
-            <div class="stat-2">
-
-            </div>
-
+        <div class="container-flex-row space-around">
             <div>
-                <h4>LỊCH SỬ GIAO DỊCH</h4>
-            </div>
+                <p class="big-text">BIỂU ĐỒ TĂNG TRƯỜNG THEO QUÝ</p>
+                <div>
 
-            <div class="forecast">
-                <h4>Dự báo tăng trưởng</h4>
+                </div>
+            </div>
+            <div>
+                <p class="big-text">BIỂU ĐỒ TĂNG TRƯỜNG THEO NĂM</p>
+
             </div>
         </div>
-        
         <!--Library of chartjs-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js" integrity="sha512-L0Shl7nXXzIlBSUUPpxrokqq4ojqgZFQczTYlGjzONGTDAcLremjwaWv5A+EDLnxhQzY5xUZPWLOLqYRkY0Cbw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
         <script src="/tai_chinh/script.js"></script>
+        </div>
     </body>
 </html>
