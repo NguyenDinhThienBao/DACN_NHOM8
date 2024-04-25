@@ -204,16 +204,3 @@ margin-left: 10px;
     font-size: 11px;
     color: #808080;
 }
-
-a:link{
-    color: black;
-}
-a:visited{
-    color: black;
-}
-a:active{
-    color: black;
-}
-a:hover{
-    color: #25b9b9;
-}

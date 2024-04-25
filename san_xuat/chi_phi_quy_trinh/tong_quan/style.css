@@ -64,8 +64,6 @@ ul li a :link{
 /*Nội dung chính*/
 #tong_quan_san_pham{
     position: relative;
-    margin-top: 65px;
-    margin-left: 240px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
