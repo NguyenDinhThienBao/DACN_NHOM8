@@ -17,178 +17,132 @@
     <body>
 
         
-        <!--Navbar- thanh ngang menu-->
-        
-        <header class="header">
-            
-            <nav class="navbar">
-                <a href="#">
-                    <i class='bx bx-chat'></i>
-                </a>
-                <a href="#">
-                    <i class='bx bx-bell'></i>
-                </a>
-                <a href="#">
-                    <a href="/dang_nhap/index.html"><i class='bx bx-user'></i></a>
-                </a>
-            </nav>
-        </header>
-
-         <!--Mục lục-->
-        <div class="sidebar">
-            <div class="logo-content">
-                <div class="logo">
-                    <i class='bx bxl-meta'></i>
-                    <h3>Advee ERP</h3>
-                </div>
-                <i class='bx bx-menu' id="btn"></i>
-            </div>
-
-            <ul class="list">
-
-                <li class="list-item">
-                    <a href="#">
-                        <a href="/index.html">
-                            <i class='bx bx-grid-alt'></i>
-                            <span class="links-name">Trang chủ</span>
-                        </a>
-                    </a>
-                </li>
-
-                <li class="list-item">
-                    <a href="#">
-                        <a href="/khach_hang/index.html">
-                            <i class='bx bx-user-circle' ></i>
-                            <span class="links-name">Khách hàng</span>
-                        </a>
-                    </a>
-                </li>
-
-                <li class="list-item">
-                    <a href="#">
-                        <a href="/nhan_su/index.html">
-                            <i class='bx bx-id-card'></i>
-                            <span class="links-name">Nhân sự</span>
-                        </a>
-                    </a>
-                </li>
-
-                <li class="list-item">
-                    <a href="#">
-                        <a href="/san_xuat/index.html">
-                            <i class='bx bx-package'></i>
-                            <span class="links-name">Sản xuất</span>
-                        </a>
-                    </a>
-                </li>
-
-                <li class="list-item">
-                    <a href="#">
-                        <a href="/mua_ban/index.html">
-                            <i class='bx bx-shopping-bag'></i>
-                            <span class="links-name">Mua bán</span>
-                        </a>
-                    </a>
-                </li>
-
-                <li class="list-item">
-                    <a href="#">
-                        <a href="/tai_chinh/index.html">
-                            <i class='bx bx-wallet-alt'></i>
-                            <span class="links-name">Tài chính</span>
-                        </a>
-                        <a href="/tai_chinh/phieu_chi/index.html">
-                            <span class="links-name">Phiếu chi</span>
-                        </a>
-                    </a>
-                </li>
-            </ul>
-
-            <ul class="list-logout">
-                <li>
-                    <a href="#">
-                        <i class='bx bx-log-out'></i>
-                        <span class="links-name">Logout</span>
-                    </a>
-                </li>
-            </ul>
+        <!--Mục lục-->
+        <div>
+            <div class="sidebar">
+                     <div class="logo-content">
+                         <img src="../../Advee ERP.png" alt="logo">
+                     </div>
+                     <ul class="list">
+                         <!--Trang chủ-->
+                         <li class="list-item">
+                             <a href="#">
+                                 <a href="../index.html">
+                                     <span class="links-name">Trang chủ</span>
+                                 </a>
+                             </a>
+                         </li>   
+                         <!--Khách hàng-->                                   
+                         <li class="list-item">
+                             <a href="#">
+                                 <a href="../khach_hang/index.html">
+                                     <span class="links-name">Khách hàng</span>
+                                 </a>
+                             </a>
+                         </li>
+                         <!--Nhân sự-->
+                         <li class="list-item">
+                             <a href="#">
+                                 <a href="../nhan_su/index.html">
+                                     <span class="links-name">Nhân sự</span>
+                                 </a>
+                             </a>
+                         </li>
+                         <!--Sản xuất-->
+                         <li class="list-item">
+                             <a href="#">
+                                 <a href="../san_pham/index.html">
+                                     <span class="links-name">Sản xuất</span>
+                                 </a>
+                             </a>
+                         </li>
+                         <!--Mua bán-->
+                         <li class="list-item">
+                             <a href="#">
+                                 <a href="index.html">
+                                     <span class="links-name">Mua bán</span>
+                                 </a>
+                             </a>
+                         </li>
+                         <!--Tài chính-->
+                         <li class="list-item">
+                             <a href="#">
+                                 <a href="../tai_chinh/index.html">
+                                     <span class="links-name">Tài chính</span>
+                                 </a>
+                             </a>
+                         </li>
+                     </ul>
+                     <!--Đăng xuất-->
+                     <ul class="list-logout">
+                         <li>
+                             <a href="#">
+                                 <a href="../dang_nhap/index.html">
+                                 <span class="links-name">Đăng xuất</span>
+                             </a>
+                         </li>
+                     </ul>
         </div>
-
         <!--Nội dung content-->
         <main id="phieu-chi">
-
             <!--Nút trở về-->
             <section id="back">
                 <a href="/tai_chinh/index.html">
                     <i class='bx bx-arrow-back'></i>
                 </a>
             </section>
-
             <!--===============NỘI DUNG PHIẾU CHI===================-->
             <section id="phieu-chi-tien">
+                <div>
+                    <h1>PHIẾU CHI TIỀN</h1>
+                </div>
                 <div class="">
                     <from action=""> 
-                        <h2>PHIẾU CHI TIỀN</h2>
-
-                        <div class="input-box">
-                            <h4>Ngày ghi sổ</h4>
-                            <input type="text" placeholder="Username" required>
-                        </div>
-            
-                        <div class="input-box">
-                            <h4>Số chứng từ</h4>
-                            <input type="text" placeholder="Username" required>
-                        </div>
-    
-                        <div class="input-box">
-                            <h4>Ngày chứng từ</h4>
-                            <input type="text" placeholder="Username" required>
-                        </div>
-    
-                        <div class="input-box">
-                            <h4>Nội dung chi tiền</h4>
-                            <textarea id="moneydetail" name="moneydetail" rows="3" cols="30" ></textarea>
-                        </div>
-    
-                        <div class="input-box">
-                            <h4>Số tiền</h4>
-                            <input type="text" placeholder="Username" required>
-                        </div>
-    
-                        <div class="input-box">
-                            <h4>Tài khoản</h4>
-                            <input type="text" placeholder="Username" required>
-                        </div>
-    
-                        <div class="input-box">
-                            <h4>Loại chi phí</h4>
-                            <input type="text" placeholder="Username" required>
-                        </div>
-    
-                        <div class="input-box">
-                            <h3>Thông tin người giao dịch</h3>
-                            <div class="input-box">
-                                <h4>Họ và tên người nhận</h4>
-                                <input type="text" placeholder="Username" required>
-                            </div>
-                            <div class="input-box">
-                                <h4>Email</h4>
-                                <input type="text" placeholder="Username" required>
-                            </div>
-                            <div class="input-box">
-                                <h4>Địa chỉ</h4>
-                                <input type="text" placeholder="Username" required>
-                            </div>
-                        </div>
-                        
+                        <fieldset class="container-flex-row first-fieldset">
+                            <!--Ngày ghi sổ-->
+                            <label for="ngay-ghi-so" id="name-label" class="bold-text">Ngày ghi sổ
+                                <input type="date" name="ngay-ghi-so" id="ngay-ghi-so" placeholder="" required>
+                            </label>
+                            <!--Số chứng từ-->
+                            <label for="so-chung-tu" id="name-label" class="bold-text">Số chứng từ
+                                <input type="text" name="so-chung-tu" id="so-chung-tu" placeholder="" required>
+                            </label>    
+                            <!--Ngày chứng từ-->
+                            <label for="ngay-chung-tu" id="name-label" class="bold-text">Ngày chứng từ
+                                <input type="date" name="ngay-chung-tu" id="ngay-chung-tu" placeholder="" required>
+                            </label>
+                        </fieldset>
+                        <fieldset class="second-fieldset">
+                            <label for="noi-dung-chuyen-tien" class="bold-text">Nội dung chuyển tiền
+                          <textarea id="noi-dung-chuyen-tien" name="bio" rows="6" cols="60" placeholder="" value></textarea>
+                        </label>
+                      </fieldset>
+                      <fieldset class="container-flex-row third-fieldset">
+                        <label for="so-tien" id="name-label" class="bold-text">Số tiền
+                          <input type="text" name="so-tien" id="so-tien" placeholder="" required>
+                        </label>
+                        <label for="tai-khoan" id="name-label" class="bold-text">Tài khoản
+                          <input type="text" name="tai-khoan" id="tai-khoan" placeholder="" required>
+                        </label>
+                        <label for="loai-chi-phi" id="name-label" class="bold-text">Loại chi phí
+                          <input type="text" name="loai-chi-phi" id="loai-chi-phi" placeholder="" required>
+                        </label>
+                      </fieldset>
+                      <p class="big-text">Thông tin người giao dịch</p>
+                      <fieldset class="fourth-fieldset">
+                            <label for="ho-ten" id="name-label" class="bold-text">Họ và tên
+                                <input type="text" name="ho-ten" id="ho-ten" placeholder="" required>
+                            </label>
+                            <label for="email" id="name-label" class="bold-text">Email
+                                <input type="email" name="email" id="email" placeholder="" required>
+                            </label>
+                            <label for="dia-chi" id="name-label" class="bold-text">Địa chỉ
+                                <input type="text" name="dia-chi" id="dia-chi" placeholder="" required>
+                            </label>
+                      </fieldset>
                         <!--BUTTON XÁC NHẬN-->
-                        <section class="position-relative">
-                            <from action="">
-                                <button type="submit" class="btn_xac_nhan">Xác nhận</button>
-                            </from>
-                        </section>
-                            
-                    </from>             
+                        <input id="submit" type="submit" value="Xác nhận" />    
+                    </form>             
                 </div>
             </section>
             
