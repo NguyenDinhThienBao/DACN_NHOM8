@@ -99,7 +99,8 @@ label > input {
     border: 2px solid rgba(255, 255, 255, .2);
     border-radius: 10px;
     padding: 20px 30px;
-    margin-top: 50px 
+    margin-top: 50px;
+    position: relative;
 }
 fieldset{
     border: none;
@@ -118,37 +119,33 @@ fieldset{
 }
 .third-fieldset{
     display: flex;
-    align-items: center;
     justify-content: space-around;
+    align-self: start;
     margin-bottom: 20px;
 }
 .third-fieldset > label > input{
-    width: 200px;
+    width: auto;
     height: 20px;
 }
 .fourth-fieldset{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-bottom: 20px;
 }
 .fourth-fieldset > label > input{
-    width: 300px;
-    height: 6 0px;
+    width: auto;
+    height: 20px;
 }
 /*BUTTON XÁC NHẬN*/
-.btn_xac_nhan{
-    position: absolute;
-    right: 0;
-    bottom:0;
-    margin-right: 15px;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #25b9b9;
+#submit{
+    display: flex;
+    margin-left: auto;
+    background: #25b9b9;
+    padding: 8px;
     color: white;
-    border: none;
+    border: 1px solid #5c6565;
     border-radius: 5px;
-    cursor: pointer;
 }
 
 
@@ -157,7 +154,7 @@ fieldset{
 
 .container-flex-column{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin-bottom: 20px;
 
 }
@@ -185,6 +182,7 @@ fieldset{
     color: #292828;
     border-top: 2px solid black;
     margin-bottom: 20px;
+    padding-top: 5px;
 }
 .small-text{
     font-size: 13px;
