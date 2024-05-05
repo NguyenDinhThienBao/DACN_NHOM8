@@ -99,42 +99,62 @@
 
             <!--===============NỘI DUNG PHIẾU LƯƠNG=================-->
             <section id="chi-tiet-phieu-luong">
+                <div>
+                    <h1>PHIẾU LƯƠNG</h1>
+                </div>
                 <div class="">
                     <from action=""> 
-                        <h2>PHIẾU LƯƠNG</h2>
-                        <div class="input-box">
-                            <h4>Tổng thu nhập</h4>
-                            <input type="text" placeholder="Username" required>
-                        </div>
-            
-                        <div class="input-box">
-                            <h4>Tổng khấu trừ</h4>
-                            <input type="text" placeholder="Username" required>
-                        </div>
-    
-                        <div class="input-box">
-                            <h4>Tạm ứng</h4>
-                            <input type="text" placeholder="Username" required>
-                        </div>
-    
-                        <div class="input-box">
-                            <h4>Lương thực lĩnh</h4>
-                            <input type="text" placeholder="Username" required>
-                        </div>
-                        
-                        <h4>Thông tin lương</h4>
+                        <fieldset class="container-flex-row first-fieldset">
+                            <!--Tổng thu nhập-->
+                            <label for="tong-thu-nhap" id="name-label" class="bold-text">Tổng thu nhập
+                                <input type="text" name="tong-thu-nhap" id="tong-thu-nhap" placeholder="" required>
+                                <p class="small-text">(vnd)</p>
+                            </label>
+                            
 
-                        <div class="input-box">
-                            <h4>Khoản thu nhập</h4>
-                            <input type="text" placeholder="Username" required>
-                        </div>
-    
-                        <div class="input-box">
-                            <h4>Khoản khấu trừ</h4>
-                            <input type="text" placeholder="Username" required>
-                        </div>
+                            <!--Tổng khấu trừ-->
+                            <label for="tong-khau-tru" id="name-label" class="bold-text">Tổng khấu trừ
+                                <input type="text" name="tong-khau-tru" id="tong-khau-tru" placeholder="" required>
+                                <p class="small-text">(vnd)</p>
+                            </label>
+
+                            <!--Tạm ứng-->
+                            <label for="tam-ung" id="name-label" class="bold-text">Tạm ứng
+                                <input type="text" name="tam-ung" id="tam-ung" placeholder="" required>
+                                <p class="small-text">(vnd)</p>
+                            </label>
+                        </fieldset>
+                            
+                        <fieldset class="second-fieldset">
+                            <!--Lương thực lĩnh-->
+                            <label for="luong-thuc-linh" id="name-label" class="bold-text">Lương thực lĩnh
+                                <input type="text" name="luong-thuc-linh" id="luong-thuc-linh" placeholder="" required>
+                                <p class="small-text">(vnd)</p>
+                            </label>
+                        </fieldset>
+
+                        <p class="big-text">Thông tin lương</p>
+
+                        <fieldset class="container-flex-row third-fieldset">
+                            <!--Khoảng thu nhập-->
+                            <label for="khoang-thu-nhap" id="name-label" class="bold-text">Khoảng thu nhập
+                                <input type="text" name="khoang-thu-nhap" id="khoang-thu-nhap" placeholder="" required>
+                                <p class="small-text">(vnd)</p>
+                            </label>
+
+                            <!--Khoảng khấu trừ-->
+                            <label for="khoang-khau-tru" id="name-label" class="bold-text">Khoảng khấu trừ
+                                <input type="text" name="khoang-khau-tru" id="khoang-khau-tru" placeholder="" required>
+                                <p class="small-text">(vnd)</p>
+                            </label>
+                        </fieldset>
+
+
+                        <p class="big-text">Thông tin bổ sung</p>
+
+                       
                         
-                        <h4>Thông tin bổ sung</h4>
+
 
                         <div class="input-box">
                             <h4>Thông tin chấm công</h4>
