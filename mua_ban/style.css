@@ -66,23 +66,22 @@ ul li a :link{
 /*nội dung chính - content*/
 #hang-hoa {
     position: relative;
-    margin-top: 80px;
-    margin-left: 240px;
     display: flex;
     flex-direction: column;
 }
 
-/*button thêm xóa hàng hóa*/
-.btn_them_hang, .btn_xoa_hang {
-    margin-left: 15px;
+/*button Hóa đơn*/
+.btn_hoa_don {
+    margin: 10px 20px;
     padding: 10px 20px;
+    width:auto;
     background-color: #25b9b9;
     color: white;
+    font-size: medium;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     margin-bottom: 10px;
-    font-size: 15px;
 }
 
 #tensp {
