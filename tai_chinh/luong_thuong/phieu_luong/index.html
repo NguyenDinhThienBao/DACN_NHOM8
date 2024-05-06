@@ -137,35 +137,93 @@
 
                         <fieldset class="container-flex-row third-fieldset">
                             <!--Khoảng thu nhập-->
-                            <label for="khoang-thu-nhap" id="name-label" class="bold-text">Khoảng thu nhập
-                                <input type="text" name="khoang-thu-nhap" id="khoang-thu-nhap" placeholder="" required>
-                                <p class="small-text">(vnd)</p>
-                            </label>
+                            <div class="">
+                                <label for="khoang-thu-nhap" id="name-label" class="bold-text">Khoảng thu nhập
+                                    <input type="text" name="khoang-thu-nhap" id="khoang-thu-nhap" placeholder="" required>
+                                    <p class="small-text">(vnd)</p>
+                                </label>
 
+                                <!--Lương KPI-->
+                                <label for="luong-kpi" id="name-label">Lương KPI
+                                    <input type="text" name="luong-kpi" id="luong-kpi" placeholder="">
+                                </label>
+
+                                <!--Hoa hồng-->
+                                <label for="hoa-hong" id="name-label">Hoa hồng
+                                    <input type="text" name="hoa-hong" id="hoa-hong" placeholder="">
+                                </label>
+                            </div>
+                            
                             <!--Khoảng khấu trừ-->
-                            <label for="khoang-khau-tru" id="name-label" class="bold-text">Khoảng khấu trừ
-                                <input type="text" name="khoang-khau-tru" id="khoang-khau-tru" placeholder="" required>
-                                <p class="small-text">(vnd)</p>
-                            </label>
+                            <div>
+                                <label for="khoang-khau-tru" id="name-label" class="bold-text">Khoảng khấu trừ
+                                    <input type="text" name="khoang-khau-tru" id="khoang-khau-tru" placeholder="" required>
+                                    <p class="small-text">(vnd)</p>
+                                </label>
+
+                                <!--BHXH-->
+                                <label for="bhxh" id="name-label">BHXH
+                                    <input type="text" name="bhxh" id="bhxh" placeholder="" required>
+                                </label>
+
+                                <!--BHYT-->
+                                <label for="bhyt" id="name-label">BHYT
+                                    <input type="text" name="bhyt" id="bhyt" placeholder="" required>
+                                </label>
+
+                                <!--BHTN-->
+                                <label for="bhtn" id="name-label">BHTN
+                                    <input type="text" name="bhtn" id="bhtn" placeholder="" required>
+                                </label>
+
+                                <!--Thuế TNCN-->
+                                <label for="thue-tncn" id="name-label">Thuế TNCN
+                                    <input type="text" name="thue-tncn" id="thue-tncn" placeholder="" required>
+                                </label>
+
+                                <!--Phạt đi muộn-->
+                                <label for="phat" id="name-label">Phạt đi muộn
+                                    <input type="text" name="phat" id="phat" placeholder="" required>
+                                </label>
+
+                            </div>
+                            
                         </fieldset>
-
-
+                  
                         <p class="big-text">Thông tin bổ sung</p>
 
-                       
                         
+                        <fieldset class="container-flex-row fourth-fieldset">
+                            <!--Thông tin chấm công-->
+                            <div>
+                                <p class="bold-text">Thông tin chấm công</p>
+                                <!--Tổng công hưởng lương-->
+                                <label for="ca" id="name-label">Tổng công hưởng lương (ca)
+                                    <input type="number" min="0" max="100" name="ca" id="ca" placeholder="" required>
+                                </label>
+                            </div>
 
+                            <!--Doanh số-->
+                            <div>
+                                <p class="bold-text">Doanh số</p>
+                                <!--Doanh số mục tiêu-->
+                                <label for="ds-muc-tieu" id="name-label">Doanh số mục tiêu
+                                    <input type="text" name="ds-muc-tieu" id="ds-muc-tieu" placeholder="" required>
+                                </label>
 
-                        <div class="input-box">
-                            <h4>Thông tin chấm công</h4>
-                            <input type="text" placeholder="Username" required>
-                        </div>
+                                <!--Doanh số thực tế-->
+                                <label for="ds-thuc-te" id="name-label">Doanh số thực tế
+                                    <input type="text" name="ds-thuc-te" id="ds-thuc-te" placeholder="" required>
+                                </label>
 
-                        <div class="input-box">
-                            <h4>Doanh số</h4>
-                            <input type="text" placeholder="Username" required>
-                        </div>
-    
+                                <!--Tỉ lệ hoàn thành doanh số-->
+                                <label for="ti-le" id="name-label">Tỉ lệ hoàn thành doanh số
+                                    <input type="text" name="ti-le" id="ti-le" placeholder="" required>
+                                </label>
+                            </div>
+                            
+
+                        </fieldset>
                     
                         <!--BUTTON CẬP NHẬT-->
                         <section class="position-relative">
