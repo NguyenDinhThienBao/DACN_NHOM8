@@ -91,12 +91,120 @@ ul li a :link{
     margin-bottom: 10px;
 }
 
+h1 {
+    font-size: 30px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+label {
+    margin-right: 50px;
+}
+
+label > input {
+    margin-left: 10px;
+}
+
 #hoa-don-ban-hang {
-    margin-top: 10px;
-    margin-left: 30px;
-    margin-right: 30px;
     background:#fff;
     border: 2px solid rgba(255, 255, 255, .2);
     border-radius: 10px;
     padding: 20px 30px;
+    margin-top: 20px;
+    position: relative;
+}
+
+fieldset{
+    border: none;
+}
+
+.first-fieldset{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    height: 30px;
+}
+
+.second-fieldset{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.third-fieldset{
+    display: flex;
+    justify-content: space-around;
+    align-self: start;
+    margin-bottom: 20px;
+}
+
+.third-fieldset > label > input{
+    width: auto;
+    height: 20px;
+}
+
+
+table {
+    width: 100%;
+}
+
+table, td, th {
+    border-bottom:1px solid #000;
+    border-collapse:collapse; /*hợp nhất border thành 1 đường kẻ*/
+}
+
+td, th {
+    padding: 6px 10px;
+    text-align: center;
+}
+
+
+
+/*Phần chỉnh sửa chung*/
+
+.container-flex-column{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+}
+.position-relative{
+    margin-top: 30px;
+    margin-bottom: 15px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.container-flex-row{
+    display: flex;
+    flex-direction: row;
+}
+.bold-text{
+    font-size: 18px;
+    font-weight: 500;
+    width: auto;
+    color: #292828;
+}
+.big-text{
+    font-size: 20px;
+    font-weight: 500;
+    width: auto;
+    color: #292828;
+    border-top: 2px solid black;
+    margin-bottom: 20px;
+    padding-top: 5px;
+}
+.small-text{
+    font-size: 13px;
+    font-weight: 500;
+    justify-content: center;
+    color: #292828;
+}
+.border-info{
+    padding: 10px;
+    background: white;
+    border: 1px solid black;
+    font-size: large;
 }
