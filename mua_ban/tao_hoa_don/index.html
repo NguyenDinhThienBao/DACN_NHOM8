@@ -14,101 +14,74 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
-    <body>
-
-        
-        <!--Navbar- thanh ngang menu-->
-        
-        <header class="header">
-            
-            <nav class="navbar">
-                <a href="#">
-                    <i class='bx bx-chat'></i>
-                </a>
-                <a href="#">
-                    <i class='bx bx-bell'></i>
-                </a>
-                <a href="#">
-                    <a href="/dang_nhap/index.html"><i class='bx bx-user'></i></a>
-                </a>
-            </nav>
-        </header>
-
-         <!--Mục lục-->
+    <body>  
+        <!--Mục lục-->
         <div class="sidebar">
             <div class="logo-content">
-                <div class="logo">
-                    <i class='bx bxl-meta'></i>
-                    <h3>Advee ERP</h3>
-                </div>
-                <i class='bx bx-menu' id="btn"></i>
+                <img src="/Advee ERP.png" alt="logo">
             </div>
-
             <ul class="list">
-
+                <!--Trang chủ-->
                 <li class="list-item">
                     <a href="#">
                         <a href="/index.html">
-                            <i class='bx bx-grid-alt'></i>
                             <span class="links-name">Trang chủ</span>
                         </a>
                     </a>
-                </li>
-
+                </li>   
+                
+                <!--Khách hàng-->                                   
                 <li class="list-item">
                     <a href="#">
                         <a href="/khach_hang/index.html">
-                            <i class='bx bx-user-circle' ></i>
                             <span class="links-name">Khách hàng</span>
                         </a>
                     </a>
                 </li>
-
+                
+                <!--Nhân sự-->
                 <li class="list-item">
                     <a href="#">
                         <a href="/nhan_su/index.html">
-                            <i class='bx bx-id-card'></i>
                             <span class="links-name">Nhân sự</span>
                         </a>
                     </a>
                 </li>
 
+                <!--Sản xuất-->
                 <li class="list-item">
                     <a href="#">
                         <a href="/san_xuat/index.html">
-                            <i class='bx bx-package'></i>
                             <span class="links-name">Sản xuất</span>
                         </a>
                     </a>
                 </li>
-
+             
+                <!--Mua bán-->
                 <li class="list-item">
                     <a href="#">
                         <a href="/mua_ban/index.html">
-                            <i class='bx bx-shopping-bag'></i>
                             <span class="links-name">Mua bán</span>
-                        </a>
-                        <a href="/mua_ban/hoa_don/index.html">
-                            <span class="links-name">Hóa đơn</span>
                         </a>
                     </a>
                 </li>
-
+             
+                <!--Tài chính-->
                 <li class="list-item">
                     <a href="#">
                         <a href="/tai_chinh/index.html">
-                            <i class='bx bx-wallet-alt'></i>
                             <span class="links-name">Tài chính</span>
                         </a>
                     </a>
                 </li>
             </ul>
-
+         
+            <!--Đăng xuất-->
             <ul class="list-logout">
                 <li>
                     <a href="#">
-                        <i class='bx bx-log-out'></i>
-                        <span class="links-name">Logout</span>
+                        <a href="/dang_nhap/index.html">
+                        <span class="links-name">Đăng xuất</span>
                     </a>
                 </li>
             </ul>
@@ -130,40 +103,49 @@
             </section>
             <!--==============CHI TIẾT HÓA ĐƠN=================-->
             <section id="hoa-don-ban-hang">
+                <div>
+                    <h1>HÓA ĐƠN BÁN HÀNG</h1>
+                </div>
+
                 <div class="bill">
                     <from action=""> 
-                        <h3>HÓA ĐƠN BÁN HÀNG</h3>
+                        <fieldset class="container-flex-row first-fieldset">
+                            <!--Khách hàng-->
+                            <label for="khach-hang" id="name-label" class="bold-text">Khách hàng
+                                <input type="text" name="khach-hang" id="khach-hang" placeholder="" required>
+                            </label>
 
-                        <div class="input-box">
-                            <h4>Khách hàng</h4>
-                            <input type="text" placeholder="Tên khách hàng" required>
-                        </div>
-        
-                        <div class="input-box">
-                            <h4>SĐT</h4>
-                            <input type="text" placeholder="Số điện thoại" required>
-                        </div>
+                            <!--Ngày lập hóa đơn-->
+                            <label for="ngay-lap-hoa-don" id="name-label" class="bold-text">Ngày lập hóa đơn
+                                <input type="date" name="ngay-lap-hoa-don" id="ngay-lap-hoa-don" placeholder="" required>
+                            </label>
+                        </fieldset>
 
-                        <div class="input-box">
-                            <h4>Địa chỉ</h4>
-                            <input type="text" placeholder="Địa chỉ" required>
-                        </div>
+                        <fieldset class="container-flex-row second-fieldset">
+                            <!--SĐT-->
+                            <label for="sdt" id="name-label" class="bold-text">SĐT
+                                <input type="text" name="sdt" id="sdt" placeholder="" required>
+                            </label>
 
-                        <div class="input-box">
-                            <h4>Ngày lập hóa đơn</h4>
-                            <input type="text" placeholder="Ngày lập hóa đơn" required>
-                        </div>
+                            <!--Thông tin thanh toán-->
+                            <label for="thong-tin-thanh-toan" id="name-label" class="bold-text">Thông tin thanh toán
+                                <input type="text" name="thong-tin-thanh-toan" id="thong-tin-thanh-toan" placeholder="" required>
+                            </label>
+                        </fieldset>
 
-                        <div class="input-box">
-                            <h4>Thông tin thanh toán</h4>
-                            <input type="text" placeholder="Chuyển khoản/ tiền mặt" required>
-                        </div>
+                        <fieldset class="container-flex-row third-fieldset">
+                            <!--Địa chỉ-->
+                            <label for="dia-chi" id="name-label" class="bold-text">Địa chỉ
+                                <input type="text" name="dia-chi" id="dia-chi" placeholder="" required>
+                            </label>
 
-                        <div class="input-box">
-                            <h4>Ngày đến hạn</h4>
-                            <input type="text" placeholder="Ngày đến hạn" required>
-                            <p>hoặc</p>
-                            <div class="filter">
+                            <!--Ngày đến hạn-->
+                            <label for="ngay-den-han" id="name-label" class="bold-text">Ngày đến hạn
+                                <input type="text" name="ngay-den-han" id="ngay-den-han" placeholder="" required>
+                            </label>
+
+                            <!--Điều khoản thanh toán-->
+                            <label for="dk-thanh-toan" id="name-label" class="">hoặc
                                 <select id="referrer" name="referrer">
                                     <option value="">Điều khoản thanh toán</option>
                                     <option value="1">Thanh toán ngay</option>
@@ -175,13 +157,13 @@
                                     <option value="7">30% trả ngay, còn lại trả trong 60 ngày</option>
                                     <option value="8">Khác</option>
                                 </select>
-                            </div>
-                        </div> 
+                            </label>
+                        </fieldset>
                     </from>
                 </div>
 
                 <div class="chi-tiet-hoa-don">
-                    <h4>Chi tiết hóa đơn</h4>
+                    <p class="bold-text">Chi tiết hóa đơn</p>
                     <table>
                         <thead>
                             <tr><!--tạo hàng-->
