@@ -1,0 +1,1 @@
+// Lưu thông tin trang chủ vào file site.js
