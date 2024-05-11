@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose'); // mongoose giúp biến document trong mongodb thành các object trong javascript
 const Schema = mongoose.Schema;
 
 const Employee = new Schema({
@@ -20,4 +20,4 @@ const Employee = new Schema({
     ThongTinLienLac: { SoDienThoaiNV: String, EmailNV: String, DiaChiNV: String,},
 });
 
-module.exports = mongoose.model('Employee', Employee); //export model Employee
+module.exports = mongoose.model('NHANVIEN', Employee); //export model Employee
