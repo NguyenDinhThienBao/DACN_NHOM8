@@ -1,8 +1,9 @@
+const Customer = require('../models/Customer');
 class CustomerController {
-    // GET /khach-hang
-    index(req, res) {
-      res.render('khach-hang');
-    }
+  async index(req, res) {
 
+    const customer = await Customer.find({});
+    res.json(customer);
   }
-  module.exports = new CustomerController;
+}
+module.exports = new CustomerController;
