@@ -1,7 +1,7 @@
 class EmployeeController {
-  // GET /nhan-su
+  // GET /nhan-vien
   index(req, res) {
-    res.render('employee');
+    res.render('nhan-vien');
   }
 }
 module.exports = new EmployeeController;
