@@ -1,7 +1,10 @@
+const Employee = require('../models/Employee');
 class EmployeeController {
   // GET /nhan-vien
-  index(req, res) {
-    res.render('nhan-vien');
+  async index(req, res) {
+
+    const employee = await Employee.find({});
+    res.json(employee);
   }
 }
 module.exports = new EmployeeController;
