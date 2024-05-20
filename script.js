@@ -1,6 +1,7 @@
 /*back end*/ /*======tải express.js==========*/
 const express = require('express'); /*lấy express trong node_modules để nạp vào const express*/ 
 const morgan = require('morgan');
+const mongoose = require('mongoose');
 const route = require('./src/routes/script.js'); //lấy file index.js trong thư mục routes
 const db = require('./src/config/db/script.js'); //lấy file index.js trong thư mục db
 //const handlebars = require('express-handlebars');
