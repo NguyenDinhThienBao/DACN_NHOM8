@@ -15,13 +15,13 @@ const port = 5500; //port website
 db.connect(); //gọi hàm connect trong file script.js
 //HTTP logger
 app.use(morgan('combined'));
-
-app.engine('hbs', engine);
-app.set('views', path.join(__dirname, 'resources/views'));
-app.engine('.hbs', engine({
-  defaultLayout: 'main',
-  layoutsDir: path.join(app.get('views'), 'layouts'),
-  partialsDir: path.join(app.get('views'), 'partials'),
+//Template engine
+app.engine('hbs', engine); //cấu hình handlebars
+app.set('views', path.join(__dirname, 'resources/views')); //cấu hình đường dẫn views
+app.engine('.hbs', engine({ 
+  defaultLayout: 'main',  //cấu hình layout mặc định
+  layoutsDir: path.join(app.get('views'), 'layouts'), //cấu hình đường dẫn layout
+  partialsDir: path.join(app.get('views'), 'partials'), //cấu hình đường dẫn partials
   extname: '.hbs'
 }));
 app.set('view engine', '.hbs');
