@@ -1,8 +1,9 @@
+const Finance = require('../models/Finance');
 class FinanceController {
-    // GET /tai-chinh
-    index(req, res) {
-      res.render('tai-chinh');
-    }
+  async index(req, res) {
 
+    const finance = await Finance.find({});
+    res.json(finance);
+  }
   }
   module.exports = new FinanceController;
