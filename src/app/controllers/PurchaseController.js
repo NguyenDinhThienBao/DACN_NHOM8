@@ -1,8 +1,10 @@
+const Purchase = require('../models/Purchase');
 class PurchaseController {
-    // GET /ban-hang
-    index(req, res) {
-      res.render('ban-hang');
-    }
 
+  async index(req, res) {
+
+    const purchase = await Purchase.find({});
+    res.json(purchase);
+  }
   }
   module.exports = new PurchaseController;
