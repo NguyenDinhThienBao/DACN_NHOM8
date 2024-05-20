@@ -1,8 +1,10 @@
+const Manufacture = require('../models/Manufacture');
 class ManufactureController {
-    // GET /manufacture
-    index(req, res) {
-      res.render('san-xuat');
-    }
+  async index(req, res) {
+
+    const manufacture = await Manufacture.find({});
+    res.json(manufacture);
+  }
 
   }
   module.exports = new ManufactureController;
