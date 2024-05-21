@@ -21,7 +21,6 @@ margin-left: 10px;
 }
 /*text search*/
 #search-box #search-text{
-    
     border: none;
     outline: none;
     background: none;
@@ -90,16 +89,15 @@ margin-left: 10px;
 .employee-info{
     display: flex;
     position: relative; /*Hiển thị nút "chi tiết" ở góc dưới bên phải*/
-    width: 30%;
     background-color: #fff;
+    height: auto;
     margin-top: 10px;
     margin-left: 30px;
     border: 1px solid black;
     border-radius: 10px;
-    justify-content: center; /*Căn giữa*/
 }
 .employee-img{
-    width: 150px;
+    width: 100px;
     height: auto;
     margin-right: 10px;
     border-radius: 10px;

@@ -68,13 +68,14 @@
 
                 <!--Thông tin nhân sự-->
                     <section class="employee-card">
+                        {{#each employee}}
                     <div class="employee-info">
-                        <img src="./nhan_vien_1.png" alt="Ảnh nhân viên" class="employee-img">
+                        <img src="{{this.AnhNV}}" alt="Ảnh nhân viên" class="employee-img">
                     <div class="employee-card-body">
-                            <div class="ho_ten_nhan_vien"><p><strong>lê thị tố uyên</strong></p></div>
-                            <div class="chuc_vu_nhan_vien"><p>Quản lý</p></div>
-                            <div class="email_nhan_vien"><p>21521893@gm.uit.edu.vn</p></div>
-                            <div class="so_dien_thoai_nhan_vien"><p>0931285430</p></div>
+                            <div class="ho_ten_nhan_vien"><p><strong>{{this.HoNV}} {{this.TenNV}}</strong></p></div>
+                            <div class="chuc_vu_nhan_vien"><p>{{this.ViTriLamViec}}</p></div>
+                            <div class="email_nhan_vien"><p>{{this.EmailNV}}</p></div>
+                            <div class="so_dien_thoai_nhan_vien"><p>{{this.SoDienThoaiNV}}</p></div>
                     </div>
                     <div id="chi_tiet_nhan_vien">
                         <a href="#">
@@ -82,8 +83,7 @@
                         </a>
                     </div>
                     </div>
-
-
+                    {{/each}}
                 </section>
     </main>
     </body>
