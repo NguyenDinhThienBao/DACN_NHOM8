@@ -10,7 +10,7 @@ const db = require('./config/db/script.js'); //lấy file index.js trong thư m�
 const app = express(); /*gọi express để trả lại instance (trả lại 1 đối tượng đại diện cho ứng dụng nodejs)*/ 
 const port = 5500; //port website
 
-app.use(express.static(path.join(__dirname, 'public'))); //lấy đường dẫn public
+app.use(express.static(path.join(__dirname, 'public'))); //lấy đường dẫn public (xử lý static file)
 
 
 // Connect to db
