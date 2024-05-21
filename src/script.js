@@ -10,8 +10,7 @@ const db = require('./config/db/script.js'); //lấy file index.js trong thư m�
 const app = express(); /*gọi express để trả lại instance (trả lại 1 đối tượng đại diện cho ứng dụng nodejs)*/ 
 const port = 5500; //port website
 
-app.use(express.static(path.join(__dirname, 'public'))); //lấy đường dẫn public (xử lý static file)
-
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Connect to db
 db.connect(); //gọi hàm connect trong file script.js
@@ -27,20 +26,8 @@ app.engine('.hbs', engine({
   extname: '.hbs'
 }));
 app.set('view engine', '.hbs');
-//Trả về trang chủ
-app.get('/', (req, res) => {
-  res.render('home'); 
-});
-//Về trang nhân viên
-app.get('/nhan-vien', (req, res) => {
-  res.render('employee');
-});
-//Về trang khách hàng
-app.get('/customer', (req, res) => {
-  res.render('customer');
-})
-// route(app); //gọi hàm route trong file script.js
-// // 127.0.0.1 - localhost
+route(app); //gọi hàm route trong file script.js
+// 127.0.0.1 - localhost
 app.listen(port, () => { //lắng nghe port 5500, bắt đâu chạy server
   console.log(`Example app listening on port http://localhost:${port}`);
 })
