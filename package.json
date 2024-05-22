@@ -5,6 +5,7 @@
   "main": "src/script.js",
   "scripts": {
     "start": "nodemon --inspect src/script.js",
+    "watch": "node-sass src/resources/scss/app.scss src/public/css/app.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

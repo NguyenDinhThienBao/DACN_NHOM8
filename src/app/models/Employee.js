@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;
 const Employee = new Schema({
     AnhNV: String,
     MaNV: String,
-    HoVaTenNV: { HoNV: String, TenNV: String,},
+    HoNV: String, 
+    TenNV: String,
     NgaySinhNV: Date,
     NoiSinh: String,
     ThamNienLamViec: Number,
@@ -17,7 +18,9 @@ const Employee = new Schema({
     LoaiNV: String,
     GioiTinh: String,
     TinhTrangSucKhoe: String,
-    ThongTinLienLac: { SoDienThoaiNV: String, EmailNV: String, DiaChiNV: String,},
+    SoDienThoaiNV: String, 
+    EmailNV: String, 
+    DiaChiNV: String,
 });
 
 module.exports = mongoose.model('Employee', Employee); //export model Employee
