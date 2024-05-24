@@ -10,5 +10,10 @@ class CustomerController {
     })
     .catch(error => next());
   }
+
+  //GET /khach-hang/:slug (slug là phần thông tin khách hàng khi chọn)
+  show(res, req) {
+    res.send('Thông tin khách hàng');
+  }
 }
 module.exports = new CustomerController;
