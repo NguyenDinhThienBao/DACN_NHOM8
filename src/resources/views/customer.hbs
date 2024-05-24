@@ -1,1 +1,132 @@
-<h1>KHÁCH HÀNG</h1>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--<link rel="stylesheet" href="/khach_hang/style.css">-->
+        <link rel="stylesheet" href="/css/customer.css">
+    </head>
+    <body>
+    <!--nội dung content-->
+        <main id="khach-hang">
+            <!--Tìm kiếm-->
+            <section id="employee-search">
+                <div id ="search-box">
+                    <form action ="">
+                        <input type="text" placeholder="Tìm kiếm..." id="search-text" required>
+                        <button type="submit" id="search-btn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                </div>
+            </section>
+            <!--================BẢNG KHÁCH HÀNG================-->
+            <section class="main_workspace container-flex-row">
+                <!--line kẻ-->
+                <span class="line"></span>
+                <!--KHÁCH HÀNG MỚI-->
+                    <div class="new-customer container-flex-column">
+                        <!--Tiêu đề loại khách hàng-->
+                        <div class="type-new-customer container-flex-column">
+                            <p class="big-text">MỚI</p>
+                            <span class="yellow-color"></span>
+                        </div>
+                        <span class="line"></span>
+                        <!--Nội dung ô khách hàng-->
+                        <!--===========================================================================-->
+                        <!--===========================================================================-->
+                        <div class="container-flex-row adjust-center">
+                            <items class="container-flex-row background-item">
+                                <div>  
+                                    <p class="khach-hang-name big-text">{{this.HoKH}} {{this.TenKH}}</p>
+                                    <p class="khach-hang-email">{{this.EmailLienLac}}</p>
+                                    <div class="container-flex-row space-around">
+                                        <p class="border-yellor don-vi">{{this.SoTienTieuThu}}</p>
+                                        <p>(VNĐ)</p>
+                                    </div>
+                                    <div class="container-flex-row space-around">
+                                        <p class="border-yellor">{{this.SoSanPhamTieuThu}}</p>
+                                        <p>(SL)</p>
+                                    </div>
+                                </div>
+                                <a class="chi_tiet_khach_hang" href="../khach_hang/phan_loai_khach_hang/thong_tin_khach_hang/index.html">
+                                    <button class="btn_chuyen">
+                                        <i class="fa-solid fa-user"></i>
+                                    </button>
+                                </a>
+                            </items>
+                        </div>
+                    </div>
+            <!--=============================================================================-->
+            <!--=============================================================================-->
+                <!--KHÁCH HÀNG TIỀM NĂNG-->
+                    <div class="new-customer container-flex-column">
+                        <!--Tiêu đề loại khách hàng-->
+                        <div class="type-new-customer container-flex-column">
+                            <p class="big-text">TIỀM NĂNG</p>
+                            <span class="orange-color"></span>
+                        </div>
+                        <span class="line"></span>
+                        <!--Nội dung ô khách hàng-->
+                        <!--===========================================================================-->
+                        <!--===========================================================================-->
+                        <div class="container-flex-row adjust-center">
+                            <items class="container-flex-row background-item">
+                                <div>  
+                                    <p class="khach-hang-name big-text">{{this.HoKH}} {{this.TenKH}}</p>
+                                    <p class="khach-hang-email">{{this.EmailLienLac}}</p>
+                                    <div class="container-flex-row space-around">
+                                        <p class="border-orange don-vi">{{this.SoTienTieuThu}}</p>
+                                        <p>(VNĐ)</p>
+                                    </div>
+                                    <div class="container-flex-row space-around">
+                                        <p class="border-orange">{{this.SoSanPhamTieuThu}}</p>
+                                        <p>(SL)</p>
+                                    </div>
+                                </div>
+                                <a class="chi_tiet_khach_hang" href="../khach_hang/phan_loai_khach_hang/thong_tin_khach_hang/index.html">
+                                    <button class="btn_chuyen">
+                                        <i class="fa-solid fa-user"></i>
+                                    </button>
+                                </a>
+                            </items>
+                        </div>
+                    </div>
+            <!--===========================================================================-->
+            <!--===========================================================================-->
+                <!--KHÁCH HÀNG VIP-->
+                    <div class="new-customer container-flex-column">
+                        <!--Tiêu đề loại khách hàng-->
+                        <div class="type-new-customer container-flex-column">
+                            <p class="big-text">V.I.P</p>
+                            <span class="red-color"></span>
+                        </div>
+                        <span class="line"></span>
+                        <!--Nội dung ô khách hàng-->
+                        <!--===========================================================================-->
+                        <!--===========================================================================-->
+                        <div class="container-flex-row adjust-center">
+                            <items class="container-flex-row background-item">
+                                <div>  
+                                    <p class="khach-hang-name big-text">{{this.HoKH}} {{this.TenKH}}</p>
+                                    <p class="khach-hang-email">{{this.EmailLienLac}}</p>
+                                    <div class="container-flex-row space-around">
+                                        <p class="border-red don-vi">{{this.SoTienTieuThu}}</p>
+                                        <p>(VNĐ)</p>
+                                    </div>
+                                    <div class="container-flex-row space-around">
+                                        <p class="border-red">{{this.SoSanPhamTieuThu}}</p>
+                                        <p>(SL)</p>
+                                    </div>
+                                </div>
+                                <a class="chi_tiet_khach_hang" href="../khach_hang/phan_loai_khach_hang/thong_tin_khach_hang/index.html">
+                                    <button class="btn_chuyen">
+                                        <i class="fa-solid fa-user"></i>
+                                    </button>
+                                </a>
+                            </items>
+                        </div>
+                    </div>
+            <!--===========================================================================-->
+            </section>
+        </main> 
+    </body>
+</html>

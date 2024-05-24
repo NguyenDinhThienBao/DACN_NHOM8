@@ -1,9 +1,9 @@
-const employeeRouter = require('./employee.js'); //lấy file index.js trong thư mục routes
-const customerRouter = require('./customer.js'); //lấy file index.js trong thư mục routes
-const financeRouter = require('./finance.js'); //lấy file index.js trong thư mục routes
-const manufactureRouter = require('./manufacture.js'); //lấy file index.js trong thư mục routes
-const purchaseRouter = require('./purchase.js'); //lấy file index.js trong thư mục routes
-const siteRouter = require('./site.js'); //lấy file index.js trong thư mục routes
+const employeeRouter = require('./employee.js'); //lấy file employee.js trong thư mục routes
+const customerRouter = require('./customer.js'); //lấy file customer.js trong thư mục routes
+const financeRouter = require('./finance.js'); //lấy file finance.js trong thư mục routes
+const manufactureRouter = require('./manufacture.js'); //lấy file manufacture.js trong thư mục routes
+const purchaseRouter = require('./purchase.js'); //lấy file purchase.js trong thư mục routes
+const siteRouter = require('./site.js'); //lấy file site.js trong thư mục routes
 const { engine } = require ('express-handlebars');
 const path = require('path');
 function route(app) {
