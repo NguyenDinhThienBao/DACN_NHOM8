@@ -5,17 +5,14 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif; }
-
 html {
   scroll-behavior: smooth; }
-
 body {
   min-height: 100vh;
   background: #fffcf1;
   position: relative;
   display: flex;
   flex-direction: column; }
-
 .sidebar {
   display: flex;
   flex-direction: row;
@@ -23,18 +20,18 @@ body {
   background: #25b9b9;
   align-items: center;
   padding: 0 10px 0 10px;
-  margin-bottom: 18px; }
-
+  margin-bottom: 18px;
+ }
 .logo-content img {
   width: 50px;
   height: auto; }
-
 ul li {
   list-style: none;
   display: inline-block;
-  margin-left: 20px;
+  margin-top: 20px;
   width: 150px;
-  height: auto; }
+  height: auto; 
+}
 
 ul li a {
   text-decoration: none;
@@ -56,5 +53,4 @@ ul li a :link {
   background: #e25037;
   border: 1px solid #aa9d9a;
   border-radius: 10px;
-  padding: 10px;
-  font-weight: 800; }
+  font-weight: 800; } 
