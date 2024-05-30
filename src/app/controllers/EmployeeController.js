@@ -10,5 +10,6 @@ class EmployeeController {
     })
     .catch(error => next());
   }
+
 }
 module.exports = new EmployeeController;
