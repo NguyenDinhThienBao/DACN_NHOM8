@@ -4,6 +4,7 @@
   "description": "Đồ án chuyên ngành",
   "main": "src/script.js",
   "scripts": {
+    "beautiful": "lint-staged",
     "start": "nodemon --inspect src/script.js",
     "watch": "node-sass src/resources/scss/main.scss src/public/css/main.css",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -24,6 +25,9 @@
     "url": "https://github.com/NguyenDinhThienBao/DACN_NHOM8/issues"
   },
   "homepage": "https://github.com/NguyenDinhThienBao/DACN_NHOM8#readme",
+  "lint-staged": {
+    "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
+  },
   "dependencies": {
     "express": "^4.19.2",
     "express-handlebars": "^7.1.2",
@@ -32,7 +36,7 @@
   },
   "devDependencies": {
     "husky": "^9.0.11",
-    "lint-staged": "^15.2.2",
+    "lint-staged": "^15.2.5",
     "morgan": "^1.10.0",
     "nodemon": "^3.1.0",
     "prettier": "^3.2.5"
