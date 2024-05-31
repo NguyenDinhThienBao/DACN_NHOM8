@@ -14,6 +14,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Connect to db
 db.connect(); //gọi hàm connect trong file script.js
+app.use(express.urlencoded());
 //HTTP logger
 app.use(morgan('combined'));
 //Template engine
