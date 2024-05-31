@@ -1,4 +1,6 @@
 const mongoose = require('mongoose'); // mongoose giúp biến document trong mongodb thành các object trong javascript
+// const slug = require('mongoose-slug-generator');
+// mongoose.plugin(slug);
 const Schema = mongoose.Schema;
 
 const Employee = new Schema({
@@ -21,6 +23,7 @@ const Employee = new Schema({
     SoDienThoaiNV: String, 
     EmailNV: String, 
     DiaChiNV: String,
+    // slug: { type: String, slug: '' }
 });
 
 module.exports = mongoose.model('Employee', Employee); //export model Employee

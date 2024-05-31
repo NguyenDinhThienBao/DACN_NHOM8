@@ -32,7 +32,9 @@
     "express": "^4.19.2",
     "express-handlebars": "^7.1.2",
     "mongoose": "^8.3.4",
-    "node-sass": "^9.0.0"
+    "mongoose-slug-generator": "^1.0.4",
+    "node-sass": "^9.0.0",
+    "slug": "^9.1.0"
   },
   "devDependencies": {
     "husky": "^9.0.11",
