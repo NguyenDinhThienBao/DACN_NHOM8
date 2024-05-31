@@ -3,15 +3,15 @@
 const express = require('express'); /*lấy express trong node_modules để nạp vào const express*/ 
 const morgan = require('morgan');
 const { engine } = require ('express-handlebars');
+const methodOverride = require('method-override')
 const path = require('path');
 const route = require('./routes/script.js'); //lấy file script.js trong thư mục routes
 const db = require('./config/db/script.js'); //lấy file script.js trong thư mục db
-//const handlebars = require('express-handlebars');
 const app = express(); /*gọi express để trả lại instance (trả lại 1 đối tượng đại diện cho ứng dụng nodejs)*/ 
 const port = 5500; //port website
 
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(methodOverride('_method'))
 // Connect to db
 db.connect(); //gọi hàm connect trong file script.js
 app.use(express.urlencoded());
