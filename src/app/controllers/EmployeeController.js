@@ -27,7 +27,7 @@ async add(req, res, next){
 async store(req, res, next){
   const employee = new Employee(req.body);
   employee.save()
-  .then(() => res.redirect('/'))
+  .then(() => res.redirect('/nhan-vien'))
   .catch(error => next());
 }
 
