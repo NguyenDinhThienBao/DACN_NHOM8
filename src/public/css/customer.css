@@ -44,6 +44,26 @@
   cursor: pointer;
   padding: 10px 10px; }
 
+/*Thêm, xóa khách hàng*/
+#adjust-employee {
+  position: absolute;
+  /*Hiển thị nút "Thêm, xóa khách hàng" ở góc dưới bên phải*/
+  right: 0;
+  align-items: center;
+  cursor: pointer;
+  width: 90px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 5px; }
+
+#add-btn, #delete-btn {
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 10px; }
+
 /*================BẢNG KHÁCH HÀNG======================*/
 /*===============CỘT KHÁCH HÀNG*===============*/
 .new-customer, .potential-customer, .vip-customer {
