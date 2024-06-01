@@ -1,19 +1,29 @@
 const { render } = require('node-sass');
 const Customer = require('../models/Customer');
+const { multipleMongooseToObject } = require('../../util/mongoose')
 class CustomerController {
   //GET /khach-hang
   async index(req, res, next) {
     Customer.find({})
     .then(customer => {
-      customer = customer.map(customer => customer.toObject())
-      res.render('customer', { customer });
+      res.render('customer', { 
+        customer: multipleMongooseToObject(customer) 
+      });
     })
     .catch(error => next());
   }
 
-  //GET /khach-hang/:slug (slug là phần thông tin khách hàng khi chọn)
-  show(res, req) {
-    res.send('Thông tin khách hàng');
+
+  // Hiển thị chi tiết khách hàng khi click vào khách hàng với slug là mã khách hàng
+  async show(req, res, next) {
+    Customer.findOne({ MaKH: req.params.slug })
+    .then(customerDetail => {
+        customerDetail = customerDetail.toObject()
+        res.render('customerDetail', {customerDetail});
+      })
+      .catch(error => next());
   }
+
+  
 }
 module.exports = new CustomerController;

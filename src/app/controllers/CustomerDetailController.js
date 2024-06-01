@@ -1,4 +1,6 @@
-
+const { render } = require('node-sass');
+const Customer = require('../models/Customer');
+const { multipleMongooseToObject } = require('../../util/mongoose')
 
 class CustomerDetailController {
 
