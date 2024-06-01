@@ -27,9 +27,24 @@ async add(req, res, next){
 async store(req, res, next){
   const employee = new Employee(req.body);
   employee.save()
-  .then(() => res.redirect('/'))
+  .then(() => res.redirect('/nhan-vien'))
   .catch(error => next());
 }
 
+// Chỉnh sửa thông tin nhân viên
+async edit(req, res, next){
+  Employee.findById(req.params.id)
+  .then(employeeDetail => {
+    employeeDetail = employeeDetail.toObject()
+    res.render('editEmployee', {employeeDetail});
+  })
+  .catch(error => next());
+}
+// [PUT] Lưu thông tin nhân viên đã chỉnh sửa
+async update(req, res, next){
+  Employee.updateOne({_id: req.params.id}, req.body)
+  .then(() => res.redirect('/', MaNV))
+  .catch(error => next());
+}
 }
 module.exports = new EmployeeController;
