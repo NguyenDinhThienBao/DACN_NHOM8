@@ -30,7 +30,7 @@ app.set('view engine', '.hbs');
 route(app); //gọi hàm route trong file script.js
 // 127.0.0.1 - localhost
 app.listen(port, () => { //lắng nghe port 5500, bắt đâu chạy server
-  console.log(`Example app listening on port http://localhost:${port}`);
+  console.log(`App listening on port http://localhost:${port}`);
 })
 
 /*===============================================*/

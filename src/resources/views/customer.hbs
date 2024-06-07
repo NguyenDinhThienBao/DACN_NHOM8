@@ -17,6 +17,19 @@
                         </button>
                     </form>
                 </div>
+
+                <div id="adjust-employee">
+                    <!--Thêm khách hàng-->
+                    <div id="add-employee">
+                        <a href="/khach-hang/them-khach-hang" target="_parent"><i class="fa-solid fa-user-plus"></i></a>
+                    </div>
+                    <!--Xóa khách hàng-->
+                    <div id="delete-employee">
+                        <button type="button" id="delete-btn">
+                            <i class="fa-solid fa-user-minus"></i>
+                        </button>
+                    </div>
+                </div>
             </section>
             <!--================BẢNG KHÁCH HÀNG================-->
             <section class="main_workspace container-flex-row">
@@ -33,6 +46,7 @@
                         <!--Nội dung ô khách hàng-->
                         <!--===========================================================================-->
                         <!--===========================================================================-->
+                        {{#each customer}}
                         <div class="container-flex-row adjust-center">
                             <items class="container-flex-row background-item">
                                 <div>  
@@ -47,13 +61,14 @@
                                         <p>(SL)</p>
                                     </div>
                                 </div>
-                                <a class="chi_tiet_khach_hang" href="../khach_hang/phan_loai_khach_hang/thong_tin_khach_hang/index.html">
+                                <a class="chi_tiet_khach_hang" href="/khach-hang/{{this.MaKH}}">
                                     <button class="btn_chuyen">
                                         <i class="fa-solid fa-user"></i>
                                     </button>
                                 </a>
                             </items>
                         </div>
+                        {{/each}}
                     </div>
             <!--=============================================================================-->
             <!--=============================================================================-->
@@ -68,6 +83,7 @@
                         <!--Nội dung ô khách hàng-->
                         <!--===========================================================================-->
                         <!--===========================================================================-->
+                        {{#each customer}}
                         <div class="container-flex-row adjust-center">
                             <items class="container-flex-row background-item">
                                 <div>  
@@ -82,13 +98,14 @@
                                         <p>(SL)</p>
                                     </div>
                                 </div>
-                                <a class="chi_tiet_khach_hang" href="../khach_hang/phan_loai_khach_hang/thong_tin_khach_hang/index.html">
+                                <a class="chi_tiet_khach_hang" href="/khach-hang/{{this.MaKH}}">
                                     <button class="btn_chuyen">
                                         <i class="fa-solid fa-user"></i>
                                     </button>
                                 </a>
                             </items>
                         </div>
+                        {{/each}}
                     </div>
             <!--===========================================================================-->
             <!--===========================================================================-->
@@ -103,6 +120,7 @@
                         <!--Nội dung ô khách hàng-->
                         <!--===========================================================================-->
                         <!--===========================================================================-->
+                        {{#each customer}}
                         <div class="container-flex-row adjust-center">
                             <items class="container-flex-row background-item">
                                 <div>  
@@ -117,13 +135,14 @@
                                         <p>(SL)</p>
                                     </div>
                                 </div>
-                                <a class="chi_tiet_khach_hang" href="../khach_hang/phan_loai_khach_hang/thong_tin_khach_hang/index.html">
+                                <a class="chi_tiet_khach_hang" href="/khach-hang/{{this.MaKH}}">
                                     <button class="btn_chuyen">
                                         <i class="fa-solid fa-user"></i>
                                     </button>
                                 </a>
                             </items>
                         </div>
+                        {{/each}}
                     </div>
             <!--===========================================================================-->
             </section>
