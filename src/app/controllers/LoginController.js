@@ -1,6 +1,6 @@
 const { render } = require('node-sass');
 const Login = require('../models/Login');
-
+const { multipleMongooseToObject } = require('../../util/mongoose');
 class LoginController {
     /*async post(req, res, next) {
         Login.findOne({name: req.body.name})

@@ -1,9 +1,17 @@
+const { render } = require('node-sass');
 const Finance = require('../models/Finance');
+const { multipleMongooseToObject } = require('../../util/mongoose');
 class FinanceController {
-  async index(req, res) {
-
-    const finance = await Finance.find({});
-    res.json(finance);
+  //GET /tai-chinh
+  async index(req, res, next) {
+    Finance.find({})
+    .then(finance => {
+      res.render('finance', { 
+        finance: multipleMongooseToObject(finance) 
+      });
+    })
+    .catch(error => next());
   }
-  }
-  module.exports = new FinanceController;
+    
+}
+module.exports = new FinanceController;

@@ -7,10 +7,9 @@ const Purchase = new Schema({
     NgayLapHD: Date,
     TongTien: Number,
     TrangThai: String,
-    ChiTietHD: [{
-        MaSP: String,
-        SoLuong: Number,
-        DonGia: Number,
-    }],
+    MaSP: String,
+    SoLuong: Number,
+    DonGia: Number,
+    
 });
 module.exports = mongoose.model('Purchase', Purchase); //export model Purchase
