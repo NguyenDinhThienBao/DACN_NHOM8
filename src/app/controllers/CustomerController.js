@@ -1,6 +1,6 @@
 const { render } = require('node-sass');
 const Customer = require('../models/Customer');
-const { multipleMongooseToObject } = require('../../util/mongoose')
+const { multipleMongooseToObject } = require('../../util/mongoose');
 class CustomerController {
   //GET /khach-hang (Hiển thị danh sách khách hàng)
   async index(req, res, next) {
