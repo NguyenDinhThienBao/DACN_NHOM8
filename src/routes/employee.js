@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const employeeController = require('../app/controllers/EmployeeController'); //lấy file index.js trong thư mục controllers
+router.get('/bo-loc', employeeController.filter);
 router.get('/them-nhan-vien', employeeController.add);
 router.put('/:id', employeeController.update);
 router.get('/:id/edit', employeeController.edit);
