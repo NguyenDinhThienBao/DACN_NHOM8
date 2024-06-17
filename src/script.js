@@ -8,10 +8,11 @@ const path = require('path');
 const route = require('./routes/script.js'); //lấy file script.js trong thư mục routes
 const db = require('./config/db/script.js'); //lấy file script.js trong thư mục db
 const app = express(); /*gọi express để trả lại instance (trả lại 1 đối tượng đại diện cho ứng dụng nodejs)*/ 
-const port = 5500; //port website
-
+const dotenv = require("dotenv");
+const port = process.env.PORT || 5500; //port website
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(methodOverride('_method'))
+app.use(methodOverride('_method'));
+app.use(morgan("common"));
 // Connect to db
 db.connect(); //gọi hàm connect trong file script.js
 app.use(express.urlencoded());
