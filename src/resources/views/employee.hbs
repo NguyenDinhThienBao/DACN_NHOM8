@@ -3,21 +3,20 @@
     <head>
 
         <link rel="stylesheet" href="/css/employee.css">
-        {{!-- <script src="/js/employee.js"></script> --}}
     </head>
     <body class="position-relative flex-row">
     <!--Hiển thị chính-->
             <!--Thanh tìm kiếm-->
         <section id="employee-search">
                 <div id ="search-box">
-                    <form action ="">
-                        <input type="text" placeholder="Tìm kiếm..." id="search-text" required>
+                    <form action ="/nhan-vien/tim-kiem">
+                        <input type="text" placeholder="Tìm kiếm..." id="search-text" name="search" value="{{search}}">
                         <button type="submit" id="search-btn">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
                     </form>
                 </div>
-                <!--Bộ lọc-->
+    <!--Bộ lọc-->
 <form id="filter" class="employee-filter" action="/nhan-vien/bo-loc">
   <div>
     <label for="ViTriLamViec">Vị trí làm việc:</label>
@@ -32,7 +31,7 @@
     <select id="ChuyenMonLamViec" name="ChuyenMonLamViec">
       <option value="">Tất cả</option>
       <option value="Giám Định Sản Phẩm">Giám Định Sản Phẩm</option>
-      <option value="Quản Lí Nhân Sự">Quản Lí Nhân Sự</option>
+      <option value="Nhân Sự">Nhân Sự</option>
       <option value="IT">IT</option>
       <option value="Sản Xuất">Sản Xuất</option> <!--Nhân viên/ Quản lý-->
     </select>
@@ -55,19 +54,17 @@
   </div>
   <button type="submit">Lọc</button>
 </form>
-
-
-                <div id="adjust-employee">
-                    <!--Thêm nhân viên-->
-                    <div id="add-employee">
-                        <a class = "add-employee" href="/nhan-vien/them-nhan-vien" target="_parent"><i class="fa-solid fa-user-plus"></i></a>
-                    </div>
-                    <!--Xóa nhân viên-->
-                    <div id="delete-employee">
-                        <a class = "delete-employee" href="/nhan-vien/xoa-nhan-vien" target="_parent"><i class="fa-solid fa-user-minus"></i></a>
-                    </div>
-                </div>
-            </section>
+ <div id="adjust-employee">
+        <!--Thêm nhân viên-->
+        <div id="add-employee">
+            <a class = "add-employee" href="/nhan-vien/them-nhan-vien" target="_parent"><i class="fa-solid fa-user-plus"></i></a>
+        </div>
+        <!--Xóa nhân viên-->
+        <div id="delete-employee">
+            <a class = "delete-employee" href="/nhan-vien/xoa-nhan-vien" target="_parent"><i class="fa-solid fa-user-minus"></i></a>
+        </div>
+    </div>
+</section>
 
             <!--Thông tin nhân sự-->
             <section class="employee-card">
