@@ -1,23 +1,30 @@
+
 #nhan-su{
     position: relative; /*Hiển thị nút "Thêm, xóa nhân viên" ở góc dưới bên phải*/
     display: flex;
-    flex-direction: column; /*Hiển thị theo cột*/
+    flex-direction: row; /*Hiển thị theo cột*/
+    margin-top: 10px;  
 }
 #employee-search{
     display: flex;
-    position: sticky; /*Hiển thị "employee-search" cố định khi cuộn trang*/
-    z-index: 2000; /* Đảm bảo hiển thị "employee-search" trên cùng */
+    flex-direction: column;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 /*Thanh tìm kiếm*/
 #search-box {
 background: white;
-border: 1px solid black;
 cursor: pointer;
-width: 300px;
+width: 400px;
 border-radius: 20px;
 display: flex;
 flex-direction: column;
 margin-left: 10px;
+margin-bottom: 10px;
+box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
 }
 /*text search*/
 #search-box #search-text{
@@ -38,29 +45,51 @@ margin-left: 10px;
 }
 
 /*Bộ lọc nhân viên*/
-#employee-filter{
-    background: white;
-    border: 1px solid black;
-    margin-left: 5px;
-    border-radius: 20px;
+.employee-filter {
     display: flex;
-    padding: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .employee-filter label,
+  .employee-filter select,
+  .employee-filter input,
+  .employee-filter button {
+    flex: 0 0 auto;
     margin-right: 10px;
-    flex-direction: row;
+  }
+.employee-filter select,
+.employee-filter input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: 14px;
+  background-color: #f8f8f8;
+  color: #333;
 }
-.filter-item{
-    display: inline;
-    margin-bottom: 10px;
+
+.employee-filter select:focus,
+.employee-filter input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
-.filter-item select{
-    background: none;
-    font-family: "Montserrat", sans-serif;
-    border: 1px solid black;
-    outline: none;
-    margin-left: 5px;
-    border-radius: 20px;
-    justify-content: center;
-}
+
+  .employee-filter button {
+    background-color: #25b9b9;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .employee-filter button:hover {
+    background-color: #099090;
+  }
+  
 /*Thêm, xóa nhân viên*/
 #adjust-employee{
     position: absolute; /*Hiển thị nút "Thêm, xóa nhân viên" ở góc dưới bên phải*/
@@ -73,7 +102,7 @@ margin-left: 10px;
     flex-direction: row;
     margin-left: 5px;
 }
-#add-btn, #delete-btn{
+#add-employee, #delete-employee{
     border: none;
     background: none;
     outline: none;
@@ -94,21 +123,21 @@ margin-left: 10px;
     background-color: #fff;
     margin-top: 10px;
     margin-left: 30px;
-    border: 1px solid black;
+    border: 1px solid none;
     border-radius: 10px;
-    justify-content: center; /*Căn giữa*/
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1); 
 }
 .employee-img{
-    width: 150px;
-    height: auto;
-    margin-right: 10px;
+    width:30%;
+    height: 100%;
     border-radius: 10px;
-    border-right: 1px solid black;
+    border-right: 1px solid none;
 }
 
 .employee-card-body{
     position: relative;
     margin: 10px;
+    width: 60%;
 }
 #chi_tiet_nhan_vien{
     position: absolute; /*Hiển thị nút "chi tiết" ở góc dưới bên phải*/
@@ -124,11 +153,12 @@ margin-left: 10px;
     font-size: 20px;
     text-transform: uppercase; /*viết hoa*/
     font-weight: bold;
-    margin-bottom: 5px;
 }
 .chuc_vu_nhan_vien{
-    background-color: #25b9b9;
-    padding: 5px;
+    /* background: #25b9b9; */
+    width: auto;
+    height: auto;
+    border: 1px solid none;
     text-transform: uppercase; /*viết hoa*/
 }
 .email_nhan_vien, .so_dien_thoai_nhan_vien{
@@ -136,3 +166,15 @@ margin-left: 10px;
     font-size: 11px;
     color: #808080;
 }
+/* Định dạng chung cho các link */
+.add-employee, .delete-employee, .chi-tiet-nhan-vien {
+    color: black;
+    text-decoration: none;
+  }
+  
+  /* Định dạng khi để chuột vào link */
+.add-employee:hover, .delete-employee:hover,  .chi-tiet-nhan-vien:hover  {
+    color: red;
+  }
+  
+  
