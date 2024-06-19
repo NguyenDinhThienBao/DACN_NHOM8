@@ -3,6 +3,7 @@
     <head>
 
         <link rel="stylesheet" href="/css/employee.css">
+        <script src="/js/employee.js"></script>
     </head>
     <body class="position-relative flex-row">
     <!--Hiển thị chính-->
@@ -19,20 +20,22 @@
     <!--Bộ lọc-->
 <form id="filter" class="employee-filter" action="/nhan-vien/bo-loc">
   <div>
-    <label for="ViTriLamViec">Vị trí làm việc:</label>
-    <select id="ViTriLamViec" name="ViTriLamViec">
+    <label for="LoaiNV">Loại nhân viên:</label>
+    <select id="LoaiNV" name="LoaiNV">
       <option value="">Tất cả</option>
-      <option value="Nhân viên">Nhân viên</option>
-      <option value="Quản lý">Quản lý</option>
+      <option value="Nhân viên chính thức">Nhân viên chính thức</option>
+      <option value="Thực tập sinh">Thực tập sinh</option>
+      <option value="Thử việc">Thử việc</option>
     </select>
   </div>
   <div>
     <label for="ChuyenMonLamViec">Chuyên môn:</label>
     <select id="ChuyenMonLamViec" name="ChuyenMonLamViec">
       <option value="">Tất cả</option>
-      <option value="Giám Định Sản Phẩm">Giám Định Sản Phẩm</option>
+      <option value="Giám định sản phẩm">Giám định sản phẩm</option>
       <option value="Nhân Sự">Nhân Sự</option>
       <option value="IT">IT</option>
+      <option value="marketing">Bán hàng</option>
       <option value="Sản Xuất">Sản Xuất</option> <!--Nhân viên/ Quản lý-->
     </select>
   </div>
@@ -63,14 +66,14 @@
         <div id="delete-employee">
             <a class = "delete-employee" href="/nhan-vien/xoa-nhan-vien" target="_parent"><i class="fa-solid fa-user-minus"></i></a>
         </div>
-    </div>
+  </div>
 </section>
 
             <!--Thông tin nhân sự-->
             <section class="employee-card">
                 {{#each employee}}
                 <div class="employee-info">
-                    <img src="{{this.AnhNV}}" alt="Ảnh nhân viên" class="employee-img">
+                    <img src="img/{{this.AnhNV}}" alt="Ảnh nhân viên" class="employee-img">
                     <div class="employee-card-body">
                         <div class="ho_ten_nhan_vien"><p><strong>{{this.HoNV}} {{this.TenNV}}</strong></p></div>
                         <div class="chuc_vu_nhan_vien"><p>{{this.ViTriLamViec}}</p></div>
