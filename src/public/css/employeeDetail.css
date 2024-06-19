@@ -1,7 +1,8 @@
 #chi_tiet_nhan_vien {
-    position: relative;
+    position: relative; /*Hiển thị nút "Thêm, xóa nhân viên" ở góc dưới bên phải*/
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /*Hiển thị theo cột*/
+    margin-top: 0px;  
 }
 
 #quay_lai {
@@ -171,6 +172,7 @@
 }
 /*Button cập nhật*/
 .btn_cap_nhat{
+    text-decoration: none;
     position: absolute;
     right: 0;
     bottom:0;
