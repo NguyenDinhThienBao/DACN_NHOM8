@@ -29,6 +29,9 @@ class EmployeeController {
   async store(req, res, next){
     const employee = new Employee(req.body);
     employee.ThamNienLamViec = ThamNienLamViec(employee.ThoiGianBatDau);
+    if(req.file){
+      employee.AnhNV = req.file.filename;
+    }
     employee.save()
     .then(() => res.redirect('/nhan-vien'))
     .catch(error => next());
