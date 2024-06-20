@@ -5,8 +5,7 @@ const Schema = mongoose.Schema;
 const Employee = new Schema({
     AnhNV: String,
     MaNV: String,
-    HoNV: String, 
-    TenNV: String,
+    HovaTenNV: String,
     NgaySinhNV: Date,
     NoiSinh: String,
     ThamNienLamViec: Number,

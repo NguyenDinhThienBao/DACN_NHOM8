@@ -12,13 +12,9 @@
     <input name="AnhNV" type="file" class="form-control" id="AnhNV" required>
   </div>
   {{!--Tên nhân viên--}}
-  <div class="form-div">
-    <label for="HoNV" class="form-label">Họ nhân viên</label>
-    <input name="HoNV" type="text" class="form-control" id="HoNV" required>
-  </div>
-  <div class="form-div">
-    <label for="TenNV" class="form-label">Tên nhân viên</label>
-    <input name="TenNV" type="text" class="form-control" id="TenNV">
+    <div class="form-div">
+    <label for="HovaTenNV" class="form-label">Họ và Tên nhân viên</label>
+    <input name="HovaTenNV" type="text" class="form-control" id="HovaTenNV" required>
   </div>
   {{!--Ngày sinh nhân viên--}}
   <div class="form-div">
@@ -50,30 +46,6 @@
     <label for="TonGiaoNV" class="form-label">Tôn Giáo</label>
     <input name="TonGiaoNV" type="text" class="form-control" id="TonGiaoNV" required>
   </div>
-
-    {{!--Vị trí làm việc--}}
-  {{!-- <div class="form-div">
-    <label for="ViTriNV" class="form-label">Vị trí làm việc</label>
-    <input name="ViTriLamViec" type="text" class="form-control" id="ViTriNV" required>
-  </div> --}}
-
-      {{!--Chuyên môn làm việc--}}
-  {{!-- <div class="form-div">
-    <label for="ChuyenMonLamViec" class="form-label">Chuyên môn</label>
-    <input name="ChuyenMonLamViec" type="text" class="form-control" id="ChuyenMonLamViec" required>
-  </div> --}}
-
-    {{!--Loại nhân viên--}}
-  {{!-- <div class="form-div">
-    <label for="LoaiNV" class="form-label">Loại NV</label>
-    <input name="LoaiNV" type="text" class="form-control" id="LoaiNV" required>
-  </div> --}}
-
-    {{!--Giới tính--}}
-  {{!-- <div class="form-div">
-    <label for="GioiTinhNV" class="form-label">Giới tính</label>
-    <input name="GioiTinh" type="text" class="form-control" id="GioiTinhNV" required>
-  </div> --}}
   {{!--Vị trí--}}
     <fieldset>
       <legend>Chuyên môn làm việc</legend>
@@ -86,7 +58,8 @@
   {{!--Loại nhân viên--}}
     <fieldset>
       <legend>Loại nhân viên</legend>
-      <label for="nhan-vien-chinh-thuc"><input id="nhan-vien-chinh-thuc" type="radio" name="LoaiNV" class="inline" value="Nhân viên chính thức" checked/>Nhân viên chính thức</label>
+      <label for="nhan-vien-chinh-thuc"><input id="nhan-vien-chinh-thuc" type="radio" name="LoaiNV" class="inline" value="Nhân viên" checked/>Nhân viên</label>
+            <label for="nhan-vien-chinh-thuc"><input id="nhan-vien-chinh-thuc" type="radio" name="LoaiNV" class="inline" value="Quản lí" checked/>Quản lí</label>
       <label for="thuc-tap-sinh"><input id="thuc-tap-sinh" type="radio" name="LoaiNV" class="inline" value="Thực tập sinh" />Thực tập sinh</label>
       <label for="thu-viec"><input id="thu-viec" type="radio" name="LoaiNV" class="inline" value="Thử việc" />Thử việc</label>
     </fieldset>

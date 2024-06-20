@@ -6,6 +6,7 @@ router.get('/bo-loc', employeeController.filter);
 router.get('/tim-kiem', employeeController.search);
 router.get('/them-nhan-vien', employeeController.add);
 router.put('/:id', employeeController.update);
+router.delete('/:id', employeeController.delete);
 router.get('/:id/edit', employeeController.edit);
 router.post('/luu-nhan-vien', upload.single("AnhNV"), employeeController.store);
 router.get('/:slug', employeeController.show);

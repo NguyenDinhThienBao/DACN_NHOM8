@@ -77,7 +77,13 @@ class EmployeeController {
     })
     .catch(error => next());
     }
+  // [DELETE]
+  async delete(req, res, next){
+    Employee.deleteOne({_id: req.params.id})
+    .then(() => res.redirect('back'))
+    .catch(error => next());
   }
+}
 module.exports = new EmployeeController;
 
     // Tính thông niên làm việc
