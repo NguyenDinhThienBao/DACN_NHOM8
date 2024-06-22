@@ -1,6 +1,6 @@
 const { render } = require('node-sass');
 const Employee = require('../models/Employee');
-const { isDate } = require('moment');
+const { monment } = require('moment');
 class EmployeeController {
   // Hiển thị danh sách nhân viên và thêm thẻ nếu có thêm nhân viên mới vào
   async index(req, res, next) {
@@ -17,6 +17,9 @@ class EmployeeController {
     .then(employeeDetail => {
       employeeDetail = employeeDetail.toObject();
       employeeDetail.ThamNienLamViec= ThamNienLamViec(employeeDetail.ThoiGianBatDau);
+      const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+      employeeDetail.ThoiGianBatDauFormatted = employeeDetail.ThoiGianBatDau.toLocaleDateString('vi-VN', options);
+      employeeDetail.NgaySinhNVFormatted = employeeDetail.NgaySinhNV.toLocaleDateString('vi-VN', options);
       res.render('employeeDetail', {employeeDetail});
       })
       .catch(error => next());
@@ -41,7 +44,7 @@ class EmployeeController {
   async edit(req, res, next){
     Employee.findById(req.params.id)
     .then(employeeDetail => {
-      employeeDetail = employeeDetail.toObject()
+      employeeDetail = employeeDetail.toObject();
       res.render('editEmployee', {employeeDetail});
     })
     .catch(error => next());
@@ -57,7 +60,7 @@ class EmployeeController {
   async filter(req,res,next){
   await Employee.find({
     GioiTinh: req.query.GioiTinh || { $exists: true }, 
-    ViTriLamViec:req.query.ViTriLamViec || { $exists: true },
+    LoaiNV:req.query.LoaiNV|| { $exists: true },
     ChuyenMonLamViec:req.query.ChuyenMonLamViec|| { $exists: true },
     ThamNienLamViec:{ $gte: req.query.minExperience || 0, $lte: req.query.maxExperience || Infinity},
   })

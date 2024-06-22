@@ -1,7 +1,8 @@
 /*chạy npm run watch để chạy*/
 * {
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif; }
+  font-family: 'Montserrat', sans-serif; 
+}
 html {
   scroll-behavior: smooth; }
 .position-relative{
