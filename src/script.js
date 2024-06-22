@@ -9,7 +9,7 @@ const route = require('./routes/script.js'); //lấy file script.js trong thư m
 const db = require('./config/db/script.js'); //lấy file script.js trong thư mục db
 const app = express(); /*gọi express để trả lại instance (trả lại 1 đối tượng đại diện cho ứng dụng nodejs)*/ 
 const dotenv = require("dotenv");
-
+const moment = require('moment');
 const port = process.env.PORT || 5500; //port website
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
