@@ -3,7 +3,8 @@
     <head>
         <link rel="stylesheet" href="/css/employeeDetail.css">
     </head>
-    <body id="chi_tiet_nhan_vien">
+    <body>
+        <main id="chi-tiet-nhan-vien">
         <!--Hiển thị chính-->
             <!--Nút quay lại trên cùng-->
             <section id="quay_lai">
@@ -15,7 +16,7 @@
             <section id="vung_thong_tin_1">
                 <!--Ảnh nhân viện --> 
                 <div id="anh_nhan_vien">
-                    <img src="{{employeeDetail.AnhNV}}" alt=""/>
+                    <img src="/img/{{employeeDetail.AnhNV}}" alt="Ảnh nhân viên"/>
                 </div> 
                 <!--Phần bên trái ảnh nhân viên --> 
                 <!--Mã nhân viên-->
@@ -29,7 +30,7 @@
                             <p class="big-text">HỌ VÀ TÊN</p>
                             <P class="small-text">(Full name)</P>
                         </div>
-                        <p class="ho_va_ten border-info" >{{employeeDetail.HoNV}} {{employeeDetail.TenNV}}</p>
+                        <p class="ho_va_ten border-info" >{{employeeDetail.HovaTenNV}}</p>
                     </div>
                     <!--Phần dưới học và tên-->
                     <div class="container-flex-row">
@@ -98,13 +99,6 @@
                 <div>
                     <div class="container-flex-column">
                         <div>
-                            <p class="big-text">VỊ TRÍ</p>
-                            <p class="small-text">(Position)</p>
-                        </div>
-                        <p class="vi_tri border-info">{{employeeDetail.ViTriLamViec}}</p>
-                    </div>
-                    <div class="container-flex-column">
-                        <div>
                             <p class="big-text">CHUYÊN MÔN</p>
                             <p class="small-text">(Specialized)</p>
                         </div>
@@ -112,8 +106,8 @@
                     </div>
                     <div class="container-flex-column">
                         <div>
-                            <p class="big-text">LOẠI</p>
-                            <p class="small-text">(Type)</p>
+                            <p class="big-text">VỊ TRÍ</p>
+                            <p class="small-text">(Position)</p>
                         </div>
                         <p class="loai border-info">{{employeeDetail.LoaiNV}}</p>
                     </div>
@@ -164,5 +158,6 @@
                     <span>Cập nhật thông tin</span>
                 </a>
             </section>
+        </main>
     </body>
 </html>

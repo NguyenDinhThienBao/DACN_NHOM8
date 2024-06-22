@@ -2,16 +2,17 @@
 #nhan-su{
     position: relative; /*Hiển thị nút "Thêm, xóa nhân viên" ở góc dưới bên phải*/
     display: flex;
-    flex-direction: row; /*Hiển thị theo cột*/
-    margin-top: 10px;  
+    flex-direction: row; /*Hiển thị theo cột*/ 
 }
 #employee-search{
     display: flex;
     flex-direction: column;
     box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.3);
     padding: 10px;
+    background: #efeeee;
+    margin-top: -10px;
     position: sticky;
-    top: 0;
+    top: 70px;
     z-index: 1;
 }
 /*Thanh tìm kiếm*/
@@ -28,7 +29,6 @@ box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
 }
 /*text search*/
 #search-box #search-text{
-
     border: none;
     outline: none;
     background: none;
@@ -91,23 +91,21 @@ box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
   }
   
 /*Thêm, xóa nhân viên*/
-#adjust-employee{
+#add-employee{
     position: absolute; /*Hiển thị nút "Thêm, xóa nhân viên" ở góc dưới bên phải*/
     right: 0;
     align-items: center;
     cursor: pointer;
-    width: 90px;
     border-radius: 20px;
     display: flex;
     flex-direction: row;
-    margin-left: 5px;
+    padding: 10px 10px; 
 }
 #add-employee, #delete-employee{
     border: none;
     background: none;
     outline: none;
     cursor: pointer;
-    padding: 10px 10px; 
 }
 /*Danh sách nhân viên*/
 .employee-card {
@@ -155,7 +153,6 @@ box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
     font-weight: bold;
 }
 .chuc_vu_nhan_vien{
-    /* background: #25b9b9; */
     width: auto;
     height: auto;
     border: 1px solid none;
@@ -177,4 +174,4 @@ box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
     color: red;
   }
   
-  
+

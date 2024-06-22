@@ -1,13 +1,11 @@
 const mongoose = require('mongoose'); // mongoose giúp biến document trong mongodb thành các object trong javascript
-// const slug = require('mongoose-slug-generator');
-// mongoose.plugin(slug);
+const multer = require('multer');
 const Schema = mongoose.Schema;
 
 const Employee = new Schema({
     AnhNV: String,
     MaNV: String,
-    HoNV: String, 
-    TenNV: String,
+    HovaTenNV: String,
     NgaySinhNV: Date,
     NoiSinh: String,
     ThamNienLamViec: Number,

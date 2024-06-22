@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-
-        <link rel="stylesheet" href="/css/employee.css">
-    </head>
+  <head>
+      <link rel="stylesheet" href="/css/employee.css">
+  </head>
     <body class="position-relative flex-row">
     <!--Hiển thị chính-->
             <!--Thanh tìm kiếm-->
-        <section id="employee-search">
-                <div id ="search-box">
-                    <form action ="/nhan-vien/tim-kiem">
-                        <input type="text" placeholder="Tìm kiếm..." id="search-text" name="search" value="{{search}}">
-                        <button type="submit" id="search-btn">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
-                    </form>
-                </div>
+      <section id="employee-search">
+        <div id ="search-box">
+            <form action ="/nhan-vien/tim-kiem">
+                <input type="text" placeholder="Tìm kiếm..." id="search-text" name="search" value="{{search}}">
+                <button type="submit" id="search-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+      </div>
     <!--Bộ lọc-->
 <form id="filter" class="employee-filter" action="/nhan-vien/bo-loc">
   <div>
-    <label for="ViTriLamViec">Vị trí làm việc:</label>
-    <select id="ViTriLamViec" name="ViTriLamViec">
+    <label for="LoaiNV">Loại nhân viên:</label>
+    <select id="LoaiNV" name="LoaiNV">
       <option value="">Tất cả</option>
-      <option value="Nhân viên">Nhân viên</option>
-      <option value="Quản lý">Quản lý</option>
+      <option value="Nhân viên chính thức">Nhân viên chính thức</option>
+      <option value="Thực tập sinh">Thực tập sinh</option>
+      <option value="Thử việc">Thử việc</option>
     </select>
   </div>
   <div>
     <label for="ChuyenMonLamViec">Chuyên môn:</label>
     <select id="ChuyenMonLamViec" name="ChuyenMonLamViec">
       <option value="">Tất cả</option>
-      <option value="Giám Định Sản Phẩm">Giám Định Sản Phẩm</option>
+      <option value="Giám định sản phẩm">Giám định sản phẩm</option>
       <option value="Nhân Sự">Nhân Sự</option>
       <option value="IT">IT</option>
+      <option value="marketing">Bán hàng</option>
       <option value="Sản Xuất">Sản Xuất</option> <!--Nhân viên/ Quản lý-->
     </select>
   </div>
@@ -54,29 +55,27 @@
   </div>
   <button type="submit">Lọc</button>
 </form>
- <div id="adjust-employee">
-        <!--Thêm nhân viên-->
+  <!--Thêm nhân viên-->
         <div id="add-employee">
-            <a class = "add-employee" href="/nhan-vien/them-nhan-vien" target="_parent"><i class="fa-solid fa-user-plus"></i></a>
+            <a class = "add-employee" href="/nhan-vien/them-nhan-vien"  target="_top"><i class="fa-solid fa-user-plus"></i></a>
         </div>
-        <!--Xóa nhân viên-->
-        <div id="delete-employee">
-            <a class = "delete-employee" href="/nhan-vien/xoa-nhan-vien" target="_parent"><i class="fa-solid fa-user-minus"></i></a>
-        </div>
-    </div>
 </section>
 
             <!--Thông tin nhân sự-->
             <section class="employee-card">
                 {{#each employee}}
                 <div class="employee-info">
-                    <img src="{{this.AnhNV}}" alt="Ảnh nhân viên" class="employee-img">
+                    <img src="img/{{this.AnhNV}}" alt="Ảnh nhân viên" class="employee-img">
                     <div class="employee-card-body">
-                        <div class="ho_ten_nhan_vien"><p><strong>{{this.HoNV}} {{this.TenNV}}</strong></p></div>
-                        <div class="chuc_vu_nhan_vien"><p>{{this.ViTriLamViec}}</p></div>
+                        <div class="ho_ten_nhan_vien"><p><strong>{{this.HovaTenNV}}</strong></p></div>
+                        <div class="chuc_vu_nhan_vien"><p>{{this.LoaiNV}}</p></div>
                         <div class="email_nhan_vien"><p>{{this.EmailNV}}</p></div>
                         <div class="so_dien_thoai_nhan_vien"><p>{{this.SoDienThoaiNV}}</p></div>
                     </div>
+            <!--Xóa nhân viên-->
+        <div id="delete-employee">
+            <a class = "delete-employee" data-bs-toggle="modal" data-bs-id="{{this._id}}" data-bs-target="#delete-employee-modal"><i class="fa-solid fa-user-minus"></i></a>
+        </div>
                     <div id="chi_tiet_nhan_vien">
                         <a class="chi-tiet-nhan-vien" href="/nhan-vien/{{this.MaNV}}"><i class="fa-solid fa-address-card"></i></a>
                     </div>
@@ -85,3 +84,46 @@
             </section>
     </body>
 </html> 
+
+{{!--Confirm delete-employee--}}
+<div id="delete-employee-modal" class="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Xóa nhân viên</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Bạn có chắc muốn xóa nhân viên này không?</p>
+      </div>
+      <div class="modal-footer">
+        <button id="btn-delete-employee" type="button" class="btn btn-danger" data-bs-dismiss="modal">Xóa</button>
+        <button type="button" class="btn btn-primary">Hủy</button>
+      </div>
+    </div>
+  </div>
+</div>
+ {{!--Delete hidden form--}}
+<form id="delete-employee-form" class="form-addEmployee" method="POST">
+</form>
+
+
+
+{{!--Lấy id cho sự kiện click button xóa--}}
+<script>
+  const delete_employee = document.getElementById('delete-employee-modal');
+  const btnDeleteEmployee = document.getElementById('btn-delete-employee');
+  const deleteEmployeeForm = document.getElementById('delete-employee-form');
+  let employeeId;
+  if (delete_employee) {
+    delete_employee.addEventListener('show.bs.modal', function(event) {
+      const button = event.relatedTarget;
+      employeeId = button.getAttribute('data-bs-id');
+  })
+}
+/*Tạo submit delete form */
+  btnDeleteEmployee.onclick = function(){
+    deleteEmployeeForm.action = "/nhan-vien/"+ employeeId + "?_method=DELETE";
+    deleteEmployeeForm.submit();
+  }
+</script>

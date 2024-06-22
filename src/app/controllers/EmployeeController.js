@@ -29,6 +29,9 @@ class EmployeeController {
   async store(req, res, next){
     const employee = new Employee(req.body);
     employee.ThamNienLamViec = ThamNienLamViec(employee.ThoiGianBatDau);
+    if(req.file){
+      employee.AnhNV = req.file.filename;
+    }
     employee.save()
     .then(() => res.redirect('/nhan-vien'))
     .catch(error => next());
@@ -74,7 +77,13 @@ class EmployeeController {
     })
     .catch(error => next());
     }
+  // [DELETE]
+  async delete(req, res, next){
+    Employee.deleteOne({_id: req.params.id})
+    .then(() => res.redirect('back'))
+    .catch(error => next());
   }
+}
 module.exports = new EmployeeController;
 
     // Tính thông niên làm việc

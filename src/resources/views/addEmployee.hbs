@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/css/addEmployee.css">
 <body id="them-nhan-vien">
-<form class="form-addEmployee" method="POST" action="/nhan-vien/luu-nhan-vien">
+<form class="add-employee-form" method="POST" enctype="multipart/form-data" action="/nhan-vien/luu-nhan-vien"> {{!--enctype--}}
   {{!-- Mã nhân viên --}}
   <div class="form-div">
     <label for="MaNV" class="form-label">Mã nhân viên</label>
@@ -9,16 +9,12 @@
   {{!-- Ảnh nhân viên --}}
   <div class="form-div">
     <label for="AnhNV" class="form-label">Ảnh nhân viên</label>
-    <input name="AnhNV" type="text" class="form-control" id="AnhNV" required>
+    <input name="AnhNV" type="file" class="form-control" id="AnhNV" required>
   </div>
   {{!--Tên nhân viên--}}
-  <div class="form-div">
-    <label for="HoNV" class="form-label">Họ nhân viên</label>
-    <input name="HoNV" type="text" class="form-control" id="HoNV" required>
-  </div>
-  <div class="form-div">
-    <label for="TenNV" class="form-label">Tên nhân viên</label>
-    <input name="TenNV" type="text" class="form-control" id="TenNV">
+    <div class="form-div">
+    <label for="HovaTenNV" class="form-label">Họ và Tên nhân viên</label>
+    <input name="HovaTenNV" type="text" class="form-control" id="HovaTenNV" required>
   </div>
   {{!--Ngày sinh nhân viên--}}
   <div class="form-div">
@@ -50,62 +46,39 @@
     <label for="TonGiaoNV" class="form-label">Tôn Giáo</label>
     <input name="TonGiaoNV" type="text" class="form-control" id="TonGiaoNV" required>
   </div>
-
-    {{!--Vị trí làm việc--}}
-  <div class="form-div">
-    <label for="ViTriNV" class="form-label">Vị trí làm việc</label>
-    <input name="ViTriLamViec" type="text" class="form-control" id="ViTriNV" required>
-  </div>
-
-      {{!--Chuyên môn làm việc--}}
-  <div class="form-div">
-    <label for="ChuyenMonLamViec" class="form-label">Chuyên môn</label>
-    <input name="ChuyenMonLamViec" type="text" class="form-control" id="ChuyenMonLamViec" required>
-  </div>
-
-    {{!--Loại nhân viên--}}
-  <div class="form-div">
-    <label for="LoaiNV" class="form-label">Loại NV</label>
-    <input name="LoaiNV" type="text" class="form-control" id="LoaiNV" required>
-  </div>
-
-    {{!--Giới tính--}}
-  <div class="form-div">
-    <label for="GioiTinhNV" class="form-label">Giới tính</label>
-    <input name="GioiTinh" type="text" class="form-control" id="GioiTinhNV" required>
-  </div>
   {{!--Vị trí--}}
-    {{!-- <fieldset>
+    <fieldset>
       <legend>Chuyên môn làm việc</legend>
-      <label for="giam-dinh-san-pham"><input id="giam-dinh-san-pham" type="radio" name="account-type" class="inline" checked /> Giám định sản phẩm</label>
-      <label for="bo-phan-nhan-su"><input id="bo-phan-nhan-su" type="radio" name="account-type" class="inline" />Bộ phận nhân sự</label>
-      <label for="bo-phan-kho"><input id="bo-phan-kho" type="radio" name="account-type" class="inline" />Bộ phận kho</label>
-      <label for="marketing"><input id="marketing" type="radio" name="account-type" class="inline" />Marketing</label>
-      <label for="nhan-vien-IT"><input id="nhan-vien-IT" type="radio" name="account-type" class="inline" />Nhân viên IT</label>
-    </fieldset> --}}
+      <label for="giam-dinh-san-pham"><input id="giam-dinh-san-pham" type="radio" name="ChuyenMonLamViec" class="inline" value="Giám định sản phẩm" checked />Giám định sản phẩm</label>
+      <label for="nhan-su"><input id="nhan-su" type="radio" name="ChuyenMonLamViec" class="inline" value="Nhân Sự"/>Nhân Sự</label>
+      <label for="bo-phan-kho"><input id="bo-phan-kho" type="radio" name="ChuyenMonLamViec" value="Bộ phận kho" class="inline" />Bộ phận kho</label>
+      <label for="marketing"><input id="marketing" type="radio" name="ChuyenMonLamViec" class="inline" value="Bán hàng" />Bán hàng</label>
+      <label for="nhan-vien-IT"><input id="nhan-vien-IT" type="radio" name="ChuyenMonLamViec" class="inline" value="IT"/>IT</label>
+    </fieldset>
   {{!--Loại nhân viên--}}
-    {{!-- <fieldset>
+    <fieldset>
       <legend>Loại nhân viên</legend>
-      <label for="nhan-vien-chinh-thuc"><input id="nhan-vien-chinh-thuc" type="radio" name="account-type" class="inline" checked />Nhân viên chính thức</label>
-      <label for="thuc-tap-sinh"><input id="thuc-tap-sinh" type="radio" name="account-type" class="inline" />Thực tập sinh</label>
-      <label for="thu-viec"><input id="thu-viec" type="radio" name="account-type" class="inline" />Thử việc</label>
-    </fieldset> --}}
+      <label for="nhan-vien-chinh-thuc"><input id="nhan-vien-chinh-thuc" type="radio" name="LoaiNV" class="inline" value="Nhân viên" checked/>Nhân viên</label>
+            <label for="nhan-vien-chinh-thuc"><input id="nhan-vien-chinh-thuc" type="radio" name="LoaiNV" class="inline" value="Quản lí" checked/>Quản lí</label>
+      <label for="thuc-tap-sinh"><input id="thuc-tap-sinh" type="radio" name="LoaiNV" class="inline" value="Thực tập sinh" />Thực tập sinh</label>
+      <label for="thu-viec"><input id="thu-viec" type="radio" name="LoaiNV" class="inline" value="Thử việc" />Thử việc</label>
+    </fieldset>
   {{!--Giới tính--}}
-    {{!-- <fieldset>
+    <fieldset>
       <legend>Giới tính</legend>
-      <label for="nam"><input id="nam" type="radio" name="account-type" class="inline" checked />Nam</label>
-      <label for="nu"><input id="nu" type="radio" name="account-type" class="inline" />Nữ</label>
-    </fieldset> --}}
+      <label for="nam"><input id="nam" type="radio" name="GioiTinh" class="inline" value="Nam" checked />Nam</label>
+      <label for="nu"><input id="nu" type="radio" name="GioiTinh" class="inline" value="Nữ" />Nữ</label>
+    </fieldset>
   {{!--Tình trạng sức khỏe--}}
-  {{!-- <div class="form-div">
-    <label for="TinhTrangSucKhoeNV" class="form-label">Tình trạng sức khỏe</label>
-    <input type="text" class="form-control" id="TinhTrangSucKhoeNV" required>
-  </div> --}}
+  <div class="form-div">
+    <label for="TinhTrangSucKhoe" class="form-label">Tình trạng sức khỏe</label>
+    <input type="text" class="form-control" id="TinhTrangSucKhoe" name="TinhTrangSucKhoe" required>
+  </div>
   <p>Thông tin liên hệ</p>
   {{!--Số điện thoại--}}
   <div class="form-div">
     <label for="SoDienThoaiNV" class="form-label">Số điện thoại</label>
-    <input name="SoDienThoaiNV" type="text" class="form-control" id="TinhTrangSucKhoeNV" required>
+    <input name="SoDienThoaiNV" type="text" class="form-control" id="SoDienThoaiNV" required>
   </div>  
   {{!--Email--}}
   <div class="form-div">
