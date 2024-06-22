@@ -21,7 +21,8 @@
     <label for="LoaiNV">Loại nhân viên:</label>
     <select id="LoaiNV" name="LoaiNV">
       <option value="">Tất cả</option>
-      <option value="Nhân viên chính thức">Nhân viên chính thức</option>
+      <option value="Quản lí">Quản lí</option>
+      <option value="Nhân viên">Nhân viên</option>
       <option value="Thực tập sinh">Thực tập sinh</option>
       <option value="Thử việc">Thử việc</option>
     </select>
@@ -65,7 +66,7 @@
             <section class="employee-card">
                 {{#each employee}}
                 <div class="employee-info">
-                    <img src="img/{{this.AnhNV}}" alt="Ảnh nhân viên" class="employee-img">
+                    <img src="/img/{{this.AnhNV}}" alt="Ảnh nhân viên" class="employee-img">
                     <div class="employee-card-body">
                         <div class="ho_ten_nhan_vien"><p><strong>{{this.HovaTenNV}}</strong></p></div>
                         <div class="chuc_vu_nhan_vien"><p>{{this.LoaiNV}}</p></div>

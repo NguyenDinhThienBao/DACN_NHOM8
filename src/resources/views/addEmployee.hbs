@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/css/addEmployee.css">
 <body id="them-nhan-vien">
-<form class="add-employee-form" method="POST" enctype="multipart/form-data" action="/nhan-vien/luu-nhan-vien"> {{!--enctype--}}
+<form class="add-employee-form" method="POST" action="/nhan-vien/luu-nhan-vien"> {{!--enctype--}}
   {{!-- Mã nhân viên --}}
   <div class="form-div">
     <label for="MaNV" class="form-label">Mã nhân viên</label>
@@ -59,7 +59,7 @@
     <fieldset>
       <legend>Loại nhân viên</legend>
       <label for="nhan-vien-chinh-thuc"><input id="nhan-vien-chinh-thuc" type="radio" name="LoaiNV" class="inline" value="Nhân viên" checked/>Nhân viên</label>
-            <label for="nhan-vien-chinh-thuc"><input id="nhan-vien-chinh-thuc" type="radio" name="LoaiNV" class="inline" value="Quản lí" checked/>Quản lí</label>
+      <label for="nhan-vien-chinh-thuc"><input id="nhan-vien-chinh-thuc" type="radio" name="LoaiNV" class="inline" value="Quản lí" checked/>Quản lí</label>
       <label for="thuc-tap-sinh"><input id="thuc-tap-sinh" type="radio" name="LoaiNV" class="inline" value="Thực tập sinh" />Thực tập sinh</label>
       <label for="thu-viec"><input id="thu-viec" type="radio" name="LoaiNV" class="inline" value="Thử việc" />Thử việc</label>
     </fieldset>
