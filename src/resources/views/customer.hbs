@@ -2,34 +2,27 @@
 <html lang="en">
     <head>
         <!--<link rel="stylesheet" href="/khach_hang/style.css">-->
-        <link rel="stylesheet" href="css/customer.css">
+        <link rel="stylesheet" href="/css/customer.css">
     </head>
-    <body>
+    <body class="position-relative flex-row">
     <!--nội dung content-->
         <main id="khach-hang">
             <!--Tìm kiếm-->
-            <section id="employee-search">
+            <section id="customer-search">
                 <div id ="search-box">
-                    <form action ="">
-                        <input type="text" placeholder="Tìm kiếm..." id="search-text" required>
+                    <form action ="/khach-hang/tim-kiem">
+                        <input type="text" placeholder="Tìm kiếm..." id="search-text" name="search" value="{{search}}">
                         <button type="submit" id="search-btn">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
                     </form>
                 </div>
 
-                <div id="adjust-employee">
-                    <!--Thêm khách hàng-->
-                    <div id="add-employee">
-                        <a href="/khach-hang/them-khach-hang" target="_parent"><i class="fa-solid fa-user-plus"></i></a>
-                    </div>
-                    <!--Xóa khách hàng-->
-                    <div id="delete-employee">
-                        <button type="button" id="delete-btn">
-                            <i class="fa-solid fa-user-minus"></i>
-                        </button>
-                    </div>
+                <!--Thêm khách hàng-->
+                <div id="add-customer">
+                    <a class="add-customer" href="/khach-hang/them-khach-hang" target="_top"><i class="fa-solid fa-user-plus"></i></a>
                 </div>
+
             </section>
             <!--================BẢNG KHÁCH HÀNG================-->
             <section class="main_workspace container-flex-row">

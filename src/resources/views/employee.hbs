@@ -3,19 +3,19 @@
   <head>
       <link rel="stylesheet" href="/css/employee.css">
   </head>
-    <body class="position-relative flex-row">
-    <!--Hiển thị chính-->
-            <!--Thanh tìm kiếm-->
-      <section id="employee-search">
-        <div id ="search-box">
-            <form action ="/nhan-vien/tim-kiem">
-                <input type="text" placeholder="Tìm kiếm..." id="search-text" name="search" value="{{search}}">
-                <button type="submit" id="search-btn">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-            </form>
+  <body class="position-relative flex-row">
+  <!--Hiển thị chính-->
+    <!--Thanh tìm kiếm-->
+    <section id="employee-search">
+      <div id ="search-box">
+        <form action ="/nhan-vien/tim-kiem">
+          <input type="text" placeholder="Tìm kiếm..." id="search-text" name="search" value="{{search}}">
+          <button type="submit" id="search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
       </div>
-    <!--Bộ lọc-->
+       <!--Bộ lọc-->
 <form id="filter" class="employee-filter" action="/nhan-vien/bo-loc">
   <div>
     <label for="LoaiNV">Loại nhân viên:</label>
@@ -84,7 +84,7 @@
                 {{/each}}
             </section>
     </body>
-</html> 
+</html>  
 
 {{!--Confirm delete-employee--}}
 <div id="delete-employee-modal" class="modal" tabindex="-1">
