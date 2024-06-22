@@ -9,7 +9,7 @@
   width: 100%; }
 
 /*===========Thanh tìm kiếm============*/
-#employee-search {
+#customer-search {
   display: flex;
   margin-bottom: 10px;
   position: sticky;
@@ -20,13 +20,14 @@
 /*Thanh tìm kiếm*/
 #search-box {
   background: white;
-  border: 1px solid black;
   cursor: pointer;
-  width: 300px;
+  width: 400px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
-  margin-left: 10px; }
+  margin-left: 10px;
+  margin-bottom: 10px;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1); }
 
 /*text search*/
 #search-box #search-text {
@@ -45,24 +46,22 @@
   padding: 10px 10px; }
 
 /*Thêm, xóa khách hàng*/
-#adjust-employee {
+#add-customer {
   position: absolute;
-  /*Hiển thị nút "Thêm, xóa khách hàng" ở góc dưới bên phải*/
+  /*Hiển thị nút "Thêm, xóa nhân viên" ở góc dưới bên phải*/
   right: 0;
   align-items: center;
   cursor: pointer;
-  width: 90px;
   border-radius: 20px;
   display: flex;
   flex-direction: row;
-  margin-left: 5px; }
+  padding: 10px 10px; }
 
-#add-btn, #delete-btn {
+#add-customer, #delete-customer {
   border: none;
   background: none;
   outline: none;
-  cursor: pointer;
-  padding: 10px 10px; }
+  cursor: pointer; }
 
 /*================BẢNG KHÁCH HÀNG======================*/
 /*===============CỘT KHÁCH HÀNG*===============*/
@@ -175,3 +174,11 @@
   font-weight: bold; }
 
 /*==============================================*/
+/* Định dạng chung cho các link */
+.add-customer, .delete-customer, .chi-tiet-khach-hang {
+  color: black;
+  text-decoration: none; }
+
+/* Định dạng khi để chuột vào link */
+.add-customer:hover, .delete-customer:hover, .chi-tiet-khach-hang:hover {
+  color: red; }
