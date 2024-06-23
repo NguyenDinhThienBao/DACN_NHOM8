@@ -10,6 +10,7 @@ const Customer = new Schema({
     EmailLienLac: String,
     DiaChiLienLac: String,
     ThoiGianGiaoDich: Date,
+    ThoiGianGiaoDichFormatted: Date,
     TenSanPhamGiaoDich: String,
     SoLuongGiaoDich: Number,
     TongTien: Number,
