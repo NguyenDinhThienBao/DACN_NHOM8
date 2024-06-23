@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <link rel="stylesheet" href="/css/employee.css">
+    <link rel="stylesheet" href="/css/employee.css">
   </head>
   <body class="position-relative flex-row">
   <!--Hiển thị chính-->
@@ -15,75 +15,77 @@
           </button>
         </form>
       </div>
-       <!--Bộ lọc-->
-<form id="filter" class="employee-filter" action="/nhan-vien/bo-loc">
-  <div>
-    <label for="LoaiNV">Loại nhân viên:</label>
-    <select id="LoaiNV" name="LoaiNV">
-      <option value="">Tất cả</option>
-      <option value="Quản lí">Quản lí</option>
-      <option value="Nhân viên">Nhân viên</option>
-      <option value="Thực tập sinh">Thực tập sinh</option>
-      <option value="Thử việc">Thử việc</option>
-    </select>
-  </div>
-  <div>
-    <label for="ChuyenMonLamViec">Chuyên môn:</label>
-    <select id="ChuyenMonLamViec" name="ChuyenMonLamViec">
-      <option value="">Tất cả</option>
-      <option value="Giám định sản phẩm">Giám định sản phẩm</option>
-      <option value="Nhân Sự">Nhân Sự</option>
-      <option value="IT">IT</option>
-      <option value="marketing">Bán hàng</option>
-      <option value="Sản Xuất">Sản Xuất</option> <!--Nhân viên/ Quản lý-->
-    </select>
-  </div>
-  <div>
-    <label for="GioiTinh">Giới tính:</label>
-    <select id="GioiTinh" name="GioiTinh">
-      <option value="">Tất cả</option>
-      <option value="Nam">Nam</option>
-      <option value="Nữ">Nữ</option>
-    </select>
-  </div>
-  <div>
-    <label for="minExperience">Thâm niên tối thiểu:</label>
-    <input style="width:100px" type="number" id="minExperience" name="minExperience" value="{{minExperience}}">
-  </div>
-  <div>
-    <label for="maxExperience">Thâm niên tối đa:</label>
-    <input style="width:100px" type="number" id="maxExperience" name="maxExperience" value="{{maxExperience}}">
-  </div>
-  <button type="submit">Lọc</button>
-</form>
-  <!--Thêm nhân viên-->
-        <div id="add-employee">
-            <a class = "add-employee" href="/nhan-vien/them-nhan-vien"  target="_top"><i class="fa-solid fa-user-plus"></i></a>
+      <!--Bộ lọc-->
+      <form id="filter" class="employee-filter" action="/nhan-vien/bo-loc">
+        <div>
+          <label for="LoaiNV">Loại nhân viên:</label>
+          <select id="LoaiNV" name="LoaiNV">
+            <option value="">Tất cả</option>
+            <option value="Quản lí">Quản lí</option>
+            <option value="Nhân viên">Nhân viên</option>
+            <option value="Thực tập sinh">Thực tập sinh</option>
+            <option value="Thử việc">Thử việc</option>
+          </select>
         </div>
-</section>
+        <div>
+          <label for="ChuyenMonLamViec">Chuyên môn:</label>
+          <select id="ChuyenMonLamViec" name="ChuyenMonLamViec">
+            <option value="">Tất cả</option>
+            <option value="Giám định sản phẩm">Giám định sản phẩm</option>
+            <option value="Nhân Sự">Nhân Sự</option>
+            <option value="IT">IT</option>
+            <option value="marketing">Bán hàng</option>
+            <option value="Sản Xuất">Sản Xuất</option> <!--Nhân viên/ Quản lý-->
+          </select>
+        </div>
+        <div>
+          <label for="GioiTinh">Giới tính:</label>
+          <select id="GioiTinh" name="GioiTinh">
+            <option value="">Tất cả</option>
+            <option value="Nam">Nam</option>
+            <option value="Nữ">Nữ</option>
+          </select>
+        </div>
+        <div>
+          <label for="minExperience">Thâm niên tối thiểu:</label>
+          <input style="width:100px" type="number" id="minExperience" name="minExperience" value="{{minExperience}}">
+        </div>
+        <div>
+          <label for="maxExperience">Thâm niên tối đa:</label>
+          <input style="width:100px" type="number" id="maxExperience" name="maxExperience" value="{{maxExperience}}">
+        </div>
+        <button type="submit">Lọc</button>
+      </form>
+      <!--Thêm nhân viên-->
+      <div id="add-employee">
+        <a class = "add-employee" href="/nhan-vien/them-nhan-vien"  target="_top"><i class="fa-solid fa-user-plus"></i></a>
+      </div>
+    </section>
 
-            <!--Thông tin nhân sự-->
-            <section class="employee-card">
-                {{#each employee}}
-                <div class="employee-info">
-                    <img src="/img/{{this.AnhNV}}" alt="Ảnh nhân viên" class="employee-img">
-                    <div class="employee-card-body">
-                        <div class="ho_ten_nhan_vien"><p><strong>{{this.HovaTenNV}}</strong></p></div>
-                        <div class="chuc_vu_nhan_vien"><p>{{this.LoaiNV}}</p></div>
-                        <div class="email_nhan_vien"><p>{{this.EmailNV}}</p></div>
-                        <div class="so_dien_thoai_nhan_vien"><p>{{this.SoDienThoaiNV}}</p></div>
-                    </div>
-            <!--Xóa nhân viên-->
-        <div id="delete-employee">
-            <a class = "delete-employee" data-bs-toggle="modal" data-bs-id="{{this._id}}" data-bs-target="#delete-employee-modal"><i class="fa-solid fa-user-minus"></i></a>
+    <!--Thông tin nhân sự-->
+    <section class="employee-card">
+      {{#each employee}}
+      <div class="employee-info">
+        <img src="/img/{{this.AnhNV}}" alt="Ảnh nhân viên" class="employee-img">
+        <div class="employee-card-body">
+          <div class="ho_ten_nhan_vien"><p><strong>{{this.HovaTenNV}}</strong></p></div>
+          <div class="chuc_vu_nhan_vien"><p>{{this.LoaiNV}}</p></div>
+          <div class="email_nhan_vien"><p>{{this.EmailNV}}</p></div>
+          <div class="so_dien_thoai_nhan_vien"><p>{{this.SoDienThoaiNV}}</p></div>
         </div>
-                    <div id="chi_tiet_nhan_vien">
-                        <a class="chi-tiet-nhan-vien" href="/nhan-vien/{{this.MaNV}}"><i class="fa-solid fa-address-card"></i></a>
-                    </div>
-                </div>
-                {{/each}}
-            </section>
-    </body>
+
+        <!--Xóa nhân viên-->
+        <div id="delete-employee">
+          <a class = "delete-employee" data-bs-toggle="modal" data-bs-id="{{this._id}}" data-bs-target="#delete-employee-modal"><i class="fa-solid fa-user-minus"></i></a>
+        </div>
+
+        <div id="chi_tiet_nhan_vien">
+            <a class="chi-tiet-nhan-vien" href="/nhan-vien/{{this.MaNV}}"><i class="fa-solid fa-address-card"></i></a>
+        </div>
+      </div>
+      {{/each}}
+    </section>
+  </body>
 </html>  
 
 {{!--Confirm delete-employee--}}

@@ -4,6 +4,7 @@ const customerController = require('../app/controllers/CustomerController');
 
 router.get('/them-khach-hang', customerController.add);
 router.put('/:id', customerController.update);
+router.delete('/:id', customerController.delete);
 router.get('/:id/edit', customerController.edit);
 router.post('/luu-khach-hang', customerController.store);
 router.get('/:slug', customerController.show);
