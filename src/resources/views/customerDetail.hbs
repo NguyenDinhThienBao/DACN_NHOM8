@@ -12,7 +12,7 @@
                     <i class='bx bx-arrow-back'></i>
                 </a>
             </section>
-            <span class="line"></span>
+            
             <!--Thông tin khách hàng-->
             <section id="info-customer">
                 <div>
@@ -31,6 +31,10 @@
                         </div>
                     </div>
                     <div class="container-flex-row">
+                    </div>
+                    <div class="container-flex-row margin-bottom align-center">
+                        <p class="big-text margin-right">SỐ ĐIỆN THOẠI</p>
+                        <p class="sdt border-info" >{{customerDetail.SoDienThoaiKH}}</p>
                     </div>
                     <div class="container-flex-row margin-bottom align-center">
                         <p class="big-text margin-right">EMAIL</p>
@@ -66,7 +70,7 @@
                         <tbody>
                             <tr><!--tạo hàng-->
                                 <td><!--tạo cột-->
-                                    {{customerDetail.ThoiGianGiaoDich}}
+                                    {{customerDetail.ThoiGianGiaoDichFormatted}}
                                 </td>
                                 <td>{{customerDetail.TenSanPhamGiaoDich}}</td>
                                 <td>{{customerDetail.SoLuongGiaoDich}}</td>
