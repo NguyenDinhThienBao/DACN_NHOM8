@@ -4,6 +4,7 @@ const Customer = new Schema({
     MaKH: String,
     HoKH: String,
     TenKH: String,
+    SoDienThoaiKH: String,
     SoSanPhamTieuThu: Number,
     SoTienTieuThu: Number,
     EmailLienLac: String,

@@ -53,5 +53,12 @@ class CustomerController {
     .catch(error => next());
   }
 
+  // [DELETE]
+  async delete(req, res, next){
+    Customer.deleteOne({_id: req.params.id})
+    .then(() => res.redirect('back'))
+    .catch(error => next());
+  }
+
 }
 module.exports = new CustomerController;

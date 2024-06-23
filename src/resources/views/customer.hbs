@@ -154,3 +154,44 @@
         </main> 
     </body>
 </html>
+
+{{!--Confirm delete-customer--}}
+<div id="delete-customer-modal" class="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Xóa khách hàng</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Bạn có chắc muốn xóa khách hàng này không?</p>
+      </div>
+      <div class="modal-footer">
+        <button id="btn-delete-customer" type="button" class="btn btn-danger" data-bs-dismiss="modal">Xóa</button>
+        <button type="button" class="btn btn-primary">Hủy</button>
+      </div>
+    </div>
+  </div>
+</div>
+ {{!--Delete hidden form--}}
+<form id="delete-customer-form" class="form-addCustomer" method="POST">
+</form>
+
+{{!--Lấy id cho sự kiện click button xóa--}}
+<script>
+  const delete_customer = document.getElementById('delete-customer-modal');
+  const btnDeleteCustomer = document.getElementById('btn-delete-customer');
+  const deleteCustomerForm = document.getElementById('delete-customer-form');
+  let customerId;
+  if (delete_customer) {
+    delete_customer.addEventListener('show.bs.modal', function(event) {
+      const button = event.relatedTarget;
+      customerId = button.getAttribute('data-bs-id');
+  })
+}
+/*Tạo submit delete form */
+  btnDeleteCustomer.onclick = function(){
+    deleteCustomerForm.action = "/khach-hang/"+ customerId + "?_method=DELETE";
+    deleteCustomerForm.submit();
+  }
+</script>
