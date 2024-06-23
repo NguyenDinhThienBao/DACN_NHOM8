@@ -27,7 +27,7 @@
             <!--================BẢNG KHÁCH HÀNG================-->
             <section class="main_workspace container-flex-row">
                 <!--line kẻ-->
-                <span class="line"></span>
+                <span class="line-top"></span>
                 <!--KHÁCH HÀNG MỚI-->
                     <div class="new-customer container-flex-column">
                         <!--Tiêu đề loại khách hàng-->
@@ -35,7 +35,7 @@
                             <p class="big-text">MỚI</p>
                             <span class="yellow-color"></span>
                         </div>
-                        <span class="line"></span>
+                        <span class="line-down"></span>
                         <!--Nội dung ô khách hàng-->
                         <!--===========================================================================-->
                         <!--===========================================================================-->
@@ -54,11 +54,15 @@
                                         <p>(SL)</p>
                                     </div>
                                 </div>
-                                <a class="chi_tiet_khach_hang" href="/khach-hang/{{this.MaKH}}">
-                                    <button class="btn_chuyen">
-                                        <i class="fa-solid fa-user"></i>
-                                    </button>
-                                </a>
+
+                                <!--Xóa khách hàng-->
+                                <div id="delete-customer">
+                                    <a class = "delete-customer" data-bs-toggle="modal" data-bs-id="{{this._id}}" data-bs-target="#delete-customer-modal"><i class="fa-solid fa-user-minus"></i></a>
+                                </div>
+
+                                <div class="chi_tiet_khach_hang">
+                                    <a class="chi-tiet-khach-hang" href="/khach-hang/{{this.MaKH}}"><i class="fa-solid fa-user"></i></a>
+                                </div>
                             </items>
                         </div>
                         {{/each}}
@@ -72,7 +76,7 @@
                             <p class="big-text">TIỀM NĂNG</p>
                             <span class="orange-color"></span>
                         </div>
-                        <span class="line"></span>
+                        <span class="line-down"></span>
                         <!--Nội dung ô khách hàng-->
                         <!--===========================================================================-->
                         <!--===========================================================================-->
@@ -91,11 +95,15 @@
                                         <p>(SL)</p>
                                     </div>
                                 </div>
-                                <a class="chi_tiet_khach_hang" href="/khach-hang/{{this.MaKH}}">
-                                    <button class="btn_chuyen">
-                                        <i class="fa-solid fa-user"></i>
-                                    </button>
-                                </a>
+
+                                <!--Xóa khách hàng-->
+                                <div id="delete-customer">
+                                    <a class = "delete-customer" data-bs-toggle="modal" data-bs-id="{{this._id}}" data-bs-target="#delete-customer-modal"><i class="fa-solid fa-user-minus"></i></a>
+                                </div>
+
+                                <div class="chi_tiet_khach_hang">
+                                    <a class="chi-tiet-khach-hang" href="/khach-hang/{{this.MaKH}}"><i class="fa-solid fa-user"></i></a>
+                                </div>
                             </items>
                         </div>
                         {{/each}}
@@ -109,7 +117,7 @@
                             <p class="big-text">V.I.P</p>
                             <span class="red-color"></span>
                         </div>
-                        <span class="line"></span>
+                        <span class="line-down"></span>
                         <!--Nội dung ô khách hàng-->
                         <!--===========================================================================-->
                         <!--===========================================================================-->
@@ -128,11 +136,15 @@
                                         <p>(SL)</p>
                                     </div>
                                 </div>
-                                <a class="chi_tiet_khach_hang" href="/khach-hang/{{this.MaKH}}">
-                                    <button class="btn_chuyen">
-                                        <i class="fa-solid fa-user"></i>
-                                    </button>
-                                </a>
+
+                                <!--Xóa khách hàng-->
+                                <div id="delete-customer">
+                                    <a class = "delete-customer" data-bs-toggle="modal" data-bs-id="{{this._id}}" data-bs-target="#delete-customer-modal"><i class="fa-solid fa-user-minus"></i></a>
+                                </div>
+
+                                <div class="chi_tiet_khach_hang">
+                                    <a class="chi-tiet-khach-hang" href="/khach-hang/{{this.MaKH}}"><i class="fa-solid fa-user"></i></a>
+                                </div>
                             </items>
                         </div>
                         {{/each}}
