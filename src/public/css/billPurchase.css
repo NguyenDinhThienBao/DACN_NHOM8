@@ -1,0 +1,40 @@
+@charset "UTF-8";
+/*Nội dung content*/
+#hoa-don {
+  position: relative;
+  display: flex;
+  flex-direction: column; }
+
+/*Nút trở về*/
+#back {
+  border-bottom: 2px solid black;
+  width: 100%; }
+
+#back > a {
+  text-decoration: none;
+  color: #000;
+  font-size: 25px;
+  margin-left: 15px; }
+
+/*BUTTON TẠO HÓA ĐƠN*/
+.btn_tao_hoa_don {
+  margin: 15px 15px 0 15px;
+  padding: 10px 20px;
+  background-color: #25b9b9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px; }
+
+table {
+  width: 100%; }
+
+table, td, th {
+  border-bottom: 1px solid #000;
+  border-collapse: collapse;
+  /*hợp nhất border thành 1 đường kẻ*/ }
+
+td, th {
+  padding: 6px 10px;
+  text-align: center; }

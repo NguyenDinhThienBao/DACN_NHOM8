@@ -17,12 +17,12 @@ class CustomerController {
   async show(req, res, next) {
     Customer.findOne({ MaKH: req.params.slug })
     .then(customerDetail => {
-        customerDetail = customerDetail.toObject()
-        const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
-        customerDetail.ThoiGianGiaoDichFormatted = customerDetail.ThoiGianGiaoDich.toLocaleDateString('vi-VN', options);
-        res.render('customerDetail', {customerDetail});
-      })
-      .catch(error => next());
+      customerDetail = customerDetail.toObject();
+      const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+      customerDetail.ThoiGianGiaoDichFormatted = customerDetail.ThoiGianGiaoDich.toLocaleDateString('vi-VN', options);
+      res.render('customerDetail', {customerDetail});
+    })
+    .catch(error => next());
   }
 
   // Thêm khách hàng vào trong danh sách

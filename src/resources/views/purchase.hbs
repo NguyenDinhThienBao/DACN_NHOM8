@@ -6,8 +6,26 @@
     <body>
         <!--Nội dung content-->
         <main id="hang-hoa">
+            <!--Tìm kiếm-->
+            <section id="purchase-search">
+                <div id ="search-box">
+                    <form action ="/mua-hang/tim-kiem">
+                        <input type="text" placeholder="Tìm kiếm..." id="search-text" name="search" value="{{search}}">
+                        <button type="submit" id="search-btn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!--Thêm sản phẩm-->
+                <div id="add-items">
+                    <a class="add-items" href="/mua-hang/them-san-pham" ><i class="fa-solid fa-user-plus"></i></a>
+                </div>
+
+            </section>
+
             <section>
-                <a href="/mua_ban/hoa_don/index.html"> 
+                <a href="/mua-hang/hoa-don"> 
                     <button class="btn_hoa_don">
                         <span>Hóa đơn</span>
                     </button>
