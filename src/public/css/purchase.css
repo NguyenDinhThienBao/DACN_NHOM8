@@ -5,6 +5,75 @@
   display: flex;
   flex-direction: column; }
 
+/*===========Thanh tìm kiếm============*/
+#purchase-search {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background: #efeeee;
+  margin-top: -10px;
+  position: sticky;
+  top: 70px;
+  z-index: 4; }
+
+/*Thanh tìm kiếm*/
+#search-box {
+  background: white;
+  cursor: pointer;
+  width: 400px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1); }
+
+/*text search*/
+#search-box #search-text {
+  border: none;
+  outline: none;
+  background: none;
+  width: 85%;
+  padding: 10px 10px; }
+
+/*button search*/
+#search-box #search-btn {
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 10px; }
+
+/*Thêm, xóa khách hàng*/
+#add-items {
+  position: absolute;
+  /*Hiển thị nút "Thêm, xóa sản phẩm" ở góc dưới bên phải*/
+  right: 0;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  padding: 10px 10px; }
+
+#delete-items {
+  position: absolute;
+  /*Hiển thị nút "Thêm, xóa sản phẩm" ở góc dưới bên phải*/
+  right: 0;
+  top: 0;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  padding: 10px 10px; }
+
+#add-items, #delete-items {
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer; }
+
 /*button Hóa đơn*/
 .btn_hoa_don {
   margin: 10px 20px;
