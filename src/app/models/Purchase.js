@@ -9,7 +9,10 @@ const Purchase = new Schema({
     TrangThai: String,
     MaSP: String,
     SoLuong: Number,
-    DonGia: Number,
+    DonGia: String,
+    MoTa: String,
+    AnhSP: String,
+    TenSP: String,
     
 });
 module.exports = mongoose.model('Purchase', Purchase); //export model Purchase
