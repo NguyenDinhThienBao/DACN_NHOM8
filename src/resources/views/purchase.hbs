@@ -3,7 +3,7 @@
     <header>
         <link rel="stylesheet" href="/css/purchase.css">
     </header>
-    <body>
+    <body class="position-relative flex-row">
         <!--Nội dung content-->
         <main id="hang-hoa">
             <!--Tìm kiếm-->
@@ -33,60 +33,71 @@
             </section>
 
             <section>
+                {{#each purchase}}
                 <div class="sanpham">
-                    <img src="iphone_15_pro.png" alt="">
-                    <h4 id="tensp">iPhone 15 Pro</h4>
-                    <p>Màn hình 6.1 inch</p>
-                    <h5>28.999.000đ</h5>
-                    <p>hoặc 1.181.000đ/tháng trong 24 tháng</p>
-                    <p>Trả góp theo tháng với phí dịch vụ thực 1.67%, sau khi thanh toán lần đầu 20%. 
-                        Có thêm tùy chọn thanh toán khi hoàn tất giao dịch.</p>
-                    <a href="/mua_ban/chi_tiet_san_pham/index.html">
-                        <button class="buy">Mua ngay</button>
-                    </a>  
-                </div>
+                    <img src="/img/{{this.AnhSP}}" alt="Ảnh sản phẩm" class="purchase-img">
+                    <h4 id="tensp">{{this.TenSP}}</h4>
+                    <h5>{{this.DonGia}}</h5>
+                    <p>{{this.MoTa}}</p>
 
-                <div class="sanpham">
-                    <img src="iphone_15_pro.png" alt="">
-                    <h4 id="tensp">iPhone 15 Pro</h4>
-                    <p>Màn hình 6.1 inch</p>
-                    <h5>28.999.000đ</h5>
-                    <p>hoặc 1.181.000đ/tháng trong 24 tháng</p>
-                    <p>Trả góp theo tháng với phí dịch vụ thực 1.67%, sau khi thanh toán lần đầu 20%. 
-                        Có thêm tùy chọn thanh toán khi hoàn tất giao dịch.</p>
-                    <a href="/mua_ban/chi_tiet_san_pham/index.html">
-                        <button class="buy">Mua ngay</button>
-                    </a>
-                </div>
-    
-                <div class="sanpham">
-                    <img src="iphone_15_pro.png" alt="">
-                    <h4 id="tensp">iPhone 15 Pro</h4>
-                    <p>Màn hình 6.1 inch</p>
-                    <h5>28.999.000đ</h5>
-                    <p>hoặc 1.181.000đ/tháng trong 24 tháng</p>
-                    <p>Trả góp theo tháng với phí dịch vụ thực 1.67%, sau khi thanh toán lần đầu 20%. 
-                        Có thêm tùy chọn thanh toán khi hoàn tất giao dịch.</p>
-                    <a href="/mua_ban/chi_tiet_san_pham/index.html">
-                        <button class="buy">Mua ngay</button>
-                    </a>
+                    <!--Xóa sản phẩm-->
+                    <div id="delete-items">
+                        <a class = "delete-items" data-bs-toggle="modal" data-bs-id="{{this._id}}" data-bs-target="#delete-items-modal"><i class="fa-solid fa-user-minus"></i></a>
+                    </div>
+
+                    <div id="chi_tiet_san_pham">
+                        <a class="chi-tiet-san-pham" href="/mua-hang/{{this.MaSP}}">
+                            <button class="buy">Mua ngay</button>
+                        </a>
+                    </div>
 
                 </div>
-    
-                <div class="sanpham">
-                    <img src="iphone_15_pro.png" alt="">
-                    <h4 id="tensp">iPhone 15 Pro</h4>
-                    <p>Màn hình 6.1 inch</p>
-                    <h5>28.999.000đ</h5>
-                    <p>hoặc 1.181.000đ/tháng trong 24 tháng</p>
-                    <p>Trả góp theo tháng với phí dịch vụ thực 1.67%, sau khi thanh toán lần đầu 20%. 
-                        Có thêm tùy chọn thanh toán khi hoàn tất giao dịch.</p>
-                    <a href="/mua_ban/chi_tiet_san_pham/index.html">
-                        <button class="buy">Mua ngay</button>
-                    </a>
-                </div>
-    
+                {{/each}}
             </section>
+
         </main>
     </body>
 </html>
+
+{{!--Confirm delete-items--}}
+<div id="delete-items-modal" class="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Xóa sản phẩm</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Bạn có chắc muốn xóa sản phẩm này không?</p>
+      </div>
+      <div class="modal-footer">
+        <button id="btn-delete-items" type="button" class="btn btn-danger" data-bs-dismiss="modal">Xóa</button>
+        <button type="button" class="btn btn-primary">Hủy</button>
+      </div>
+    </div>
+  </div>
+</div>
+ {{!--Delete hidden form--}}
+<form id="delete-items-form" class="form-addItems" method="POST">
+</form>
+
+
+
+{{!--Lấy id cho sự kiện click button xóa--}}
+<script>
+  const delete_items = document.getElementById('delete-items-modal');
+  const btnDeleteItems = document.getElementById('btn-delete-items');
+  const deleteItemsForm = document.getElementById('delete-items-form');
+  let itemsId;
+  if (delete_items) {
+    delete_items.addEventListener('show.bs.modal', function(event) {
+      const button = event.relatedTarget;
+      itemsId = button.getAttribute('data-bs-id');
+  })
+}
+/*Tạo submit delete form */
+  btnDeleteItems.onclick = function(){
+    deleteItemsForm.action = "/mua-hang/"+ itemsId + "?_method=DELETE";
+    deleteItemsForm.submit();
+  }
+</script>
