@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="/css/addItems.css">
+<body id="them-san-pham">
+<form class="add-items-form" method="POST" action="/mua-hang/luu-san-pham"> {{!--enctype--}}
+  {{!-- Mã sản phẩm --}}
+  <div class="form-div">
+    <label for="MaSP" class="form-label">Mã sản phẩm</label>
+    <input name="MaSP" type="text" class="form-control" id="MaSP" required>
+  </div>
+  {{!-- Ảnh sản phẩm --}}
+  <div class="form-div">
+    <label for="AnhSP" class="form-label">Ảnh sản phẩm</label>
+    <input name="AnhSP" type="file" class="form-control" id="AnhSP" required>
+  </div>
+  {{!--Tên sản phẩm--}}
+    <div class="form-div">
+    <label for="HovaTenNV" class="form-label">Tên sản phẩm</label>
+    <input name="HovaTenNV" type="text" class="form-control" id="HovaTenNV" required>
+  </div>
+  {{!--Đơn giá--}}
+  <div class="form-div">
+    <label for="DonGia" class="form-label">Đơn giá</label>
+    <input name="DonGia" type="text" class="form-control" id="DonGia" required>
+  </div>
+  {{!--Mô tả sản phẩm--}}
+  <div class="form-div">
+    <label for="MoTa" class="form-label">Mô tả sản phẩm</label>
+    <input type="text" class="form-control" id="MoTa" name="MoTa" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Thêm sản phẩm</button>
+</form>
+</body>

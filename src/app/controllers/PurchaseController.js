@@ -12,7 +12,6 @@ class PurchaseController {
     })
     .catch(error => next());
   }
-
     // Hiển thị chi tiết sản phẩm khi click vào nhân viên với slug là mã nhân viên
     async show(req, res, next) {
       Purchase.findOne({TenSP: req.params.slug })
@@ -27,6 +26,5 @@ class PurchaseController {
         })
         .catch(error => next());
     }
-
 }
 module.exports = new PurchaseController;
