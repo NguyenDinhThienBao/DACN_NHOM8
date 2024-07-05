@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <header>
+        <link rel="stylesheet" href="/css/createBill.css">
+    </header>
+    <body>
+        <!--Nội dung content-->
+        <main id="tao-hoa-don">
+            <!--Nút trở về-->
+            <section id="back">
+                <a href="/mua-hang/hoa-don">
+                    <i class='bx bx-arrow-back'></i>
+                </a>
+            </section>
+            
+            <!--BUTTON XÁC NHẬN HÓA ĐƠN-->
+            <section>
+                <from action="">
+                    <button type="submit" class="btn_xac_nhan">Xác nhận</button>
+                </from>
+            </section>
+            <!--==============CHI TIẾT HÓA ĐƠN=================-->
+            <section id="hoa-don-ban-hang">
+                <div>
+                    <h1>HÓA ĐƠN BÁN HÀNG</h1>
+                </div>
+
+                <div class="bill">
+                    <from action=""> 
+                        <fieldset class="container-flex-row first-fieldset">
+                            <!--Khách hàng-->
+                            <label for="khach-hang" id="name-label" class="bold-text">Khách hàng
+                                <input type="text" name="khach-hang" id="khach-hang" placeholder="" required>
+                            </label>
+
+                            <!--Ngày lập hóa đơn-->
+                            <label for="ngay-lap-hoa-don" id="name-label" class="bold-text">Ngày lập hóa đơn
+                                <input type="date" name="ngay-lap-hoa-don" id="ngay-lap-hoa-don" placeholder="" required>
+                            </label>
+                        </fieldset>
+
+                        <fieldset class="container-flex-row second-fieldset">
+                            <!--SĐT-->
+                            <label for="sdt" id="name-label" class="bold-text">SĐT
+                                <input type="text" name="sdt" id="sdt" placeholder="" required>
+                            </label>
+
+                            <!--Thông tin thanh toán-->
+                            <label for="thong-tin-thanh-toan" id="name-label" class="bold-text">Thông tin thanh toán
+                                <input type="text" name="thong-tin-thanh-toan" id="thong-tin-thanh-toan" placeholder="" required>
+                            </label>
+                        </fieldset>
+
+                        <fieldset class="container-flex-row third-fieldset">
+                            <!--Địa chỉ-->
+                            <label for="dia-chi" id="name-label" class="bold-text">Địa chỉ
+                                <input type="text" name="dia-chi" id="dia-chi" placeholder="" required>
+                            </label>
+
+                            <!--Ngày đến hạn-->
+                            <label for="ngay-den-han" id="name-label" class="bold-text">Ngày đến hạn
+                                <input type="text" name="ngay-den-han" id="ngay-den-han" placeholder="" required>
+                            </label>
+
+                            <!--Điều khoản thanh toán-->
+                            <label for="dk-thanh-toan" id="name-label" class="">hoặc
+                                <select id="referrer" name="referrer">
+                                    <option value="">Điều khoản thanh toán</option>
+                                    <option value="1">Thanh toán ngay</option>
+                                    <option value="2">15 ngày</option>
+                                    <option value="3">21 ngày</option>
+                                    <option value="4">30 ngày</option>
+                                    <option value="5">45 ngày</option>
+                                    <option value="6">Cuối tháng kế tiếp</option>
+                                    <option value="7">30% trả ngay, còn lại trả trong 60 ngày</option>
+                                    <option value="8">Khác</option>
+                                </select>
+                            </label>
+                        </fieldset>
+                    </from>
+                </div>
+
+                <div class="chi-tiet-hoa-don">
+                    <p class="bold-text">Chi tiết hóa đơn</p>
+                    <table>
+                        <thead>
+                            <tr><!--tạo hàng-->
+                                <th><!--tạo cột--><!--tiêu đề là th-->
+                                    Sản phẩm
+                                </th>
+                                <th>Đơn giá</th>
+                                <th>Số lượng</th>
+                                <th>Thuế</th>
+                                <th>Thành tiền</th>
+                            </tr>
+                        </thead>
+                        
+                        <tbody>
+                            <tr><!--tạo hàng-->
+                                <td><!--tạo cột-->
+                                    Laptop
+                                </td>
+                                <td>20.000.000đ</td>
+                                <td>1</td>
+                                <td>10%</td>
+                                <td>20.000.000đ</td>
+                            </tr>
+        
+                            <tr><!--tạo hàng-->
+                                <td><!--tạo cột-->
+                                    Sạc dự phòng
+                                </td>
+                                <td>300.000đ</td>
+                                <td>2</td>
+                                <td>10%</td>
+                                <td>600.000đ</td>
+                            </tr>
+        
+                            <tr><!--tạo hàng-->
+                                <td><!--tạo cột-->
+                                    Tai nghe Bluetooth
+                                </td>
+                                <td>2.500.000đ</td>
+                                <td>1</td>
+                                <td>10%</td>
+                                <td>2.500.000đ</td>
+                            </tr>
+                        </tbody>
+        
+                        <tfoot>
+                            <tr>
+                                <td>Tổng</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </section>   
+        </main>
+    </body>
+</html>

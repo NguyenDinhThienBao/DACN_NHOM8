@@ -6,5 +6,6 @@ const Purchase = new Schema({
     SoLuongSP: Number,
     GiaThanhSP: Number,
     GiaThanhSPFormatted: String,
+
 });
 module.exports = mongoose.model('Purchase', Purchase); //export model Purchase
