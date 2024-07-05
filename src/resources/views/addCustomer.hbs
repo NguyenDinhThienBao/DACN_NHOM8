@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="/css/addCustomer.css">
     </head>
     <body>
-        <form class="form-addCustomer" method="POST" action="/khach-hang/luu-khach-hang">
+        <form class="add-customer-form" method="POST" action="/khach-hang/luu-khach-hang">
             <!--Mã khách hàng-->
             <div class="form-div">
                 <label for="MaKH" class="form-label">Mã khách hàng</label>
@@ -28,6 +28,12 @@
                 <label for="EmailLienLac" class="form-label">Email khách hàng</label>
                 <input name="EmailLienLac" type="email" class="form-control" id="EmailLienLac" required>
             </div>
+
+            <!--Số điện thoại-->
+            <div class="form-div">
+                <label for="SoDienThoaiKH" class="form-label">Số điện thoại</label>
+                <input name="SoDienThoaiKH" type="text" class="form-control" id="SoDienThoaiKH" required>
+            </div> 
 
             <!--Địa chỉ khách hàng-->
             <div class="form-div">

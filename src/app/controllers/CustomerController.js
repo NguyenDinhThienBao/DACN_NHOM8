@@ -18,6 +18,8 @@ class CustomerController {
     Customer.findOne({ MaKH: req.params.slug })
     .then(customerDetail => {
         customerDetail = customerDetail.toObject()
+        const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+        customerDetail.ThoiGianGiaoDichFormatted = customerDetail.ThoiGianGiaoDich.toLocaleDateString('vi-VN', options);
         res.render('customerDetail', {customerDetail});
       })
       .catch(error => next());
@@ -50,6 +52,13 @@ class CustomerController {
   async update(req, res, next){
     Customer.updateOne({_id: req.params.id}, req.body)
     .then(() => res.redirect('/', MaKH))
+    .catch(error => next());
+  }
+
+  // [DELETE]
+  async delete(req, res, next){
+    Customer.deleteOne({_id: req.params.id})
+    .then(() => res.redirect('back'))
     .catch(error => next());
   }
 
