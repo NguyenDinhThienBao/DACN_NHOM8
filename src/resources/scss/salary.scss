@@ -1,94 +1,12 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');*/
-
-/*@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');*/
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-}
-html{
-    scroll-behavior: smooth;
-}
-body {
-    min-height: 100vh;
-    background: #fffcf1;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-.sidebar{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background: #25b9b9;
-    align-items: center;
-    padding: 0 10px 0 10px;
-    margin-bottom: 18px;
-}
-.logo-content img{
-    width: 50px;
-    height: auto;
-
-}
-ul li{
-    list-style: none;
-    display: inline-block;
-    margin-right: 20px;
-}
-ul li a{
-    text-decoration: none;
-    color: #fff;
-    display: block;
-    text-align: center;
-    font-weight: 200;
-}
-
-ul li a:hover{
-    background: #e25037;
-    border: 1px solid #aa9d9a;
-    border-radius: 10px;
-    padding: 10px;
-    font-weight: 800;
-    transform: scale(1.1);
-}
-ul li a :link{
-    background: #e25037;
-    border: 1px solid #aa9d9a;
-    border-radius: 10px;
-    padding: 10px;
-    font-weight: 800;
-}
-
-
-/*===============================*/
-
-
-/*nội dung chính - content*/
 #nhan-su{
     position: relative; /*Hiển thị nút "Thêm, xóa nhân viên" ở góc dưới bên phải*/
     display: flex;
     flex-direction: column; /*Hiển thị theo cột*/
 }
-
-#back {
-    border-bottom: 2px solid black;
-    width: 100%;
-}
-
-#back > a{
-    text-decoration: none;
-    color: #000;
-    font-size: 25px;
-    margin-left: 15px;
-}
-
 #employee-search{
     display: flex;
     position: sticky; /*Hiển thị "employee-search" cố định khi cuộn trang*/
     z-index: 2000; /* Đảm bảo hiển thị "employee-search" trên cùng */
-    margin-top: 20px;
 }
 /*Thanh tìm kiếm*/
 #search-box {
@@ -103,7 +21,7 @@ margin-left: 10px;
 }
 /*text search*/
 #search-box #search-text{
-    
+
     border: none;
     outline: none;
     background: none;
