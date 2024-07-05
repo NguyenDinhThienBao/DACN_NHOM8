@@ -13,5 +13,6 @@ const Customer = new Schema({
     SoLuongGiaoDich: Number,
     TongTien: Number,
     TrangThaiGiaoDich: String,
+    SoDienThoaiKH: String,
 });
 module.exports = mongoose.model('Customer', Customer); //export model Customer

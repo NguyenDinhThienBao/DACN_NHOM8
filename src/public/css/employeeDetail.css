@@ -1,9 +1,12 @@
-#chi_tiet_nhan_vien {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  margin-top: 0px;
+*{
+  font-family: 'Montserrat', sans-serif; 
 }
+#chi_tiet_nhan_vien {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+  }
 #quay_lai {
   border-bottom: 2px solid black;
   width: 100%;

@@ -1,11 +1,5 @@
-*{
-  position: relative;
-}
 header{
     position: sticky;
     top: 0;
-    z-index: 1;
-}
-body{
-  position: absolute;
+    z-index: 999;
 }
