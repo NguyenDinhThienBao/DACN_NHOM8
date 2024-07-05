@@ -3,67 +3,28 @@ const Purchase = require('../models/Purchase');
 const { multipleMongooseToObject } = require('../../util/mongoose');
 class PurchaseController {
   //GET /mua-hang
+  // Hiển thị danh sách nhân viên và thêm thẻ nếu có thêm nhân viên mới vào
   async index(req, res, next) {
     Purchase.find({})
     .then(purchase => {
-      res.render('purchase', { 
-        purchase: multipleMongooseToObject(purchase) 
-      });
+      purchase = purchase.map(purchase=> purchase.toObject())
+      res.render('purchase', { purchase });
     })
     .catch(error => next());
   }
-
-  // Hiển thị chi tiết sản phẩm khi click vào sản phẩm với slug là mã sản phẩm
-  async show(req, res, next) {
-    Purchase.findOne({ MaSP: req.params.slug })
-    .then(purchaseDetail => {
-      purchaseDetail = purchaseDetail.toObject();
-      res.render('purchaseDetail', {purchaseDetail});
-    })
-    .catch(error => next());
-  }
-
-  //GET /mua-hang/hoa-don
-  async show(req, res, next) {
-    Purchase.find({})
-    .then(billpurchase => {
-      res.render('billpurchase', { 
-        billpurchase: multipleMongooseToObject(billpurchase) 
-      });
-    })
-    .catch(error => next());
-  }
-
-  //ADD /hoa-don/tao-hoa-don
-  /*async add(req, res, next){
-    res.render('createBill');
-  }*/
-
-  //ADD /mua-hang/them-san-pham
-  async add(req, res, next){
-    res.render('addItems');
-  }
-
-  //[POST]
-  async store(req, res, next){
-    const purchase = new Purchase(req.body);
-    if(req.file){
-      purchase.AnhSP = req.file.filename;
+    // Hiển thị chi tiết sản phẩm khi click vào nhân viên với slug là mã nhân viên
+    async show(req, res, next) {
+      Purchase.findOne({TenSP: req.params.slug })
+      .then(purchaseDetail => {
+        purchaseDetail = purchaseDetail.toObject();
+        purchaseDetail.GiaThanhSPFormatted = purchaseDetail.GiaThanhSP.toLocaleString('vi-VN', 
+          { style: 'currency', 
+            currency: 'VND' 
+          }
+        );
+        res.render('purchaseDetail', {purchaseDetail});
+        })
+        .catch(error => next());
     }
-    purchase.save()
-    .then(() => res.redirect('/mua-hang'))
-    .catch(error => next());
-  }
-
-
-
-
-  // [DELETE]
-  async delete(req, res, next){
-    Purchase.deleteOne({_id: req.params.id})
-    .then(() => res.redirect('back'))
-    .catch(error => next());
-  }
-
 }
 module.exports = new PurchaseController;

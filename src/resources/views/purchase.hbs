@@ -1,103 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-    <header>
+    <head>
         <link rel="stylesheet" href="/css/purchase.css">
-    </header>
-    <body class="position-relative flex-row">
-        <!--Nội dung content-->
-        <main id="hang-hoa">
-            <!--Tìm kiếm-->
-            <section id="purchase-search">
-                <div id ="search-box">
-                    <form action ="/mua-hang/tim-kiem">
-                        <input type="text" placeholder="Tìm kiếm..." id="search-text" name="search" value="{{search}}">
-                        <button type="submit" id="search-btn">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
-                    </form>
+    </head>
+    <div id="hang-hoa">
+        {{!-- Bộ lọc --}}
+        <form class="filter-form">
+            <legend>
+                <label>Loại sản phẩm</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Bàn" id="ban">
+                    <label class="form-check-label" for="ban">Bàn</label>
                 </div>
-
-                <!--Thêm sản phẩm-->
-                <div id="add-items">
-                    <a class="add-items" href="/mua-hang/them-san-pham" ><i class="fa-solid fa-user-plus"></i></a>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Ghế" id="ghe">
+                    <label class="form-check-label" for="Ghế">Ghế</label>
                 </div>
-
-            </section>
-
-            <section>
-                <a href="/mua-hang/hoa-don"> 
-                    <button class="btn_hoa_don">
-                        <span>Hóa đơn</span>
-                    </button>
-                </a>
-            </section>
-
-            <section>
-                {{#each purchase}}
-                <div class="sanpham">
-                    <img src="/img/{{this.AnhSP}}" alt="Ảnh sản phẩm" class="purchase-img">
-                    <h4 id="tensp">{{this.TenSP}}</h4>
-                    <h5>{{this.DonGia}}</h5>
-                    <p>{{this.MoTa}}</p>
-
-                    <!--Xóa sản phẩm-->
-                    <div id="delete-items">
-                        <a class = "delete-items" data-bs-toggle="modal" data-bs-id="{{this._id}}" data-bs-target="#delete-items-modal"><i class="fa-solid fa-user-minus"></i></a>
+            </legend>
+            <legend>
+                <label>Chất liệu</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Gỗ" id="chat-lieu-go">
+                    <label class="form-check-label" for="chat-lieu-go">Gỗ</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Nhựa cao cấp" id="chat-lieu-nhua">
+                    <label class="form-check-label" for="chat-lieu-nhu">Nhựa</label>
+                </div>
+            </legend>
+            <button type="submit">Lọc</button>
+        </form>
+        {{!-- Thông tin sản phẩm --}}
+        <section class="purchase-card">
+            {{#each purchase}}
+                <div class="card" style="width: 15rem; margin-right:5px; margin-bottom:5px;">
+                    <img src="/img/{{this.AnhSP}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{this.TenSP}}</h5>
+                        <p class="card-text">{{this.GiaThanhSPFormatted}}</p>
+                        <a href="/mua-hang/{{this.TenSP}}" class="btn btn-primary">Mua hàng</a>
                     </div>
-
-                    <div id="chi_tiet_san_pham">
-                        <a class="chi-tiet-san-pham" href="/mua-hang/{{this.MaSP}}">
-                            <button class="buy">Mua ngay</button>
-                        </a>
-                    </div>
-
                 </div>
-                {{/each}}
-            </section>
-
-        </main>
-    </body>
-</html>
-
-{{!--Confirm delete-items--}}
-<div id="delete-items-modal" class="modal" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Xóa sản phẩm</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p>Bạn có chắc muốn xóa sản phẩm này không?</p>
-      </div>
-      <div class="modal-footer">
-        <button id="btn-delete-items" type="button" class="btn btn-danger" data-bs-dismiss="modal">Xóa</button>
-        <button type="button" class="btn btn-primary">Hủy</button>
-      </div>
+            {{/each}}
+        </section>
     </div>
-  </div>
-</div>
- {{!--Delete hidden form--}}
-<form id="delete-items-form" class="form-addItems" method="POST">
-</form>
-
-
-
-{{!--Lấy id cho sự kiện click button xóa--}}
-<script>
-  const delete_items = document.getElementById('delete-items-modal');
-  const btnDeleteItems = document.getElementById('btn-delete-items');
-  const deleteItemsForm = document.getElementById('delete-items-form');
-  let itemsId;
-  if (delete_items) {
-    delete_items.addEventListener('show.bs.modal', function(event) {
-      const button = event.relatedTarget;
-      itemsId = button.getAttribute('data-bs-id');
-  })
-}
-/*Tạo submit delete form */
-  btnDeleteItems.onclick = function(){
-    deleteItemsForm.action = "/mua-hang/"+ itemsId + "?_method=DELETE";
-    deleteItemsForm.submit();
-  }
-</script>

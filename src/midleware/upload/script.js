@@ -12,7 +12,7 @@ const storage = multer.diskStorage({
   },
   fields: [
     { name: 'AnhNV', maxCount: 1 },
-    { name: 'name', maxCount: 1 }
+    { name: 'AnhSP', maxCount: 1 }
   ]
 })
 const upload = multer({storage : storage});
