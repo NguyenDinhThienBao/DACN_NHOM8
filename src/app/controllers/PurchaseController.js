@@ -64,7 +64,7 @@ class PurchaseController {
         TenSP: req.body.TenSP,
         SoLuongSP: req.body.SoLuongSP,
         SoDienThoaiGiaoDich: req.body.SoDienThoaiKH,
-        TrangThaiSanPham: false,
+        TrangThaiDonHang: false,
       })
       await bill.save()
       const transaction  = new Transaction({

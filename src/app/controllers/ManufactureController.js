@@ -40,14 +40,12 @@ class ManufactureController {
     .catch(error => next());
   }
   async confirm(req, res, next) {
-    try {
-      console.log(req.params);
-      const { id } = req.params;
-      await Bill.updateOne(id, { TrangThaiDonHang: true});
-      res.redirect('/san-xuat');
-    } catch (error) {
-      next(error);
-    }
+    await Bill.updateOne({MaDonHang: req.body.MaDonHang}, {TrangThaiDonHang: true})
+    // Cập nhật số lượng sản phẩm trong Manufacture
+    const manufacture = await Manufacture.findOne({TenSP: req.body.TenSP });
+    manufacture.SoLuongSP -= parseInt(req.body.SoLuongSP);
+    await manufacture.save();
+    res.redirect('back')
   }
   }
   module.exports = new ManufactureController;

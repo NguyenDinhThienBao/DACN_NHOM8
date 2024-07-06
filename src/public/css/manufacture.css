@@ -176,20 +176,26 @@
   color: #fff;
 }
 
-.btn {
-  display: inline-block;
+.order-details-form {
+  border: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.order-details-submit-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
   padding: 10px 20px;
-  background-color: #4CAF50; /* Màu nền */
-  color: white; /* Màu chữ */
-  text-decoration: none; /* Bỏ gạch chân */
-  border-radius: 4px; /* Bo góc */
-  transition: background-color 0.3s ease; /* Hiệu ứng chuyển đổi */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-  background-color: #45a049; /* Màu nền khi rê chuột vào */
-}
-
-.btn:active {
-  background-color: #3e8e41; /* Màu nền khi nhấp chuột */
+.order-details-submit-btn:hover {
+  background-color: #45a049;
 }

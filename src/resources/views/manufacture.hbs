@@ -27,27 +27,25 @@
   <div class="order-status-item pending">
     <div class="order-status-title">Đang Chờ Xác Nhận</div>
     {{#each billWait}}
-    <div class="order-details-list">
+    <form class="order-details-list"  method="POST" action="/san-xuat/{{this.MaDonHang}}?_method=PUT">
       <div class="order-details-item">
-        <div class="order-details-item-label">Mã Đơn Hàng</div>
-        <div class="order-details-item-value">{{this.MaDonHang}}</div>
+        <label for="MaDonHang" class="order-details-item-label">Mã Đơn Hàng</label>
+        <input class="order-details-item-value" name="MaDonHang" id="MaDonHang" value="{{this.MaDonHang}}" readonly></input>
       </div>
       <div class="order-details-item">
-        <div class="order-details-item-label">Số lượng</div>
-        <div class="order-details-item-value">{{this.SoLuongSP}}</div>
+        <label class="order-details-item-label">Số lượng</label>
+        <input class="order-details-item-value" name="SoLuongSP" id="soLuongSP" value="{{this.SoLuongSP}}" readonly></input>
       </div>
       <div class="order-details-item">
-        <div class="order-details-item-label">Tên Sản Phẩm</div>
-        <div class="order-details-item-value">{{this.TenSP}}</div>
+        <label for="TenSP" class="order-details-item-label">Tên Sản Phẩm</label>
+        <input class="order-details-item-value" name="TenSP" id="TenSP" value="{{this.TenSP}}" readonly></input>
       </div>
       <div class="order-details-item">
-        <div class="order-details-item-label">Số Điện Thoại Giao Dịch</div>
-        <div class="order-details-item-value">{{this.SoDienThoaiGiaoDich}}</div>
+        <label for="SoDienThoaiGiaoDich" class="order-details-item-label">Số Điện Thoại Giao Dịch</label>
+        <input class="order-details-item-value" name="SoDienThoaiGiaoDich" id="SoDienThoaiGiaoDich" value="{{this.SoDienThoaiGiaoDich}}" readonly></input>
       </div>
-      <div class="order-status-actions">
-      <a href="san-xuat/{{this._id}}" class="btn">Xác nhận</a>
-    </div>
-    </div>
+      <button type="submit" class="order-details-submit-btn">Xác nhận</button>
+    </form>
     {{/each}}
   </div>
   <div class="order-status-item confirmed">
