@@ -104,9 +104,11 @@
 }
 
 .order-details-list {
-  text-align: left;
-  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
 }
+
 
 .order-details-item {
   display: flex;
@@ -172,4 +174,28 @@
 .link-section.active {
   background-color: #4CAF50;
   color: #fff;
+}
+
+.order-details-form {
+  border: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.order-details-submit-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.order-details-submit-btn:hover {
+  background-color: #45a049;
 }

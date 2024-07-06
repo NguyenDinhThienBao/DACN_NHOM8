@@ -16,6 +16,7 @@
 }
 /*Thanh tìm kiếm*/
 #search-box {
+  visibility: hidden;
 background: white;
 cursor: pointer;
 width: 400px;

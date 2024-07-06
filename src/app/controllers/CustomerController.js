@@ -1,28 +1,55 @@
 const { render } = require('node-sass');
 const Customer = require('../models/Customer');
+const Transaction = require('../models/Transaction');
 const { multipleMongooseToObject } = require('../../util/mongoose');
 class CustomerController {
   //GET /khach-hang (Hiển thị danh sách khách hàng)
   async index(req, res, next) {
-    Customer.find({})
-    .then(customer => {
-      res.render('customer', { 
-        customer: multipleMongooseToObject(customer) 
+    try {
+      const customers = await Customer.find({});
+  
+      // Phân loại khách hàng
+      const newCustomers = [];
+      const pontentialCustomers = [];
+      const VIPCustomers = [];
+  
+      customers.forEach(customer => {
+        const customerObject = customer.toObject();
+        if (customerObject.SoTienTieuThu > 15000000) {
+          VIPCustomers.push(customerObject);
+        } else if (customerObject.SoTienTieuThu > 10000000) {
+          pontentialCustomers.push(customerObject);
+        } else if (customerObject.SoTienTieuThu > 5000000) {
+          newCustomers.push(customerObject);
+        }
       });
-    })
-    .catch(error => next());
+      // Truyền dữ liệu vào template
+      res.render('customer', {
+        newCustomers: newCustomers,
+        pontentialCustomers: pontentialCustomers,
+        VIPCustomers: VIPCustomers
+      });
+    } catch (error) {
+      next(error);
+    }
   }
-
-  // Hiển thị chi tiết khách hàng khi click vào khách hàng với slug là mã khách hàng
+  // Hiển thị chi tiết khách hàng khi click vào khách hàng với slug là Tên khách hàng
   async show(req, res, next) {
-    Customer.findOne({ MaKH: req.params.slug })
-    .then(customerDetail => {
-        customerDetail = customerDetail.toObject()
-        res.render('customerDetail', {customerDetail});
-      })
-      .catch(error => next());
+    try {
+      const customerDetail = await Customer.findOne({ TenKH: req.params.slug });
+      if (!customerDetail) {
+        return next();
+      }
+      const customerObject = customerDetail.toObject();
+      const transactions = await Transaction.find({ SoDienThoaiGiaoDich: customerObject.SoDienThoaiKH });
+      const transactionsObject = transactions.map(transactions => transactions.toObject())
+      res.render('customerDetail', { customerDetail: customerObject, transactions: transactionsObject });
+    } catch (error) {
+      next(error);
+    }
   }
-
+  
+  
   // Thêm khách hàng vào trong danh sách
   async add(req, res, next){
     res.render('addCustomer');

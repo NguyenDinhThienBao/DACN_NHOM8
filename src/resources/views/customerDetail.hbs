@@ -1,100 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="stylesheet" href="/css/customerDetail.css">
-    </head>
-    <body>
-        <!--nội dung hiển thị-->
-        <main id="thong_tin_khach_hang">
-            <!--Nút trở về-->
-            <section id="btn-back">
-                <a href="/khach-hang">
-                    <i class='bx bx-arrow-back'></i>
-                </a>
-            </section>
-            <span class="line"></span>
-            <!--Thông tin khách hàng-->
-            <section id="info-customer">
-                <div>
-                    <p class="name">{{customerDetail.HoKH}} {{customerDetail.TenKH}}</p>
-                </div>
-                <div class="items-khachhang">
-                    <!--Hàng đầu (Tiêu thụ & SL Sản phẩm)-->
-                    <div class="container-flex-row">
-                        <div class="container-flex-column margin-right align-center">
-                            <p class="big-text margin-bottom">TIÊU THỤ (VNĐ)</p>
-                            <p class="tieu_thu border-info margin-bottom">{{customerDetail.SoTienTieuThu}}</p>
-                        </div>
-                        <div class="container-flex-column align-center">
-                            <p class="big-text margin-bottom">SẢN PHẨM (sản phẩm)</p>
-                            <p class="san_pham border-info margin-bottom">{{customerDetail.SoSanPhamTieuThu}}</p>
-                        </div>
-                    </div>
-                    <div class="container-flex-row">
-                    </div>
-                    <div class="container-flex-row margin-bottom align-center">
-                        <p class="big-text margin-right">EMAIL</p>
-                        <p class="email border-info" >{{customerDetail.EmailLienLac}}</p>
-                    </div>
-
-                    <div class="container-flex-row margin-bottom align-center">
-                        <p class="big-text margin-right-dia-chi">ĐỊA CHỈ</p>
-                        <p class="address border-info" >{{customerDetail.DiaChiLienLac}}</p>
-                    </div>
-                </div>
-            </section>
-            <!--=================================================-->
-            <span class="line"></span>
-            <!--Lịch sử giao dịch-->
-            <section>
-                <div class="history">
-                    <h3 style="margin-bottom: 10px;">LỊCH SỬ GIAO DỊCH</h3>
-                    <!--tạo bảng lịch sử giao dịch-->
-                    <table>
-                        <thead>
-                            <tr><!--tạo hàng-->
-                                <th><!--tạo cột--><!--tiêu đề là th-->
-                                    THỜI GIAN
-                                </th>
-                                <th>SẢN PHẨM</th>
-                                <th>SỐ LƯỢNG</th>
-                                <th>TỔNG TIỀN</th>
-                                <th>TRẠNG THÁI</th>
-                            </tr>
-                        </thead>
-                        
-                        <tbody>
-                            <tr><!--tạo hàng-->
-                                <td><!--tạo cột-->
-                                    {{customerDetail.ThoiGianGiaoDich}}
-                                </td>
-                                <td>{{customerDetail.TenSanPhamGiaoDich}}</td>
-                                <td>{{customerDetail.SoLuongGiaoDich}}</td>
-                                <td>{{customerDetail.TongTien}}</td>
-                                <td>{{customerDetail.TrangThaiGiaoDich}}</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>            
-            <section>
-                <div class="chart">
-                    <div class="line-chart">
-                      <span style="height: 80%"></span>
-                      <span style="height: 60%"></span>
-                      <span style="height: 40%"></span>
-                      <span style="height: 20%"></span>
-                    </div>
-                  </div>
-            </section>
-            <span class="line"></span>
-            <!--Cập nhật thông tin-->
-            <section class="position-relative">
-                <a class="btn_cap_nhat" href="/khach-hang/{{customerDetail._id}}/edit">
-                    <i class="fa-solid fa-pen"></i>
-                    <span>Cập nhật thông tin</span>
-                </a>
-            </section>
-        </main>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin khách hàng</title>
+    <link rel="stylesheet" href="/css/customerDetail.css">
+</head>
+<body>
+    <div id="customer-info-container">
+        <div class="customer-info-section">
+            <h2>Thông tin khách hàng</h2>
+            <div class="customer-info-item">
+                <span class="label">Tên khách hàng:</span>
+                <span class="value">{{customerDetail.HoKH}} {{customerDetail.TenKH}}</span>
+            </div>
+            <div class="customer-info-item">
+                <span class="label">Số điện thoại:</span>
+                <span class="value">{{customerDetail.SoDienThoaiKH}}</span>
+            </div>
+            <div class="customer-info-item">
+                <span class="label">Tổng tiền tiêu thụ:</span>
+                <span class="value">{{customerDetail.SoTienTieuThuFormatted}}</span>
+            </div>
+            <div class="customer-info-item">
+                <span class="label">Số sản phẩm tiêu thụ:</span>
+                <span class="value">{{customerDetail.SoSanPhamTieuThu}}</span>
+            </div>
+            <div class="customer-info-item">
+                <span class="label">Địa chỉ:</span>
+                <span class="value">{{customerDetail.DiaChiLienLac}}</span>
+            </div>
+        </div>
+        <div class="transaction-history-section">
+            <h2>Lịch sử giao dịch</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Thời gian</th>
+                        <th>Sản phẩm</th>
+                        <th>Số lượng</th>
+                        <th>Tổng tiền</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each transactions}}
+                    <tr>
+                        <td>{{this.ThoiGianGiaoDichFormatted}}</td>
+                        <td>{{this.TenSPGiaoDich}}</td>
+                        <td>{{this.SoLuongSPGiaoDich}}</td>
+                        <td>{{this.TongGiaThanhGiaoDichFormatted}}</td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
 </html>

@@ -8,11 +8,7 @@ const Customer = new Schema({
     SoTienTieuThu: Number,
     EmailLienLac: String,
     DiaChiLienLac: String,
-    ThoiGianGiaoDich: Date,
-    TenSanPhamGiaoDich: String,
-    SoLuongGiaoDich: Number,
-    TongTien: Number,
-    TrangThaiGiaoDich: String,
     SoDienThoaiKH: String,
+    SoTienTieuThuFormatted: String,
 });
 module.exports = mongoose.model('Customer', Customer); //export model Customer

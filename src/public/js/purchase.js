@@ -1,9 +1,14 @@
-// Lấy các phần tử cần sử dụng
 const priceProductElement = document.querySelector('.priceProduct');
-const priceElement = document.querySelector('.price');
-const taxMoneyElement = document.querySelector('.tax-money');
-const totalPriceElement = document.querySelector('.total-price');
-const quantityInput = document.querySelector('.quantity');
+// Lấy input số lượng sản phẩm
+const quantityInput = document.getElementById('SoLuongSP');
+// Lấy phần tử input với id "MaDonHang"
+const orderIdInput = document.getElementById("MaDonHang");
+
+// Gọi hàm generateOrderId() để tạo mã đơn hàng ngẫu nhiên
+const orderId = generateOrderId();
+
+// Đặt giá trị của input "MaDonHang" bằng mã đơn hàng vừa tạo
+orderIdInput.value = orderId;
 
 
 function updateCurrentDate() {
@@ -12,46 +17,37 @@ function updateCurrentDate() {
       month: '2-digit',
       year: 'numeric'
     });
-    document.getElementById('current-time').textContent = currentDate;
+    document.getElementById('current-time').value= currentDate;
   }
   // Gọi hàm để cập nhật ngày mỗi giây
   setInterval(updateCurrentDate, 1000);
 
-
+// Cập nhật giá trị khi số lượng thay đổi
+quantityInput.addEventListener('input', calculatePrice);
 // Hàm tính toán giá sản phẩm
 function calculatePrice() {
   const priceProduct = parseFloat(priceProductElement.textContent.replace(/,/g, ''));
+    // Lấy số lượng sản phẩm từ input
   const quantity = parseInt(quantityInput.value);
   const totalPrice = priceProduct * quantity;
-  const taxMoney = totalPrice * 0.15;
-
-  // Định dạng giá trị theo tiền tệ
-  const formattedProductPrice = totalPrice.toLocaleString('vi-VN', 
-    { style: 'currency', 
-      currency: 'VND' 
-    }
-  );
-  const formattedTaxMoney = taxMoney.toLocaleString('vi-VN', 
-    { style: 'currency', 
-      currency: 'VND' 
-    }
-  );
-  const formattedTotalPrice = (totalPrice + taxMoney).toLocaleString('vi-VN', 
-    { style: 'currency',
-     currency: 'VND' 
-    }
-  );
-  priceElement.textContent = formattedProductPrice;
-  taxMoneyElement.textContent = formattedTaxMoney;
-  totalPriceElement.textContent = formattedTotalPrice;
+  const taxAmount = totalPrice * 0.1;
+// Hiển thị các giá trị với định dạng tiền tệ
+document.getElementById('GiaSPChuaThue').value = priceProduct.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+document.getElementById('ThueSP').value = taxAmount.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+document.getElementById('GiaThanhSP').value = totalPrice.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+document.getElementById('TongGiaThanhSP').value = totalPrice;
 }
 
-// Gắn sự kiện thay đổi số lượng để tính toán lại giá
-quantityInput.addEventListener('input', calculatePrice);
 
 // Tính toán giá ban đầu
 calculatePrice();
 
 const updateButton = document.querySelector('.price-info-wrapper button');
 updateButton.addEventListener('click', calculatePrice);
+
+function generateOrderId() {
+  // Tạo một mã đơn hàng ngẫu nhiên, ví dụ: "DH123456"
+  return "DH" + Math.floor(Math.random() * 900000) + 1;
+}
+
 
