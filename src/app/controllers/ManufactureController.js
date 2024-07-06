@@ -1,23 +1,53 @@
 const { render } = require('node-sass');
 const Manufacture = require('../models/Manufacture');
 const { multipleMongooseToObject } = require('../../util/mongoose');
+const Purchase = require('../models/Purchase');
+const Bill = require('../models/Bill');
 class ManufactureController {
-  /*
-  async index(req, res) {
-
-    const manufacture = await Manufacture.find({});
-    res.json(manufacture);
-  }
-  */
-
   async index(req, res, next) {
-    Manufacture.find({})
-    .then(manufacture => {
-      manufacture = manufacture.map(manufacture => manufacture.toObject())
-      res.render('manufacture', { manufacture });
+    try {
+      const manufacture = await Manufacture.find({}).lean();
+      const bills = await Bill.find({}).lean();
+
+      const billWait = bills.filter(bill => !bill.TrangThaiDonHang);
+      const billConfirmed = bills.filter(bill => bill.TrangThaiDonHang);
+
+      res.render('manufacture', { manufacture, billWait, billConfirmed });
+    } catch (error) {
+      next(error);
+    }
+  }
+  //[POST]
+  async store(req, res, next){
+    const manufacture = new Manufacture(req.body);
+    if(req.file){
+      manufacture.AnhSP = req.file.filename;
+    }
+    const options ={ style: 'currency', currency: 'VND'}
+    manufacture.GiaThanhSPFormatted = manufacture.GiaThanhSP.toLocaleString('vi-VN', options);
+    manufacture.save()
+    .then(() => {
+      const purchase = new Purchase({
+        AnhSP: manufacture.AnhSP,
+        TenSP: manufacture.TenSP,
+        GiaThanhSPFormatted: manufacture.GiaThanhSPFormatted,
+        GiaThanhSP: manufacture.GiaThanhSP,
+      })
+      purchase.save()
+      .then(() => res.redirect('/san-xuat'))
+      .catch(error => next())
     })
     .catch(error => next());
   }
-
+  async confirm(req, res, next) {
+    try {
+      console.log(req.params);
+      const { id } = req.params;
+      await Bill.updateOne(id, { TrangThaiDonHang: true});
+      res.redirect('/san-xuat');
+    } catch (error) {
+      next(error);
+    }
+  }
   }
   module.exports = new ManufactureController;

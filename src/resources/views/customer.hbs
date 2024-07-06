@@ -1,197 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <!--<link rel="stylesheet" href="/khach_hang/style.css">-->
-        <link rel="stylesheet" href="/css/customer.css">
-    </head>
-    <body class="position-relative flex-row">
-    <!--nội dung content-->
-        <main id="khach-hang">
-            <!--Tìm kiếm-->
-            <section id="customer-search">
-                <div id ="search-box">
-                    <form action ="/khach-hang/tim-kiem">
-                        <input type="text" placeholder="Tìm kiếm..." id="search-text" name="search" value="{{search}}">
-                        <button type="submit" id="search-btn">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
-                    </form>
-                </div>
-
-                <!--Thêm khách hàng-->
-                <div id="add-customer">
-                    <a class="add-customer" href="/khach-hang/them-khach-hang" target="_top"><i class="fa-solid fa-user-plus"></i></a>
-                </div>
-
-            </section>
-            <!--================BẢNG KHÁCH HÀNG================-->
-            <section class="main_workspace container-flex-row">
-                <!--line kẻ-->
-                <span class="line-top"></span>
-                <!--KHÁCH HÀNG MỚI-->
-                    <div class="new-customer container-flex-column">
-                        <!--Tiêu đề loại khách hàng-->
-                        <div class="type-new-customer container-flex-column">
-                            <p class="big-text">MỚI</p>
-                            <span class="yellow-color"></span>
-                        </div>
-                        <span class="line-down"></span>
-                        <!--Nội dung ô khách hàng-->
-                        <!--===========================================================================-->
-                        <!--===========================================================================-->
-                        {{#each customer}}
-                        <div class="container-flex-row adjust-center">
-                            <items class="container-flex-row background-item">
-                                <div>  
-                                    <p class="khach-hang-name big-text">{{this.HoKH}} {{this.TenKH}}</p>
-                                    <p class="khach-hang-email">{{this.EmailLienLac}}</p>
-                                    <div class="container-flex-row space-around">
-                                        <p class="border-yellor don-vi">{{this.SoTienTieuThu}}</p>
-                                        <p>(VNĐ)</p>
-                                    </div>
-                                    <div class="container-flex-row space-around">
-                                        <p class="border-yellor">{{this.SoSanPhamTieuThu}}</p>
-                                        <p>(SL)</p>
-                                    </div>
-                                </div>
-
-                                <!--Xóa khách hàng-->
-                                <div id="delete-customer">
-                                    <a class = "delete-customer" data-bs-toggle="modal" data-bs-id="{{this._id}}" data-bs-target="#delete-customer-modal"><i class="fa-solid fa-user-minus"></i></a>
-                                </div>
-
-                                <div class="chi_tiet_khach_hang">
-                                    <a class="chi-tiet-khach-hang" href="/khach-hang/{{this.MaKH}}"><i class="fa-solid fa-user"></i></a>
-                                </div>
-                            </items>
-                        </div>
-                        {{/each}}
-                    </div>
-            <!--=============================================================================-->
-            <!--=============================================================================-->
-                <!--KHÁCH HÀNG TIỀM NĂNG-->
-                    <div class="new-customer container-flex-column">
-                        <!--Tiêu đề loại khách hàng-->
-                        <div class="type-new-customer container-flex-column">
-                            <p class="big-text">TIỀM NĂNG</p>
-                            <span class="orange-color"></span>
-                        </div>
-                        <span class="line-down"></span>
-                        <!--Nội dung ô khách hàng-->
-                        <!--===========================================================================-->
-                        <!--===========================================================================-->
-                        {{#each customer}}
-                        <div class="container-flex-row adjust-center">
-                            <items class="container-flex-row background-item">
-                                <div>  
-                                    <p class="khach-hang-name big-text">{{this.HoKH}} {{this.TenKH}}</p>
-                                    <p class="khach-hang-email">{{this.EmailLienLac}}</p>
-                                    <div class="container-flex-row space-around">
-                                        <p class="border-orange don-vi">{{this.SoTienTieuThu}}</p>
-                                        <p>(VNĐ)</p>
-                                    </div>
-                                    <div class="container-flex-row space-around">
-                                        <p class="border-orange">{{this.SoSanPhamTieuThu}}</p>
-                                        <p>(SL)</p>
-                                    </div>
-                                </div>
-
-                                <!--Xóa khách hàng-->
-                                <div id="delete-customer">
-                                    <a class = "delete-customer" data-bs-toggle="modal" data-bs-id="{{this._id}}" data-bs-target="#delete-customer-modal"><i class="fa-solid fa-user-minus"></i></a>
-                                </div>
-
-                                <div class="chi_tiet_khach_hang">
-                                    <a class="chi-tiet-khach-hang" href="/khach-hang/{{this.MaKH}}"><i class="fa-solid fa-user"></i></a>
-                                </div>
-                            </items>
-                        </div>
-                        {{/each}}
-                    </div>
-            <!--===========================================================================-->
-            <!--===========================================================================-->
-                <!--KHÁCH HÀNG VIP-->
-                    <div class="new-customer container-flex-column">
-                        <!--Tiêu đề loại khách hàng-->
-                        <div class="type-new-customer container-flex-column">
-                            <p class="big-text">V.I.P</p>
-                            <span class="red-color"></span>
-                        </div>
-                        <span class="line-down"></span>
-                        <!--Nội dung ô khách hàng-->
-                        <!--===========================================================================-->
-                        <!--===========================================================================-->
-                        {{#each customer}}
-                        <div class="container-flex-row adjust-center">
-                            <items class="container-flex-row background-item">
-                                <div>  
-                                    <p class="khach-hang-name big-text">{{this.HoKH}} {{this.TenKH}}</p>
-                                    <p class="khach-hang-email">{{this.EmailLienLac}}</p>
-                                    <div class="container-flex-row space-around">
-                                        <p class="border-red don-vi">{{this.SoTienTieuThu}}</p>
-                                        <p>(VNĐ)</p>
-                                    </div>
-                                    <div class="container-flex-row space-around">
-                                        <p class="border-red">{{this.SoSanPhamTieuThu}}</p>
-                                        <p>(SL)</p>
-                                    </div>
-                                </div>
-
-                                <!--Xóa khách hàng-->
-                                <div id="delete-customer">
-                                    <a class = "delete-customer" data-bs-toggle="modal" data-bs-id="{{this._id}}" data-bs-target="#delete-customer-modal"><i class="fa-solid fa-user-minus"></i></a>
-                                </div>
-
-                                <div class="chi_tiet_khach_hang">
-                                    <a class="chi-tiet-khach-hang" href="/khach-hang/{{this.MaKH}}"><i class="fa-solid fa-user"></i></a>
-                                </div>
-                            </items>
-                        </div>
-                        {{/each}}
-                    </div>
-            <!--===========================================================================-->
-            </section>
-        </main> 
-    </body>
-</html>
-
-{{!--Confirm delete-customer--}}
-<div id="delete-customer-modal" class="modal" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Xóa khách hàng</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p>Bạn có chắc muốn xóa khách hàng này không?</p>
-      </div>
-      <div class="modal-footer">
-        <button id="btn-delete-customer" type="button" class="btn btn-danger" data-bs-dismiss="modal">Xóa</button>
-        <button type="button" class="btn btn-primary">Hủy</button>
-      </div>
+<html>
+<head>
+    <link rel="stylesheet" href="/css/customer.css">
+</head>
+<body>
+    <div class="customer-group">
+        <h2>Khách Hàng Mới</h2>
+        {{#each newCustomers}}
+        <div class="customer-info">
+            <div>{{this.TenKH}}</div>
+            <div>Số Điện Thoại: {{this.SoDienThoaiKH}}</div>
+            <div>Số Tiền: {{this.SoTienTieuThuFormatted}}</div>
+            <div>Số Lượng Sản Phẩm: {{SoSanPhamTieuThu}}</div>
+            <div>
+                <a href="khach-hang/{{this.TenKH}}" class="link-thong-tin-KH">Xem thông tin</a>
+            </div>
+        </div>
+        {{/each}}
     </div>
-  </div>
-</div>
- {{!--Delete hidden form--}}
-<form id="delete-customer-form" class="form-addCustomer" method="POST">
-</form>
-
-{{!--Lấy id cho sự kiện click button xóa--}}
-<script>
-  const delete_customer = document.getElementById('delete-customer-modal');
-  const btnDeleteCustomer = document.getElementById('btn-delete-customer');
-  const deleteCustomerForm = document.getElementById('delete-customer-form');
-  let customerId;
-  if (delete_customer) {
-    delete_customer.addEventListener('show.bs.modal', function(event) {
-      const button = event.relatedTarget;
-      customerId = button.getAttribute('data-bs-id');
-  })
-}
-/*Tạo submit delete form */
-  btnDeleteCustomer.onclick = function(){
-    deleteCustomerForm.action = "/khach-hang/"+ customerId + "?_method=DELETE";
-    deleteCustomerForm.submit();
-  }
-</script>
+    <div class="customer-group">
+        <h2>Khách Hàng Tiềm Năng</h2>
+        {{#each pontentialCustomers}}
+        <div class="customer-info">
+            <div>{{this.TenKH}}</div>
+            <div>Số Điện Thoại: {{this.SoDienThoaiKH}}</div>
+            <div>Số Tiền: {{this.SoTienTieuThuFormatted}}</div>
+            <div>Số Lượng Sản Phẩm: {{this.SoSanPhamTieuThu}}</div>
+            <div>
+                <a href="khach-hang/{{this.TenKH}}" class="link-thong-tin-KH">Xem thông tin</a>
+            </div>
+        </div>
+        </div>
+        {{/each}}
+    </div>
+    <div class="customer-group">
+        <h2>Khách Hàng VIP</h2>
+        {{#each VIPCustomers}}
+        <div class="customer-info">
+            <div>{{this.TenKH}}</div>
+            <div>Số Điện Thoại: {{this.SoDienThoaiKH}}</div>
+            <div>Số Tiền: {{this.SoTienTieuThuFormatted}}</div>
+            <div>Số Lượng Sản Phẩm: {{this.SoSanPhamTieuThu}}</div>
+            <div>
+                <a href="khach-hang/{{this.TenKH}}" class="link-thong-tin-KH"> Xem thông tin</a>
+            </div>
+        </div>
+        </div>
+        {{/each}}
+</body>
+</html>

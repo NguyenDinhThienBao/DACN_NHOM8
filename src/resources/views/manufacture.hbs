@@ -2,98 +2,92 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="/css/manufacture.css">
-    </head>
-    <body>
-        <!--Hiển thị chính-->
-        <main id="san-xuat">
-            <section>
-               <a href="them_san_pham.html"> 
-                    <button class="btn_lap_ke_hoach_san_xuat">
-                        <i class="fa-solid fa-pen"></i>
-                        <span>Lập kế hoạch sản xuất</span>
-                    </button>
-                </a>
-            </section>
-            <span class="line"></span>
-            <section  class="main_workspace container-flex-row">
-                <div class="sp_yeu_cau container-flex-column">
-                    <div class="title_yeu_cau container-flex-column">
-                        <p class="big-text">YÊU CẦU</p>
-                        <span class="red-color"></span>
-                    </div>
-                    <span class="line"></span>
-                    <div class="container-flex-column adjust-center">
-                        <items>
-                            <div>
-                                <p><p><strong>[WH/MO/00001]</strong></p>DDR4</p>
-                                <p>22/02/2024</p>
-                            </div>
-                            <a href="./chi_phi_quy_trinh/index.html">
-                                <button class="btn_chuyen">
-                                    <i class="fa-solid fa-database"></i>
-                                </button>
-                            </a>
-                        </items>
-                    </div>
+</head>
+  <div class="neo-link-section">
+    <a href="#product-list" class="link-section">Danh sách</a>
+    <a href="#order-status-container" class="link-section">Xác nhận</a>
+    <a href="#create-product" class="link-section">Tạo sản phẩm</a>
+</div>
+<main id="kho-hang">
+  <div class="warehouse-container">
+  <!-- Chức năng hiển thị sản phẩm -->
+  <div id="product-list" class="product-list">
+    {{#each manufacture}}
+    <div class="product-item">
+      <img src="/img/{{this.AnhSP}}" alt="{{this.TenSP}}">
+      <h3>{{this.TenSP}}</h3>
+      <p>Số lượng: {{this.SoLuongSP}}</p>
+      <p>Đơn giá: {{this.GiaThanhSPFormatted}}</p>
+    </div>
+    {{/each}}
+  </div>
 
-                    <div class="container-flex-column adjust-center">
-                        <items>
-                            <div>
-                                <p><p><strong>[WH/MO/00001]</strong></p>DDR4</p>
-                                <p>22/02/2024</p>
-                            </div>
-                            <a href="./chi_phi_quy_trinh/index.html">
-                                <button class="btn_chuyen">
-                                    <i class="fa-solid fa-database"></i>
-                                </button>
-                            </a>
-                        </items>
-                    </div>
-
-                </div>
-
-                <div class="sp_dang_tien_hanh container-flex-column">
-                    <div class="title_dang_tien_hanh container-flex-column">
-                        <p class="big-text">ĐANG TIẾN HÀNH</p>
-                        <span class="blue-color"></span>
-                    </div>
-                    <span class="line"></span>
-                    <div class="container-flex-column adjust-center">
-                        <items>
-                            <div>
-                                <p><p><strong>[WH/MO/00001]</strong></p>DDR4</p>
-                                <p>22/02/2024</p>
-                            </div>
-                            <a href="./chi_phi_quy_trinh/index.html">
-                                <button class="btn_chuyen">
-                                    <i class="fa-solid fa-database"></i>
-                                </button>
-                            </a>
-                        </items>
-                    </div>
-                </div>
-
-                <div class ="sp_da_hoan_thanh container-flex-column">
-                    <div class=" title_da_hoan_thanh container-flex-column">
-                        <p class="big-text">ĐÃ HOÀN THÀNH</p>
-                        <span class="green-color"></span>
-                    </div>
-                    <span class="line"></span>
-                    <div class="container-flex-column adjust-center">
-                        <items>
-                            <div>
-                                <p><p><strong>[WH/MO/00001]</strong></p>DDR4</p>
-                                <p>22/02/2024</p>
-                            </div>
-                            <a href="./chi_phi_quy_trinh/index.html">
-                                <button class="btn_chuyen">
-                                    <i class="fa-solid fa-database"></i>
-                                </button>
-                            </a>
-                        </items>
-                    </div>
-                </div>
-            </section>
-        </main>
-    </body>
-</html>
+  <!-- Chức năng xác nhận đơn hàng -->
+<div id= "order-status-container" class="order-status-container">
+  <div class="order-status-item pending">
+    <div class="order-status-title">Đang Chờ Xác Nhận</div>
+    {{#each billWait}}
+    <div class="order-details-list">
+      <div class="order-details-item">
+        <div class="order-details-item-label">Mã Đơn Hàng</div>
+        <div class="order-details-item-value">{{this.MaDonHang}}</div>
+      </div>
+      <div class="order-details-item">
+        <div class="order-details-item-label">Số lượng</div>
+        <div class="order-details-item-value">{{this.SoLuongSP}}</div>
+      </div>
+      <div class="order-details-item">
+        <div class="order-details-item-label">Tên Sản Phẩm</div>
+        <div class="order-details-item-value">{{this.TenSP}}</div>
+      </div>
+      <div class="order-details-item">
+        <div class="order-details-item-label">Số Điện Thoại Giao Dịch</div>
+        <div class="order-details-item-value">{{this.SoDienThoaiGiaoDich}}</div>
+      </div>
+      <div class="order-status-actions">
+      <a href="san-xuat/{{this._id}}" class="btn">Xác nhận</a>
+    </div>
+    </div>
+    {{/each}}
+  </div>
+  <div class="order-status-item confirmed">
+    <div class="order-status-title">Đã xác nhận</div>
+    {{#each billConfirmed}}
+    <div class="order-details-list">
+      <div class="order-details-item">
+        <div class="order-details-item-label">Mã Đơn Hàng</div>
+        <div class="order-details-item-value">{{this.MaDonHang}}</div>
+      </div>
+      <div class="order-details-item">
+        <div class="order-details-item-label">Số lượng</div>
+        <div class="order-details-item-value">{{this.SoLuongSP}}</div>
+      </div>
+      <div class="order-details-item">
+        <div class="order-details-item-label">Tên Sản Phẩm</div>
+        <div class="order-details-item-value">{{this.TenSP}}</div>
+      </div>
+      <div class="order-details-item">
+        <div class="order-details-item-label">Số Điện Thoại Giao Dịch</div>
+        <div class="order-details-item-value">{{this.SoDienThoaiGiaoDich}}</div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>
+  <!-- Chức năng tạo sản phẩm -->
+  <div id="create-product" class="create-product">
+    <h2>Tạo Sản Phẩm Mới</h2>
+    <form action="san-xuat/them-hang-hoa" method="POST" enctype="multipart/form-data">
+      <label for="TenSP">Tên Sản Phẩm:</label>
+      <input type="text" id="TenSP" name="TenSP" required>
+      <label for="AnhSP">Ảnh Sản Phẩm:</label>
+      <input type="file" id="AnhSP" name="AnhSP" required>
+      <label for="SoLuongSP">Số Lượng:</label>
+      <input type="number" id="SoLuongSP" name="SoLuongSP" required>
+      <label for="GiaThanhSP">Giá Thành:</label>
+      <input type="number" id="GiaThanhSP" name="GiaThanhSP" required>
+      <button type="submit">Tạo Sản Phẩm</button>
+    </form>
+  </div>
+</div>
+</main>

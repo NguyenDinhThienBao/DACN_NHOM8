@@ -26,7 +26,40 @@ app.engine('.hbs', engine({
   defaultLayout: 'main',  //cấu hình layout mặc định
   layoutsDir: path.join(app.get('views'), 'layouts'), //cấu hình đường dẫn layout
   partialsDir: path.join(app.get('views'), 'partials'), //cấu hình đường dẫn partials
-  extname: '.hbs'
+  extname: '.hbs',
+  helpers: {
+    when: function(operand_1, operator, operand_2, options){
+        console.log("Using the when helper:");
+        console.log("operand_1: " + operand_1 + " operator: " + operator + " operand_2: " + operand_2);
+        let operators = {
+            'eq': function (l, r) {
+                return l == r;
+            },
+            'gt': function(l, r) {
+              return Number(l) > Number(r);
+            },
+            'lt': function(l, r) {
+              return Number(l) < Number(r);
+            },
+            'noteq': function (l, r) {
+                return l != r;
+            },
+            'or': function (l, r) {
+                return l || r;
+            },
+            'and': function (l, r) {
+                return l && r;
+            },
+            '%': function (l, r) {
+                return (l % r) === 0;
+            }
+        }
+        , result = operators[operator](operand_1, operand_2);
+
+        if(result) return options.fn(this);
+        else  return options.inverse(this);
+    }
+}
 }));
 app.set('view engine', '.hbs');
 route(app); //gọi hàm route trong file script.js
