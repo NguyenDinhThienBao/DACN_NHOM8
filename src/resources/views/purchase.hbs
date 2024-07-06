@@ -3,44 +3,16 @@
     <head>
         <link rel="stylesheet" href="/css/purchase.css">
     </head>
-    <div id="hang-hoa">
-        {{!-- Bộ lọc --}}
-        <form class="filter-form">
-            <legend>
-                <label>Loại sản phẩm</label>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Bàn" id="ban">
-                    <label class="form-check-label" for="ban">Bàn</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Ghế" id="ghe">
-                    <label class="form-check-label" for="Ghế">Ghế</label>
-                </div>
-            </legend>
-            <legend>
-                <label>Chất liệu</label>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Gỗ" id="chat-lieu-go">
-                    <label class="form-check-label" for="chat-lieu-go">Gỗ</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Nhựa cao cấp" id="chat-lieu-nhua">
-                    <label class="form-check-label" for="chat-lieu-nhu">Nhựa</label>
-                </div>
-            </legend>
-            <button type="submit">Lọc</button>
-        </form>
-        {{!-- Thông tin sản phẩm --}}
-        <section class="purchase-card">
-            {{#each purchase}}
-                <div class="card" style="width: 15rem; margin-right:5px; margin-bottom:5px;">
-                    <img src="/img/{{this.AnhSP}}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">{{this.TenSP}}</h5>
-                        <p class="card-text">{{this.GiaThanhSPFormatted}}</p>
-                        <a href="/mua-hang/{{this.TenSP}}" class="btn btn-primary">Mua hàng</a>
-                    </div>
-                </div>
-            {{/each}}
-        </section>
-    </div>
+<div id="hang-hoa">
+    {{!-- Thông tin sản phẩm --}}
+    <section id="product-list" class="product-list">
+        {{#each purchase}}
+            <div class="product-item">
+                <img src="/img/{{this.AnhSP}}" alt="Product Image" class="product-image">
+                <div class="product-name">{{this.TenSP}}</div>
+                <div class="product-price">{{this.GiaThanhSPFormatted}}</div>
+                <a href="/mua-hang/{{this.TenSP}}" class="buy-button">Mua hàng</a>
+            </div>
+        {{/each}}
+    </section>
+</div>

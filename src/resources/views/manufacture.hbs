@@ -25,48 +25,53 @@
   <!-- Chức năng xác nhận đơn hàng -->
 <div id= "order-status-container" class="order-status-container">
   <div class="order-status-item pending">
-    <div class="order-status-title">Đang chờ xác nhận</div>
-    <div class="order-status-count">10</div>
+    <div class="order-status-title">Đang Chờ Xác Nhận</div>
+    {{#each billWait}}
     <div class="order-details-list">
       <div class="order-details-item">
-        <div class="order-details-item-label">Mã đơn hàng:</div>
-        <div class="order-details-item-value">123456</div>
+        <div class="order-details-item-label">Mã Đơn Hàng</div>
+        <div class="order-details-item-value">{{this.MaDonHang}}</div>
       </div>
       <div class="order-details-item">
-        <div class="order-details-item-label">Tên sản phẩm:</div>
-        <div class="order-details-item-value">Áo sơ mi</div>
+        <div class="order-details-item-label">Số lượng</div>
+        <div class="order-details-item-value">{{this.SoLuongSP}}</div>
       </div>
       <div class="order-details-item">
-        <div class="order-details-item-label">Số lượng:</div>
-        <div class="order-details-item-value">2</div>
+        <div class="order-details-item-label">Tên Sản Phẩm</div>
+        <div class="order-details-item-value">{{this.TenSP}}</div>
       </div>
+      <div class="order-details-item">
+        <div class="order-details-item-label">Số Điện Thoại Giao Dịch</div>
+        <div class="order-details-item-value">{{this.SoDienThoaiGiaoDich}}</div>
+      </div>
+      <div class="order-status-actions">
+      <a href="san-xuat/{{this._id}}" class="btn">Xác nhận</a>
     </div>
-    <div class="order-status-actions">
-      <button>Hủy</button>
-      <button>Xác nhận</button>
     </div>
+    {{/each}}
   </div>
   <div class="order-status-item confirmed">
     <div class="order-status-title">Đã xác nhận</div>
-    <div class="order-status-count">20</div>
+    {{#each billConfirmed}}
     <div class="order-details-list">
       <div class="order-details-item">
-        <div class="order-details-item-label">Mã đơn hàng:</div>
-        <div class="order-details-item-value">987654</div>
+        <div class="order-details-item-label">Mã Đơn Hàng</div>
+        <div class="order-details-item-value">{{this.MaDonHang}}</div>
       </div>
       <div class="order-details-item">
-        <div class="order-details-item-label">Tên sản phẩm:</div>
-        <div class="order-details-item-value">Quần jean</div>
+        <div class="order-details-item-label">Số lượng</div>
+        <div class="order-details-item-value">{{this.SoLuongSP}}</div>
       </div>
       <div class="order-details-item">
-        <div class="order-details-item-label">Số lượng:</div>
-        <div class="order-details-item-value">1</div>
+        <div class="order-details-item-label">Tên Sản Phẩm</div>
+        <div class="order-details-item-value">{{this.TenSP}}</div>
       </div>
       <div class="order-details-item">
-        <div class="order-details-item-label">Thời gian xác nhận:</div>
-        <div class="order-details-item-value">2023-05-01 10:30</div>
+        <div class="order-details-item-label">Số Điện Thoại Giao Dịch</div>
+        <div class="order-details-item-value">{{this.SoDienThoaiGiaoDich}}</div>
       </div>
     </div>
+    {{/each}}
   </div>
 </div>
   <!-- Chức năng tạo sản phẩm -->
@@ -86,4 +91,3 @@
   </div>
 </div>
 </main>
- {{!-- <script src="/js/manufacture.js"></script> --}}
